@@ -1,5 +1,7 @@
 
 package principal;
+import java.awt.Color;
+
 
 
 public class Menu extends javax.swing.JFrame {
@@ -88,6 +90,12 @@ public class Menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 etq_registrarSalidaMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                etq_registrarSalidaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                etq_registrarSalidaMouseExited(evt);
+            }
         });
 
         etq_verHistorial.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -97,6 +105,12 @@ public class Menu extends javax.swing.JFrame {
         etq_verHistorial.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 etq_verHistorialMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                etq_verHistorialMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                etq_verHistorialMouseExited(evt);
             }
         });
 
@@ -216,23 +230,44 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_etq_registrarSalidaMouseClicked
 
     private void etq_verHistorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_verHistorialMouseClicked
-        //Crear el contenedor nuevo
+        
         Panel_Historialingresos nuevo = new Panel_Historialingresos();
         
-        //Ajustar el tamaño del contenedor nuevo
         nuevo.setPreferredSize(contenedor_principal.getPreferredSize());
         nuevo.setSize(contenedor_principal.getSize());
-        
-        //Eliminar el  contenido del contentPrincipal
         contenedor_principal.removeAll();
         
-        //Agregar dentro del contentPrincipalel contenedor nuevo
+      
         contenedor_principal.add(nuevo);
         
         
         repaint();
         revalidate();
     }//GEN-LAST:event_etq_verHistorialMouseClicked
+
+    
+    
+    
+    
+    
+    
+    private void etq_registrarSalidaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarSalidaMouseEntered
+        // Cambia el color de fondo del JLabel cuando el mouse entra en él
+        etq_registrarSalida.setForeground(Color.BLACK);
+    }//GEN-LAST:event_etq_registrarSalidaMouseEntered
+
+    private void etq_registrarSalidaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarSalidaMouseExited
+        // Devuelve el color a su estado original
+        etq_registrarSalida.setForeground(Color.WHITE);
+    }//GEN-LAST:event_etq_registrarSalidaMouseExited
+
+    private void etq_verHistorialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_verHistorialMouseEntered
+        etq_verHistorial.setForeground(Color.BLACK);
+    }//GEN-LAST:event_etq_verHistorialMouseEntered
+
+    private void etq_verHistorialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_verHistorialMouseExited
+        etq_verHistorial.setForeground(Color.WHITE);
+    }//GEN-LAST:event_etq_verHistorialMouseExited
 
    
 

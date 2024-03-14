@@ -28,6 +28,9 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
 
         contenedor_Historialingresos = new javax.swing.JPanel();
         etq_titulo = new javax.swing.JLabel();
+        etq_cedula = new javax.swing.JLabel();
+        campo_cedula = new javax.swing.JTextField();
+        btn_buscar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla_historialingresos = new javax.swing.JTable();
 
@@ -36,6 +39,19 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
         etq_titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
         etq_titulo.setText("Historial Ingresos");
+
+        etq_cedula.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        etq_cedula.setForeground(new java.awt.Color(255, 255, 255));
+        etq_cedula.setText("Cédula");
+
+        campo_cedula.setBackground(new java.awt.Color(102, 102, 255));
+        campo_cedula.setForeground(new java.awt.Color(255, 255, 255));
+        campo_cedula.setBorder(null);
+
+        btn_buscar.setBackground(new java.awt.Color(0, 191, 99));
+        btn_buscar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_buscar.setForeground(new java.awt.Color(255, 255, 255));
+        btn_buscar.setText("Buscar");
 
         tabla_historialingresos.setAutoCreateRowSorter(true);
         tabla_historialingresos.setBackground(new java.awt.Color(56, 128, 255));
@@ -66,23 +82,39 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
         contenedor_Historialingresos.setLayout(contenedor_HistorialingresosLayout);
         contenedor_HistorialingresosLayout.setHorizontalGroup(
             contenedor_HistorialingresosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_HistorialingresosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(etq_titulo)
-                .addGap(151, 151, 151))
             .addGroup(contenedor_HistorialingresosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(contenedor_HistorialingresosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contenedor_HistorialingresosLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_HistorialingresosLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(contenedor_HistorialingresosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_HistorialingresosLayout.createSequentialGroup()
+                                .addComponent(etq_titulo)
+                                .addGap(151, 151, 151))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_HistorialingresosLayout.createSequentialGroup()
+                                .addComponent(etq_cedula)
+                                .addGap(18, 18, 18)
+                                .addComponent(campo_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(56, 56, 56)
+                                .addComponent(btn_buscar)
+                                .addGap(77, 77, 77))))))
         );
         contenedor_HistorialingresosLayout.setVerticalGroup(
             contenedor_HistorialingresosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedor_HistorialingresosLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(etq_titulo)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addGroup(contenedor_HistorialingresosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(etq_cedula)
+                    .addComponent(campo_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_buscar))
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -99,7 +131,10 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_buscar;
+    private javax.swing.JTextField campo_cedula;
     private javax.swing.JPanel contenedor_Historialingresos;
+    private javax.swing.JLabel etq_cedula;
     private javax.swing.JLabel etq_titulo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tabla_historialingresos;

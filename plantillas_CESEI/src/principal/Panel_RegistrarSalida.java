@@ -40,6 +40,7 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         contenedor_registrarSalida.setBackground(new java.awt.Color(0, 74, 173));
 
         etq_titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
         etq_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         etq_titulo.setText("Registrar Salida");
 
@@ -68,7 +69,7 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         campo_codigoEquipo.setBorder(null);
 
         btn_registrarSalida.setBackground(new java.awt.Color(0, 191, 99));
-        btn_registrarSalida.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btn_registrarSalida.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_registrarSalida.setForeground(new java.awt.Color(255, 255, 255));
         btn_registrarSalida.setText("Registrar Salida");
 
