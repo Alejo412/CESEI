@@ -132,6 +132,8 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarEquipoMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarEquipoMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarEquipoMouseExited"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="etq_registrarPersona">
@@ -147,6 +149,8 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarPersonaMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarPersonaMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarPersonaMouseExited"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="etq_registrarEntrada">
@@ -162,6 +166,8 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarEntradaMouseClicked"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarEntradaMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="etq_registrarEntradaMouseExited"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="etq_registrarSalida">

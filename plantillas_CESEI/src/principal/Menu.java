@@ -60,6 +60,12 @@ public class Menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 etq_registrarEquipoMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                etq_registrarEquipoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                etq_registrarEquipoMouseExited(evt);
+            }
         });
 
         etq_registrarPersona.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -70,6 +76,12 @@ public class Menu extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 etq_registrarPersonaMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                etq_registrarPersonaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                etq_registrarPersonaMouseExited(evt);
+            }
         });
 
         etq_registrarEntrada.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -79,6 +91,12 @@ public class Menu extends javax.swing.JFrame {
         etq_registrarEntrada.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 etq_registrarEntradaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                etq_registrarEntradaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                etq_registrarEntradaMouseExited(evt);
             }
         });
 
@@ -268,6 +286,30 @@ public class Menu extends javax.swing.JFrame {
     private void etq_verHistorialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_verHistorialMouseExited
         etq_verHistorial.setForeground(Color.WHITE);
     }//GEN-LAST:event_etq_verHistorialMouseExited
+
+    private void etq_registrarEquipoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEquipoMouseEntered
+        etq_registrarEquipo.setForeground(Color.BLACK);
+    }//GEN-LAST:event_etq_registrarEquipoMouseEntered
+
+    private void etq_registrarEquipoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEquipoMouseExited
+        etq_registrarEquipo.setForeground(Color.WHITE);
+    }//GEN-LAST:event_etq_registrarEquipoMouseExited
+
+    private void etq_registrarPersonaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarPersonaMouseEntered
+        etq_registrarPersona.setForeground(Color.BLACK);
+    }//GEN-LAST:event_etq_registrarPersonaMouseEntered
+
+    private void etq_registrarPersonaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarPersonaMouseExited
+        etq_registrarPersona.setForeground(Color.WHITE);
+    }//GEN-LAST:event_etq_registrarPersonaMouseExited
+
+    private void etq_registrarEntradaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEntradaMouseEntered
+        etq_registrarEntrada.setForeground(Color.BLACK);
+    }//GEN-LAST:event_etq_registrarEntradaMouseEntered
+
+    private void etq_registrarEntradaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEntradaMouseExited
+         etq_registrarEntrada.setForeground(Color.WHITE);
+    }//GEN-LAST:event_etq_registrarEntradaMouseExited
 
    
 
