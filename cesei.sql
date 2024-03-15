@@ -9,6 +9,7 @@ CREATE TABLE usuario(
     nombres VARCHAR(20),
     apellidos VARCHAR(20),
     correo VARCHAR(50),
+    password VARCHAR(255),
     telefono VARCHAR(21),
     f_nacimiento DATE,
     foto LONGBLOB DEFAULT NULL
