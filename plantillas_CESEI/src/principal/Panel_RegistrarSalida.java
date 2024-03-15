@@ -32,9 +32,9 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         etq_cedula = new javax.swing.JLabel();
         etq_asteriscoCedula = new javax.swing.JLabel();
         campo_cedula = new javax.swing.JTextField();
-        etq_codigoEquipo = new javax.swing.JLabel();
-        etq_asteriscoCodiigoEquipo = new javax.swing.JLabel();
-        campo_codigoEquipo = new javax.swing.JTextField();
+        btn_buscarPc = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla_computador = new javax.swing.JTable();
         btn_registrarSalida = new javax.swing.JButton();
 
         contenedor_registrarSalida.setBackground(new java.awt.Color(0, 74, 173));
@@ -56,19 +56,36 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         campo_cedula.setForeground(new java.awt.Color(255, 255, 255));
         campo_cedula.setBorder(null);
 
-        etq_codigoEquipo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        etq_codigoEquipo.setForeground(new java.awt.Color(255, 255, 255));
-        etq_codigoEquipo.setText("Código-Equipo");
+        btn_buscarPc.setBackground(new java.awt.Color(102, 0, 0));
+        btn_buscarPc.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btn_buscarPc.setForeground(new java.awt.Color(255, 255, 255));
+        btn_buscarPc.setText("Buscar pc");
+        btn_buscarPc.setToolTipText("");
 
-        etq_asteriscoCodiigoEquipo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        etq_asteriscoCodiigoEquipo.setForeground(new java.awt.Color(204, 0, 0));
-        etq_asteriscoCodiigoEquipo.setText("*");
+        tabla_computador.setBackground(new java.awt.Color(56, 128, 255));
+        tabla_computador.setForeground(new java.awt.Color(255, 255, 255));
+        tabla_computador.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Código_equipo", "Marca", "Persona", ""
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+            };
 
-        campo_codigoEquipo.setBackground(new java.awt.Color(102, 102, 255));
-        campo_codigoEquipo.setForeground(new java.awt.Color(255, 255, 255));
-        campo_codigoEquipo.setBorder(null);
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tabla_computador);
 
-        btn_registrarSalida.setBackground(new java.awt.Color(0, 191, 99));
+        btn_registrarSalida.setBackground(new java.awt.Color(102, 0, 0));
         btn_registrarSalida.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_registrarSalida.setForeground(new java.awt.Color(255, 255, 255));
         btn_registrarSalida.setText("Registrar Salida");
@@ -78,55 +95,47 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         contenedor_registrarSalidaLayout.setHorizontalGroup(
             contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedor_registrarSalidaLayout.createSequentialGroup()
-                .addContainerGap(95, Short.MAX_VALUE)
+                .addContainerGap(89, Short.MAX_VALUE)
                 .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_registrarSalidaLayout.createSequentialGroup()
-                        .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(etq_cedula)
-                            .addComponent(etq_codigoEquipo))
+                        .addComponent(etq_cedula)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(etq_asteriscoCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etq_asteriscoCodiigoEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)
-                        .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campo_codigoEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campo_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(167, 167, 167))
+                        .addComponent(etq_asteriscoCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(campo_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(71, 71, 71)
+                        .addComponent(btn_buscarPc)
+                        .addGap(52, 52, 52))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_registrarSalidaLayout.createSequentialGroup()
                         .addComponent(etq_titulo)
                         .addGap(175, 175, 175))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_registrarSalidaLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_registrarSalidaLayout.createSequentialGroup()
                         .addComponent(btn_registrarSalida)
-                        .addGap(228, 228, 228))))
+                        .addGap(222, 222, 222))))
         );
         contenedor_registrarSalidaLayout.setVerticalGroup(
             contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedor_registrarSalidaLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addComponent(etq_titulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contenedor_registrarSalidaLayout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(campo_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etq_cedula)))
-                    .addGroup(contenedor_registrarSalidaLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_registrarSalidaLayout.createSequentialGroup()
                         .addComponent(etq_asteriscoCedula)
-                        .addGap(15, 15, 15)))
-                .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contenedor_registrarSalidaLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
+                        .addGap(52, 52, 52))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contenedor_registrarSalidaLayout.createSequentialGroup()
                         .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(campo_codigoEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etq_codigoEquipo)))
-                    .addGroup(contenedor_registrarSalidaLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(etq_asteriscoCodiigoEquipo)))
-                .addGap(138, 138, 138)
+                            .addComponent(etq_cedula)
+                            .addComponent(campo_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_buscarPc, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
                 .addComponent(btn_registrarSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58))
+                .addGap(34, 34, 34))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -143,15 +152,15 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_buscarPc;
     private javax.swing.JButton btn_registrarSalida;
     private javax.swing.JTextField campo_cedula;
-    private javax.swing.JTextField campo_codigoEquipo;
     private javax.swing.JPanel contenedor_registrarSalida;
     private javax.swing.JLabel etq_asteriscoCedula;
-    private javax.swing.JLabel etq_asteriscoCodiigoEquipo;
     private javax.swing.JLabel etq_cedula;
-    private javax.swing.JLabel etq_codigoEquipo;
     private javax.swing.JLabel etq_titulo;
     private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabla_computador;
     // End of variables declaration//GEN-END:variables
 }
