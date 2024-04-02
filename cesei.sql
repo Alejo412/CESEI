@@ -63,10 +63,13 @@ CREATE TABLE persona_computador(
 );
 
 
-INSERT INTO usuario (id_usuario, nombres, apellidos, correo, telefono, f_nacimiento, tipo) VALUES
-('203845', 'Carlos', 'Perez', '312836293', 'carlos@gmail.com', '1987-04-23', 'Administrador'),
-('837192', 'Fernandeo', 'Cardona', '319362529','fernc@hotmail.com', '1988-06-12', 'Vigilante');
+INSERT INTO usuario (id_usuario, nombres, apellidos, correo, password, telefono, f_nacimiento, tipo) VALUES
+('192834', 'Carlos', 'Perez', 'carlos@gmail.com', '1234', '322062524', '1987-04-23', 'Administrador');
+('836292', 'Hernan', 'Ramirez', 'ernc@hotmail.com','1122','312062536', '1988-06-12', 'Vigilante'),
+('028371', 'Andres', 'Rios', 'andres@hotmail.com','2233','322022536', '1988-06-12', 'Vigilante');
 
+INSERT INTO usuario (id_usuario, nombres, apellidos, correo, password, telefono, f_nacimiento, tipo) VALUES
+('028371', 'Andres', 'Rios', 'andres@hotmail.com','2233','322022536', '1988-06-12', 'Vigilante');
 INSERT INTO persona (id_persona, nombres, apellidos, telefono)
 VALUES
 ('102836','Pepe', 'Rios', '328673524'),
