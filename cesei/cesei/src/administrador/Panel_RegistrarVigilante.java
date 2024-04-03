@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package administrador;
-
+import utils.BaseDatos;
 import java.awt.Color;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 /**
  *
@@ -50,6 +53,8 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         etq_correo = new javax.swing.JLabel();
         campo_correo = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
+        etq_contraseña = new javax.swing.JLabel();
+        campo_contraseña = new javax.swing.JTextField();
 
         cont_head.setBackground(new java.awt.Color(56, 128, 255));
 
@@ -65,7 +70,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
             cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cont_headLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(etq_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 994, Short.MAX_VALUE))
+                .addComponent(etq_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE))
         );
         cont_headLayout.setVerticalGroup(
             cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,6 +181,11 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
                 campo_cedulaMousePressed(evt);
             }
         });
+        campo_cedula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campo_cedulaActionPerformed(evt);
+            }
+        });
 
         jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -196,17 +206,32 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
 
         jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
 
+        etq_contraseña.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+        etq_contraseña.setForeground(new java.awt.Color(255, 255, 255));
+        etq_contraseña.setText("Contraseña");
+
+        campo_contraseña.setBackground(new java.awt.Color(0, 74, 173));
+        campo_contraseña.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        campo_contraseña.setForeground(new java.awt.Color(204, 204, 255));
+        campo_contraseña.setText("xxxxxxxxxxxxxxxxxxxxxx");
+        campo_contraseña.setBorder(null);
+        campo_contraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                campo_contraseñaMousePressed(evt);
+            }
+        });
+
         javax.swing.GroupLayout cont_mainLayout = new javax.swing.GroupLayout(cont_main);
         cont_main.setLayout(cont_mainLayout);
         cont_mainLayout.setHorizontalGroup(
             cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cont_mainLayout.createSequentialGroup()
+                .addGap(102, 102, 102)
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cont_mainLayout.createSequentialGroup()
-                        .addGap(446, 446, 446)
-                        .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(campo_contraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                        .addGap(171, 171, 171))
                     .addGroup(cont_mainLayout.createSequentialGroup()
-                        .addGap(102, 102, 102)
                         .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(etq_nombre)
@@ -219,7 +244,11 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
                             .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(etq_cedula)
                                 .addComponent(campo_cedula)
-                                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(etq_contraseña))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cont_mainLayout.createSequentialGroup()
                         .addGap(94, 94, 94)
                         .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -233,13 +262,17 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
                             .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(etq_correo)
                                 .addComponent(campo_correo)
-                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(228, 228, 228))))
         );
         cont_mainLayout.setVerticalGroup(
             cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(39, Short.MAX_VALUE)
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
                         .addComponent(etq_cedula)
@@ -279,9 +312,14 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
                         .addComponent(campo_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39)
-                .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
+                .addGap(18, 18, 18)
+                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cont_mainLayout.createSequentialGroup()
+                        .addComponent(etq_contraseña)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campo_contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -317,9 +355,59 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
     }//GEN-LAST:event_campo_telefonoMousePressed
 
     private void btn_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_registrarActionPerformed
+   String nombre = campo_nombre.getText();
+    String apellido = campo_apellido.getText();
+    String cedula = campo_cedula.getText();
+    String correo = campo_correo.getText();
+    String telefono = campo_telefono.getText();
+    String fechaNacimiento = campo_fechaNacimiento.getText();
+    String contraseña = campo_contraseña.getText();
 
+    // Encriptar la contraseña utilizando el método getMD5
+    String contraseñaEncriptada = getMD5(contraseña);
+    BaseDatos baseDatos = new BaseDatos();
+    baseDatos.insertarVigilante(cedula, nombre, apellido, correo, contraseñaEncriptada, telefono, fechaNacimiento);
+    
+    campo_nombre.setText("");
+    campo_apellido.setText("");
+    campo_cedula.setText("");
+    campo_correo.setText("");
+    campo_telefono.setText("");
+    campo_fechaNacimiento.setText("");
+    campo_contraseña.setText("");
+    
+     GuardarImagenBD guardarImagenBD = new GuardarImagenBD();
+     guardarImagenBD.setVisible(true);
+       
+    
+    
+    }//GEN-LAST:event_btn_registrarActionPerformed
+    
+    public String getMD5(String input) {
+        try {
+            // Obtener una instancia del algoritmo MD5
+            MessageDigest md = MessageDigest.getInstance("MD5");
+
+            // Convertir el String a bytes
+            byte[] messageDigest = md.digest(input.getBytes());
+
+            // Convertir los bytes a un String hexadecimal
+            BigInteger number = new BigInteger(1, messageDigest);
+            String hashtext = number.toString(16);
+
+            // Añadir ceros a la izquierda si es necesario
+            while (hashtext.length() < 32) {
+                hashtext = "0" + hashtext;
+            }
+
+            // Devolver el hash MD5
+            return hashtext;
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
+    
     private void campo_nombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_nombreMousePressed
         if (campo_nombre.getText().equals("Ingrese el ID de la sede")) {
             campo_nombre.setText("");
@@ -335,11 +423,24 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_campo_correoMousePressed
 
+    private void campo_fechaNacimiento1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_contraseñaMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campo_contraseñaMousePressed
+
+    private void campo_cedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campo_cedulaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campo_cedulaActionPerformed
+
+    private void campo_contraseñaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_fechaNacimiento1MousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campo_fechaNacimiento1MousePressed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_registrar;
     private javax.swing.JTextField campo_apellido;
     private javax.swing.JTextField campo_cedula;
+    private javax.swing.JTextField campo_contraseña;
     private javax.swing.JTextField campo_correo;
     private javax.swing.JTextField campo_fechaNacimiento;
     private javax.swing.JTextField campo_nombre;
@@ -348,6 +449,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
     private javax.swing.JPanel cont_main;
     private javax.swing.JLabel etq_apellido;
     private javax.swing.JLabel etq_cedula;
+    private javax.swing.JLabel etq_contraseña;
     private javax.swing.JLabel etq_correo;
     private javax.swing.JLabel etq_fechaNacimiento;
     private javax.swing.JLabel etq_nombre;
