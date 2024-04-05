@@ -63,21 +63,15 @@ CREATE TABLE persona_computador(
 );
 
 DELIMITER //
-CREATE TRIGGER actualizar_tipo AFTER INSERT ON usuario 
+CREATE TRIGGER actualizar_tipo BEFORE INSERT ON usuario 
     FOR EACH ROW
     BEGIN 
-        IF NEW.correo LIKE ('%@vigilante%') THEN
-            UPDATE usuario
-            SET tipo = 'vigilante'
-            WHERE id_usuario = NEW.id_usuario; 
+        IF NEW.correo LIKE '%@vigilante%' THEN
+            SET NEW.tipo = 'Vigilante';
+        ELSEIF NEW.correo LIKE '%@admin%' THEN
+            SET NEW.tipo = 'Administrador';
         END IF;
-
-        IF NEW.correo LIKE ('%@admin%') THEN
-            UPDATE usuario
-            SET tipo = 'administrador'
-            WHERE id_usuario = NEW.id_usuario;
-        END IF; 
-END;
+    END;
 //
 DELIMITER ;
 
