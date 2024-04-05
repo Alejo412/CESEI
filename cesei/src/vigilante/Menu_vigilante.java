@@ -15,7 +15,7 @@ import utils.Usuario;
 
 public class Menu_vigilante extends javax.swing.JFrame {
 
-   BaseDatos basedatos;
+   BaseDatos basedatos = new BaseDatos();
    Usuario usuario;
    String cedula;
    String password;
