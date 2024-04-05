@@ -107,7 +107,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="429" max="32767" attributes="0"/>
-                      <Component id="btn_registrar" min="-2" pref="145" max="-2" attributes="0"/>
+                      <Component id="btn_editarSede" min="-2" pref="145" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="426" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -141,7 +141,7 @@
                                               <Component id="campo_Nsede" alignment="0" min="-2" pref="286" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                                          <Component id="btn_registrar1" min="-2" pref="115" max="-2" attributes="0"/>
+                                          <Component id="btn_buscarSede" min="-2" pref="115" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace pref="197" max="-2" attributes="0"/>
@@ -156,7 +156,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace pref="248" max="32767" attributes="0"/>
-                      <Component id="btn_registrar" min="-2" pref="53" max="-2" attributes="0"/>
+                      <Component id="btn_editarSede" min="-2" pref="53" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -168,7 +168,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="campo_Nsede" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="btn_registrar1" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="btn_buscarSede" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           <Component id="jSeparator1" min="-2" pref="20" max="-2" attributes="0"/>
@@ -225,7 +225,6 @@
               </Properties>
               <Events>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="campo_direccionMousePressed"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campo_direccionActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator2">
@@ -246,7 +245,7 @@
                 <Property name="text" type="java.lang.String" value="Direccion"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btn_registrar1">
+            <Component class="javax.swing.JButton" name="btn_buscarSede">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="63" green="bf" red="0" type="rgb"/>
@@ -266,7 +265,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_registrar1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buscarSedeActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="campo_contacto">
@@ -287,7 +286,6 @@
               </Properties>
               <Events>
                 <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="campo_contactoMousePressed"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="campo_contactoActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator3">
@@ -297,7 +295,7 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btn_registrar">
+            <Component class="javax.swing.JButton" name="btn_editarSede">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="63" green="bf" red="0" type="rgb"/>
@@ -308,7 +306,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Registrar Sede"/>
+                <Property name="text" type="java.lang.String" value="Editar Sede"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="null"/>
                 </Property>
@@ -317,7 +315,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_registrarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_editarSedeActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="etq_sede">

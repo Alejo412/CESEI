@@ -62,6 +62,25 @@ CREATE TABLE persona_computador(
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
+DELIMITER //
+CREATE TRIGGER actualizar_tipo AFTER INSERT ON usuario 
+    FOR EACH ROW
+    BEGIN 
+        IF NEW.correo LIKE ('%@vigilante%') THEN
+            UPDATE usuario
+            SET tipo = 'vigilante'
+            WHERE id_usuario = NEW.id_usuario; 
+        END IF;
+
+        IF NEW.correo LIKE ('%@admin%') THEN
+            UPDATE usuario
+            SET tipo = 'administrador'
+            WHERE id_usuario = NEW.id_usuario;
+        END IF; 
+END;
+//
+DELIMITER ;
+
 
 INSERT INTO usuario (id_usuario, nombres, apellidos, correo, password, telefono, f_nacimiento, tipo) VALUES
 ('192834', 'Carlos', 'Perez', 'carlos@gmail.com', '1234', '322062524', '1987-04-23', 'Administrador');

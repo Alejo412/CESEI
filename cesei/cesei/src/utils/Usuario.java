@@ -1,5 +1,7 @@
-
+   
 package utils;
+
+import java.awt.Image;
 
 
 public class Usuario {
@@ -12,9 +14,9 @@ public class Usuario {
     String password;
     String tipo;
     String fecha_nacimiento;
-    String foto;
+    Image foto;
 
-    public Usuario(String cedula, String nombres, String apellidos, String telefono, String email, String password, String tipo, String fecha_nacimiento, String foto) {
+    public Usuario(String cedula, String nombres, String apellidos, String telefono, String email, String password, String tipo, String fecha_nacimiento, Image foto) {
         this.cedula = cedula;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -60,7 +62,7 @@ public class Usuario {
     }
 
 
-    public String getFoto() {
+    public Image getFoto() {
         return foto;
     }
 
@@ -97,7 +99,7 @@ public class Usuario {
         this.fecha_nacimiento = fecha_nacimiento;
     }
     
-    public void setFoto(String foto) {
+    public void setFoto(Image foto) {
         this.foto = foto;
     }
     

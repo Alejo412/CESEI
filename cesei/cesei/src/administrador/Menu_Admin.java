@@ -280,7 +280,7 @@ public class Menu_Admin extends javax.swing.JFrame {
 
     private void btnVigilanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVigilanteActionPerformed
          //crear contenedor nuevo
-        SemiNavsVigilantes nuevo = new SemiNavsVigilantes();
+        SemiNavsVigilantes nuevo = new SemiNavsVigilantes(basedatos);
         //ajustar tamaño
         nuevo.setPreferredSize(ventana_emergente.getPreferredSize());
         nuevo.setSize(ventana_emergente.getSize());

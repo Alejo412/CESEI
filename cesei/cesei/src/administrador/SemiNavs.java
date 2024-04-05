@@ -1,9 +1,14 @@
 
 package administrador;
 
+import utils.BaseDatos;
+
 
 public class SemiNavs extends javax.swing.JPanel {
 
+    BaseDatos basedatos;
+    String cedula;
+    String id_sede;
    
     public SemiNavs() {
         initComponents();
@@ -132,7 +137,7 @@ public class SemiNavs extends javax.swing.JPanel {
 
     private void btn_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarActionPerformed
    
-        Panel_RegistroSede nuevo = new Panel_RegistroSede();
+        Panel_RegistroSede nuevo = new Panel_RegistroSede(basedatos);
  
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());
@@ -146,7 +151,7 @@ public class SemiNavs extends javax.swing.JPanel {
 
     private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
         //crear contenedor nuevo
-        Panel_EliminarSede nuevo = new Panel_EliminarSede();
+        Panel_EliminarSede nuevo = new Panel_EliminarSede(id_sede, basedatos);
         //ajustar tamaño
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());
@@ -160,7 +165,7 @@ public class SemiNavs extends javax.swing.JPanel {
 
     private void btn_adjuntarVigilanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_adjuntarVigilanteActionPerformed
         //crear contenedor nuevo
-        Panel_AdjuntarVigilante nuevo = new Panel_AdjuntarVigilante();
+        Panel_AdjuntarVigilante nuevo = new Panel_AdjuntarVigilante(cedula, basedatos);
         //ajustar tamaño
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());
@@ -173,7 +178,7 @@ public class SemiNavs extends javax.swing.JPanel {
     }//GEN-LAST:event_btn_adjuntarVigilanteActionPerformed
 
     private void btn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editarActionPerformed
-       Panel_EditarSede nuevo = new Panel_EditarSede();
+       Panel_EditarSede nuevo = new Panel_EditarSede(id_sede, basedatos);
  
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());

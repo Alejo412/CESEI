@@ -1,11 +1,14 @@
 
 package administrador;
 
+import utils.BaseDatos;
+
 
 public class SemiNavsVigilantes extends javax.swing.JPanel {
 
-   
-    public SemiNavsVigilantes() {
+   BaseDatos basedatos;
+    public SemiNavsVigilantes(BaseDatos baseDatos) {
+        this.basedatos = basedatos;
         initComponents();
     }
 
@@ -116,7 +119,7 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
 
     private void btn_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarActionPerformed
         //crear contenedor nuevo
-        Panel_RegistrarVigilante nuevo = new Panel_RegistrarVigilante();
+        Panel_RegistrarVigilante nuevo = new Panel_RegistrarVigilante(basedatos);
         //ajustar tamaño
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());
