@@ -127,9 +127,9 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         contenedor_registrarSalidaLayout.setVerticalGroup(
             contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedor_registrarSalidaLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(50, 50, 50)
                 .addComponent(etq_titulo)
-                .addGap(40, 40, 40)
+                .addGap(53, 53, 53)
                 .addComponent(userLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(contenedor_registrarSalidaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

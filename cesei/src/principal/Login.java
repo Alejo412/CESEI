@@ -1,12 +1,18 @@
 package principal;
 
+import administrador.Menu_Admin;
 import java.awt.Color;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import utils.BaseDatos;
+import utils.Usuario;
+import vigilante.Menu_vigilante;
 
 
 public class Login extends javax.swing.JFrame {
     
     BaseDatos basedatos;
+    Usuario usuario;
     int xMouse, yMouse;
     
     public Login(BaseDatos basedatos) {
@@ -16,10 +22,17 @@ public class Login extends javax.swing.JFrame {
     }
     
     public void initAlternCompoinents(){
-        setTitle("Menu");
+        setTitle("Login");
         setLocationRelativeTo(null);
         setVisible(true);
         setResizable(false);
+        
+      //  Image icono_registro = getToolkit().createImage(ClassLoader.getSystemResource("imagenes/LOGOBLANCO.png"));
+        //icono_registro = icono_registro.getScaledInstance(130, 114, Image.SCALE_SMOOTH);
+        //logo.setIcon(new ImageIcon(icono_registro));
+        //setIconImage(getToolkit().createImage(ClassLoader.getSystemResource("imagenes/LOGOBLANCO.png")));
+        
+        
     }
            
     
@@ -39,10 +52,10 @@ public class Login extends javax.swing.JFrame {
         favicon = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         userLabel = new javax.swing.JLabel();
-        userTxt = new javax.swing.JTextField();
+        campo_cedula = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         passLabel = new javax.swing.JLabel();
-        passTxt = new javax.swing.JPasswordField();
+        campo_password = new javax.swing.JPasswordField();
         jSeparator2 = new javax.swing.JSeparator();
         loginBtn = new javax.swing.JPanel();
         loginBtnTxt = new javax.swing.JLabel();
@@ -57,18 +70,18 @@ public class Login extends javax.swing.JFrame {
 
         logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LOGOBLANCO.png"))); // NOI18N
-        bg.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 90, 290, 140));
+        bg.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, 290, 180));
 
         logoname.setBackground(new java.awt.Color(255, 255, 255));
-        logoname.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        logoname.setFont(new java.awt.Font("Roboto Medium", 1, 18)); // NOI18N
         logoname.setForeground(new java.awt.Color(255, 255, 255));
         logoname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         logoname.setText("CESEI");
-        bg.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(554, 250, 290, 20));
+        bg.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 290, 20));
 
         citybg.setBackground(new java.awt.Color(0, 134, 190));
         citybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/city.png"))); // NOI18N
-        bg.add(citybg, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 290, 500));
+        bg.add(citybg, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 300, 500));
 
         header.setBackground(new java.awt.Color(0, 74, 173));
         header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -146,22 +159,11 @@ public class Login extends javax.swing.JFrame {
         userLabel.setText("USUARIO");
         bg.add(userLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
-        userTxt.setBackground(new java.awt.Color(0, 74, 173));
-        userTxt.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        userTxt.setForeground(new java.awt.Color(255, 255, 255));
-        userTxt.setText("Ingrese su nombre de usuario");
-        userTxt.setBorder(null);
-        userTxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                userTxtMousePressed(evt);
-            }
-        });
-        userTxt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userTxtActionPerformed(evt);
-            }
-        });
-        bg.add(userTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 410, 30));
+        campo_cedula.setBackground(new java.awt.Color(0, 74, 173));
+        campo_cedula.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        campo_cedula.setForeground(new java.awt.Color(255, 255, 255));
+        campo_cedula.setBorder(null);
+        bg.add(campo_cedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 410, 30));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         bg.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 410, 20));
@@ -171,16 +173,10 @@ public class Login extends javax.swing.JFrame {
         passLabel.setText("CONTRASEÑA");
         bg.add(passLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, -1, -1));
 
-        passTxt.setBackground(new java.awt.Color(0, 74, 173));
-        passTxt.setForeground(new java.awt.Color(255, 255, 255));
-        passTxt.setText("********");
-        passTxt.setBorder(null);
-        passTxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                passTxtMousePressed(evt);
-            }
-        });
-        bg.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 410, 30));
+        campo_password.setBackground(new java.awt.Color(0, 74, 173));
+        campo_password.setForeground(new java.awt.Color(255, 255, 255));
+        campo_password.setBorder(null);
+        bg.add(campo_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 410, 30));
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
         bg.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 410, 20));
@@ -265,74 +261,50 @@ public class Login extends javax.swing.JFrame {
         loginBtn.setBackground(new Color(0,134,190));
     }//GEN-LAST:event_loginBtnTxtMouseExited
 
-    private void userTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userTxtMousePressed
-        if (userTxt.getText().equals("Ingrese su nombre de usuario")) {
-            userTxt.setText("");
-            userTxt.setForeground(Color.black);
-        }
-        if (String.valueOf(passTxt.getPassword()).isEmpty()) {
-            passTxt.setText("********");
-            passTxt.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_userTxtMousePressed
-
-    private void passTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passTxtMousePressed
-        if (String.valueOf(passTxt.getPassword()).equals("********")) {
-            passTxt.setText("");
-            passTxt.setForeground(Color.black);
-        }
-        if (userTxt.getText().isEmpty()) {
-            userTxt.setText("Ingrese su nombre de usuario");
-            userTxt.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_passTxtMousePressed
-
     private void loginBtnTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBtnTxtMouseClicked
-        javax.swing.JOptionPane.showMessageDialog(this, "Intento de login con los datos:\nUsuario: " + userTxt.getText() + "\nContraseña: " + String.valueOf(passTxt.getPassword()), "LOGIN", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+
+       String tipoAdmi = "Administrador";
+       String tipoVigi = "Vigilante";
+        
+      String cedulaUsuario = campo_cedula.getText();
+      String passwordUsuario = campo_password.getText();
+      
+      if (cedulaUsuario.equals(" ") || passwordUsuario.equals(" ")){
+          //crear alerta
+          System.out.println("Tiene que llenar todos los campos");
+      }else{
+          usuario = basedatos.validarIngreso(cedulaUsuario, passwordUsuario);
+          if(usuario != null){
+              System.out.println(usuario.getCedula());
+              System.out.println(usuario.getNombres());
+              System.out.println(usuario.getPassword());
+          }else{
+              System.out.println("El objeto usuario es null");
+          }
+          
+          
+          if(usuario.getTipo().equals(tipoAdmi)){
+                System.out.println("Se ha encontrado un usuario-Administrador");
+                // Menu_Admin menuAdmi = new Menu_Admin(cedulaUsuario, passwordUsuario, basedatos);
+                dispose();
+                
+            }else if(usuario.getTipo().equals(tipoVigi)){
+                System.out.println("Se ha encontrado un usuario-Vigialante");
+                Menu_vigilante menuVigilante = new Menu_vigilante(cedulaUsuario, passwordUsuario, basedatos);
+                dispose();
+            }
+          
+        }
+      
+      
     }//GEN-LAST:event_loginBtnTxtMouseClicked
 
-    private void userTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userTxtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userTxtActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login().setVisible(true);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
+    private javax.swing.JTextField campo_cedula;
+    private javax.swing.JPasswordField campo_password;
     private javax.swing.JLabel citybg;
     private javax.swing.JPanel exitBtn;
     private javax.swing.JLabel exitTxt;
@@ -345,9 +317,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logoname;
     private javax.swing.JLabel passLabel;
-    private javax.swing.JPasswordField passTxt;
     private javax.swing.JLabel title;
     private javax.swing.JLabel userLabel;
-    private javax.swing.JTextField userTxt;
     // End of variables declaration//GEN-END:variables
 }

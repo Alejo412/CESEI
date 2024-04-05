@@ -1,9 +1,11 @@
-
+   
 package utils;
+
+import java.awt.Image;
 
 
 public class Usuario {
-    
+      
     String cedula;
     String nombres;
     String apellidos;
@@ -11,9 +13,10 @@ public class Usuario {
     String email;
     String password;
     String tipo;
-    String foto;
+    String fecha_nacimiento;
+    Image foto;
 
-    public Usuario(String cedula, String nombres, String apellidos, String telefono, String email, String password, String tipo, String foto) {
+    public Usuario(String cedula, String nombres, String apellidos, String telefono, String email, String password, String tipo, String fecha_nacimiento, Image foto) {
         this.cedula = cedula;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -21,6 +24,7 @@ public class Usuario {
         this.email = email;
         this.password = password;
         this.tipo = tipo;
+        this.fecha_nacimiento=fecha_nacimiento;
         this.foto = foto;
     }
 
@@ -51,8 +55,14 @@ public class Usuario {
     public String getTipo() {
         return tipo;
     }
+    
+    
+    public String getFecha_nacimiento() {
+        return fecha_nacimiento;
+    }
 
-    public String getFoto() {
+
+    public Image getFoto() {
         return foto;
     }
 
@@ -84,7 +94,12 @@ public class Usuario {
         this.tipo = tipo;
     }
 
-    public void setFoto(String foto) {
+    
+    public void setFecha_nacimiento(String fecha_nacimiento) {
+        this.fecha_nacimiento = fecha_nacimiento;
+    }
+    
+    public void setFoto(Image foto) {
         this.foto = foto;
     }
     
