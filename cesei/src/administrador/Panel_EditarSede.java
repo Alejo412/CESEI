@@ -13,6 +13,7 @@ public class Panel_EditarSede extends javax.swing.JPanel {
    Sede sede;
    String id_sede;
     public Panel_EditarSede(String id_sede, BaseDatos basedatos) {
+        this.basedatos  =  basedatos;
         initComponents();
     }
 

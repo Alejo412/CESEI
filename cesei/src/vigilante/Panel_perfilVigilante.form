@@ -64,10 +64,8 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="etq_nombre" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="etq_apellido" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="campo_nombre" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="campo_nombre" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
                       <Component id="etq_fechaNacimiento" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jSeparator2" alignment="0" max="32767" attributes="0"/>
                       <Component id="campo_fecha_nacimiento" alignment="0" max="32767" attributes="0"/>

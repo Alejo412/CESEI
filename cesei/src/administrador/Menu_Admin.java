@@ -298,7 +298,7 @@ public class Menu_Admin extends javax.swing.JFrame {
 
     private void imgUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgUsuarioMouseClicked
           //crear contenedor nuevo
-        Perfil_admin nuevo = new Perfil_admin();
+        Perfil_admin nuevo = new Perfil_admin(cedulaAdmin, basedatos);
         //ajustar tamaño
         nuevo.setPreferredSize(ventana_emergente.getPreferredSize());
         nuevo.setSize(ventana_emergente.getSize());

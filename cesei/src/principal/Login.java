@@ -274,7 +274,7 @@ public class Login extends javax.swing.JFrame {
           //crear alerta
           System.out.println("Tiene que llenar todos los campos");
       }else{
-          usuario = basedatos.validarIngreso(cedulaUsuario, passwordUsuario);
+          usuario = basedatos.validarIngreso(cedulaUsuario);
           if(usuario != null){
               System.out.println(usuario.getCedula());
               System.out.println(usuario.getNombres());

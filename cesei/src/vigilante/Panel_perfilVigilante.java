@@ -11,20 +11,20 @@ public class Panel_perfilVigilante extends javax.swing.JPanel {
     BaseDatos basedatos;
     Usuario usuario;
     String cedula;
-    String password;
+    
     
    
-    public Panel_perfilVigilante(String cedula, String password, BaseDatos basedatos) {
+    public Panel_perfilVigilante(String cedula, BaseDatos basedatos) {
         this.basedatos=basedatos;
         this.cedula=cedula;
-        this.password=password;
+      
         initComponents();
-        initAleternComponents();
+        initAlternComponents();
     }
     
-    public void initAleternComponents(){
+    public void initAlternComponents(){
         
-        usuario = basedatos.validarIngreso(cedula, password);
+        usuario = basedatos.validarIngreso(cedula);
         
         String nombres = usuario.getNombres();
         String apellidos = usuario.getApellidos();

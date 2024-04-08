@@ -45,12 +45,12 @@ public class BaseDatos {
         }
     }
 
-    public Usuario validarIngreso(String cedula, String password){
+    public Usuario validarIngreso(String cedula){
        
             Usuario encontrado = null;
         try {
   
-            String consulta = "SELECT * FROM usuario  WHERE usuario.id_usuario = '"+cedula+"' AND usuario.password ='"+password+"'";
+            String consulta = "SELECT * FROM usuario  WHERE usuario.id_usuario = '"+cedula+"'";
             ResultSet registros = manipularDB.executeQuery(consulta);
             registros.next();
             if (registros.getRow()==1) {
@@ -61,6 +61,7 @@ public class BaseDatos {
                     String telefono = registros.getString("telefono");
                     String correo = registros.getString("correo");
                     String tipo = registros.getString("tipo");
+                    String password = registros.getNString("password");
                     // Obtener la fecha de nacimiento como un objeto java.sql.Date
                     java.sql.Date fecha_nacimiento_sql = registros.getDate("f_nacimiento");
                     // Convertir la fecha de nacimiento a una cadena (string)
