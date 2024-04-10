@@ -1,13 +1,15 @@
 
 package administrador;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import utils.BaseDatos;
 import utils.Usuario;
 
 public class Perfil_admin extends javax.swing.JPanel {
 
     
-    Usuario usuario;
+    Usuario usuarioValidado;
     BaseDatos basedatos;
     String cedula;
     
@@ -24,21 +26,37 @@ public class Perfil_admin extends javax.swing.JPanel {
     
     public void initAlternComponents(){
         
-        usuario = basedatos.validarIngreso(cedula);
+        usuarioValidado = basedatos.validarIngreso(cedula);
         
-        String nombres = usuario.getNombres();
-        String apellidos = usuario.getApellidos();
-        String correo = usuario.getEmail();
-        String telefono = usuario.getTelefono();
-        String fecha_nacimiento = usuario.getFecha_nacimiento();
-        
-       
-      
-        campo_nombre.setText(nombres);
-        campo_apellidos.setText(apellidos);
-        campo_correo.setText(correo);
-        campo_telefono.setText(telefono);
-        campo_fecha_nacimiento.setText(fecha_nacimiento);
+        if (usuarioValidado != null) {
+            String nombres = usuarioValidado.getNombres();
+            String apellidos = usuarioValidado.getApellidos();
+            String correo = usuarioValidado.getEmail();
+            String telefono = usuarioValidado.getTelefono();
+            String fecha_nacimiento = usuarioValidado.getFecha_nacimiento();
+
+            campo_nombre.setText(nombres);
+            campo_apellidos.setText(apellidos);
+            campo_correo.setText(correo);
+            campo_telefono.setText(telefono);
+            campo_fecha_nacimiento.setText(fecha_nacimiento);
+
+            Image foto_perfil = usuarioValidado.getFoto();
+            if (foto_perfil != null) {
+                foto_perfil = foto_perfil.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+                ImageIcon icono = new ImageIcon(foto_perfil);
+
+                // Asegúrate de que esta operación de interfaz de usuario se realice en el hilo de despacho de eventos de Swing
+                //SwingUtilities.invokeLater(() -> {
+                    etq_fotoAdmin.setIcon(icono);
+                
+            } else {
+                System.out.println("La foto de perfil está en null");
+            }
+        } else {
+            System.out.println("No se encontró el usuario");
+            // Manejar el caso en el que no se encuentra el usuario
+        }
     }
 
     
@@ -50,7 +68,7 @@ public class Perfil_admin extends javax.swing.JPanel {
         etq_titulo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         etq_fechaNacimiento = new javax.swing.JLabel();
-        etq_fotoVigilante = new javax.swing.JLabel();
+        etq_fotoAdmin = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         campo_correo = new javax.swing.JTextField();
         campo_nombre = new javax.swing.JTextField();
@@ -162,7 +180,7 @@ public class Perfil_admin extends javax.swing.JPanel {
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(14, 14, 14)
-                            .addComponent(etq_fotoVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(etq_fotoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                             .addComponent(etq_telefono)
                             .addGap(245, 245, 245))
@@ -217,7 +235,7 @@ public class Perfil_admin extends javax.swing.JPanel {
                             .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etq_fotoVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(etq_fotoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(etq_telefono)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -257,7 +275,7 @@ public class Perfil_admin extends javax.swing.JPanel {
     private javax.swing.JLabel etq_apellido;
     private javax.swing.JLabel etq_correo;
     private javax.swing.JLabel etq_fechaNacimiento;
-    private javax.swing.JLabel etq_fotoVigilante;
+    private javax.swing.JLabel etq_fotoAdmin;
     private javax.swing.JLabel etq_nombre;
     private javax.swing.JLabel etq_telefono;
     private javax.swing.JLabel etq_titulo;

@@ -24,11 +24,11 @@ CREATE TABLE sede(
 );
 
 CREATE TABLE usuario_sede(
+    numero_adjuntar INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario VARCHAR(30),
     id_sede VARCHAR(30),
     fecha_inicio DATE,
     fecha_fin DATE,
-    PRIMARY KEY (id_usuario, id_sede),
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
     FOREIGN KEY (id_sede) REFERENCES sede(id_sede)
 );

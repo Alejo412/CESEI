@@ -17,9 +17,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
-import javax.imageio.ImageIO;
+import javax.imageio.ImageIO; 
 import javax.swing.ImageIcon;
 import utils.Usuario;
+import java.sql.Types;
 
 public class BaseDatos {
 
@@ -77,7 +78,7 @@ public class BaseDatos {
                         foto = new ImageIcon(bytes, cedula).getImage();
                     }
                     
-                    encontrado = new Usuario(cedula, nombres, apellidos, telefono, correo, password, tipo, fecha_nacimiento, foto);
+                    encontrado = new Usuario(cedula, nombres, apellidos, telefono, correo, getMD5(password), tipo, fecha_nacimiento, foto);
                 return encontrado;
            
             }
@@ -167,6 +168,39 @@ public class BaseDatos {
         }
          return sedeEncontrada;
     }
+    
+    public Sede [] extraerSedes(){
+        try {
+            Sede arreglo [] = new Sede[100];
+            String consulta = "SELECT * FROM Sede";
+            ResultSet registros = manipularDB.executeQuery(consulta);
+            registros.next();
+            if (registros.getRow()==1) {
+                int i = 0;
+                do{
+                    String id_sede = registros.getString("id_sede");
+                    String direccion = registros.getString("direccion");
+                    String contacto = registros.getString("contacto");
+                    String id_usuario = registros.getString("id_usuario");
+                
+                    
+                    arreglo[i] = new Sede(id_sede, direccion, contacto, id_usuario);
+                    i++;
+                }while(registros.next());
+                 
+                System.out.println("SELECT exitoso ");
+                return arreglo;
+            }else{
+                return arreglo;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error al ejecutar el SELECT: ");
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
+    
+    
      
   
 
@@ -252,14 +286,106 @@ public class BaseDatos {
     }
 
     public void insertarUsuario_Sede(String id_usuario,String id_sede, String fecha_inicio, String fecha_fin){
-        try {
-        String consulta = "INSERT INTO usuario_sede ( id_usuario,  id_sede,  fecha_inicio,  fecha_fin) VALUES ('" + id_usuario + "', '" + id_sede + "', '" + fecha_inicio + "', '" + fecha_fin + "')";
-        manipularDB.executeUpdate(consulta);
-        System.out.println("Usuario_Sede insertado correctamente.");
-    } catch (SQLException ex) {
-        System.out.println("Error al insertar Usuario_Sede:");
-        System.out.println(ex.getMessage());
+            String consulta = "INSERT INTO usuario_sede ( id_usuario,  id_sede,  fecha_inicio,  fecha_fin) VALUES (?, ?, ?, ?)";
+            
+
+        try( PreparedStatement statement = conexion.prepareStatement(consulta)) {
+       
+        statement.setString(1, id_usuario);
+        statement.setString(2, id_sede);
+        statement.setString(3, fecha_inicio);
+ 
+        // Si fecha_fin es null, establecerlo como null en la consulta
+            if (fecha_fin == null) {
+               statement.setNull(4, Types.TIMESTAMP);
+            } else {
+                statement.setString(4, fecha_fin);
+            }
+
+        //  Ejecutar la consulta
+            int filasAfectadas = statement.executeUpdate();
+            System.out.println("Usuario_Sede insertado correctamente.");
+        } catch (SQLException ex) {
+            System.out.println("Error al insertar Usuario_Sede:");
+            System.out.println(ex.getMessage());
+        }
     }
+    
+    
+    public Sede buscarSedesAcargo( String id_usuario){
+          Sede sedeEncontrada = null;
+        try {
+  
+            String consulta = "SELECT * FROM usuario_sede  JOIN sede ON ( usuario_sede.id_sede=sede.id_sede) WHERE  usuario_sede.id_usuario = '"+id_usuario+"' ";
+            ResultSet registros = manipularDB.executeQuery(consulta);
+            registros.next();
+            if (registros.getRow()==1) {
+                
+             String id_sede = registros.getString("id_sede"); 
+             String direccion = registros.getString("direccion");
+             String contacto = registros.getString("contacto");
+            
+            
+                
+                sedeEncontrada = new Sede(id_sede, direccion, contacto, id_usuario);
+                return sedeEncontrada;
+           
+            }
+               
+        } catch (SQLException ex) {
+            System.out.println("Error al ejecutar el SELECT: ");
+            System.out.println(ex.getMessage());
+        
+        }
+         return sedeEncontrada;
+    }
+    
+    public Usuario_Sede validarUsuario_Sede( String id_usuario){
+          Usuario_Sede usuario_sedeEncontrado = null;
+        try {
+  
+            String consulta = "SELECT * FROM usuario_sede  JOIN sede ON ( usuario_sede.id_sede=sede.id_sede) WHERE  usuario_sede.id_usuario = '"+id_usuario+"' ";
+            ResultSet registros = manipularDB.executeQuery(consulta);
+            registros.next();
+            if (registros.getRow()==1) {
+                
+                
+             String id_sede = registros.getString("id_sede");
+             String fecha_inicio = registros.getString("fecha_inicio");
+               String fecha_fin = registros.getString("fecha_fin");
+            
+            
+                
+                usuario_sedeEncontrado = new Usuario_Sede(id_usuario, id_sede, fecha_inicio, fecha_fin);
+                return usuario_sedeEncontrado;
+           
+            }
+               
+        } catch (SQLException ex) {
+            System.out.println("Error al ejecutar el SELECT: ");
+            System.out.println(ex.getMessage());
+        
+        }
+         return usuario_sedeEncontrado;
+    }
+    
+     public boolean editarFechaFinUsuario_Sede(String id_usuario,String id_sede, String fecha_fin){
+          boolean respuesta = false;
+        try {
+            String consulta = "UPDATE Usuario_Sede SET fecha_fin='"+fecha_fin+"' WHERE id_usuario='"+id_usuario+"' AND id_sede='"+id_sede+"'";
+            int resp_consulta = manipularDB.executeUpdate(consulta);
+            if (resp_consulta==1) {
+                respuesta = true;
+            }
+        } catch (SQLException ex) {
+            System.out.println("--> Error Update: " + ex.getMessage());
+        }
+        if (respuesta){
+            System.out.println("Editado con exito");
+        }else{
+            System.out.println("No se pudo Editar");
+        }
+        return respuesta;
     }
     public boolean uploadPhoto(String cedula, ImageIcon imageIcon) {
         boolean respuesta = false;

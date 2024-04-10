@@ -18,12 +18,11 @@ public class Menu_vigilante extends javax.swing.JFrame {
    BaseDatos basedatos = new BaseDatos();
    Usuario usuario;
    String cedula;
-   String password;
    
-    public Menu_vigilante(String cedula, String password, BaseDatos basedatos) {
+   
+    public Menu_vigilante(String cedula, BaseDatos basedatos) {
         this.basedatos=basedatos;
         this.cedula=cedula;
-        this.password=password;
         initComponents();
         initAlternComponents();
         etq_registrarEquipoMouseClicked(null);

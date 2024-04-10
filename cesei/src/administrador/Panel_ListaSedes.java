@@ -1,12 +1,47 @@
 
 package administrador;
 
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.DefaultTableModel;
+import utils.BaseDatos;
+import utils.Sede;
+
 
 public class Panel_ListaSedes extends javax.swing.JPanel {
 
-   
-    public Panel_ListaSedes() {
+   DefaultTableModel modelo;
+   BaseDatos basedatos;
+   Sede listadoDeSedes [];
+    public Panel_ListaSedes(BaseDatos basedatos) {
+        this.basedatos = basedatos;
         initComponents();
+        initAlternComponents();
+        imprimirListadoDeSedes();
+    }
+    
+    public void initAlternComponents(){
+        
+        setVisible(true);
+        modelo = (DefaultTableModel) tabla_listaSedes.getModel();
+        
+        tabla_listaSedes.getColumnModel().getColumn(0).setPreferredWidth(100);
+        tabla_listaSedes.getColumnModel().getColumn(1).setPreferredWidth(150);
+        tabla_listaSedes.getColumnModel().getColumn(2).setPreferredWidth(100);
+        tabla_listaSedes.getColumnModel().getColumn(3).setPreferredWidth(100);
+        
+        
+        tabla_listaSedes.getTableHeader().setReorderingAllowed(false);
+        tabla_listaSedes.getTableHeader().setResizingAllowed(false);
+        
+        
+        DefaultTableCellRenderer centerRender = new DefaultTableCellRenderer();
+        centerRender.setHorizontalAlignment(SwingConstants.CENTER);
+        tabla_listaSedes.getColumnModel().getColumn(0).setCellRenderer(centerRender);
+        tabla_listaSedes.getColumnModel().getColumn(3).setCellRenderer(centerRender);
+        
+        
+        tabla_listaSedes.setRowHeight(20);
     }
 
     @SuppressWarnings("unchecked")
@@ -91,7 +126,31 @@ public class Panel_ListaSedes extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-
+public void imprimirListadoDeSedes(){
+     modelo.setRowCount(0);
+     
+     listadoDeSedes = basedatos.extraerSedes();
+     
+     if(listadoDeSedes != null && listadoDeSedes.length > 0){
+         for(int i = 0; i < listadoDeSedes.length; i++){
+             if(listadoDeSedes[i] != null){
+                String id_sede = listadoDeSedes[i].getNsede();
+                String direccion = listadoDeSedes[i].getDireccion();
+                String contacto = listadoDeSedes[i].getContacto();
+                String id_usuario = listadoDeSedes[i].getCedulaAdmin();
+             
+             Object objeto[] = new Object[]{id_sede,direccion, contacto, id_usuario }; 
+             modelo.addRow(objeto);
+             
+             }
+             
+         }
+     }
+     
+     
+    
+}
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel cont_head;
     private javax.swing.JPanel cont_main;

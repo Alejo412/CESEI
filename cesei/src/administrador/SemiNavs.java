@@ -192,7 +192,7 @@ public class SemiNavs extends javax.swing.JPanel {
     }//GEN-LAST:event_btn_editarActionPerformed
 
     private void btn_verSedesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verSedesActionPerformed
-         Panel_ListaSedes nuevo = new Panel_ListaSedes();
+         Panel_ListaSedes nuevo = new Panel_ListaSedes(basedatos);
  
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());

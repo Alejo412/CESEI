@@ -2,6 +2,8 @@
 package vigilante;
 
 import java.awt.Color;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import utils.BaseDatos;
 import utils.Usuario;
 
@@ -9,7 +11,7 @@ import utils.Usuario;
 public class Panel_perfilVigilante extends javax.swing.JPanel {
 
     BaseDatos basedatos;
-    Usuario usuario;
+    Usuario usuarioValidado;
     String cedula;
     
     
@@ -24,21 +26,37 @@ public class Panel_perfilVigilante extends javax.swing.JPanel {
     
     public void initAlternComponents(){
         
-        usuario = basedatos.validarIngreso(cedula);
+      usuarioValidado = basedatos.validarIngreso(cedula);
         
-        String nombres = usuario.getNombres();
-        String apellidos = usuario.getApellidos();
-        String correo = usuario.getEmail();
-        String telefono = usuario.getTelefono();
-        String fecha_nacimiento = usuario.getFecha_nacimiento();
-        
-       
-      
-        campo_nombre.setText(nombres);
-        campo_apellidos.setText(apellidos);
-        campo_correo.setText(correo);
-        campo_telefono.setText(telefono);
-        campo_fecha_nacimiento.setText(fecha_nacimiento);
+        if (usuarioValidado != null) {
+            String nombres = usuarioValidado.getNombres();
+            String apellidos = usuarioValidado.getApellidos();
+            String correo = usuarioValidado.getEmail();
+            String telefono = usuarioValidado.getTelefono();
+            String fecha_nacimiento = usuarioValidado.getFecha_nacimiento();
+
+            campo_nombre.setText(nombres);
+            campo_apellidos.setText(apellidos);
+            campo_correo.setText(correo);
+            campo_telefono.setText(telefono);
+            campo_fecha_nacimiento.setText(fecha_nacimiento);
+
+            Image foto_perfil = usuarioValidado.getFoto();
+            if (foto_perfil != null) {
+                foto_perfil = foto_perfil.getScaledInstance(250, 250, Image.SCALE_SMOOTH);
+                ImageIcon icono = new ImageIcon(foto_perfil);
+
+                // Asegúrate de que esta operación de interfaz de usuario se realice en el hilo de despacho de eventos de Swing
+                //SwingUtilities.invokeLater(() -> {
+                    etq_fotoVigilante.setIcon(icono);
+                
+            } else {
+                System.out.println("La foto de perfil está en null");
+            }
+        } else {
+            System.out.println("No se encontró el usuario");
+            // Manejar el caso en el que no se encuentra el usuario
+        }
     }
 
     @SuppressWarnings("unchecked")

@@ -1,5 +1,5 @@
 package principal;
-
+ 
 import administrador.Menu_Admin;
 import java.awt.Color;
 import java.awt.Image;
@@ -278,7 +278,7 @@ public class Login extends javax.swing.JFrame {
           if(usuario != null){
               System.out.println(usuario.getCedula());
               System.out.println(usuario.getNombres());
-              System.out.println(usuario.getPassword());
+              
           }else{
               System.out.println("El objeto usuario es null");
           }
@@ -286,12 +286,12 @@ public class Login extends javax.swing.JFrame {
           
           if(usuario.getTipo().equals(tipoAdmi)){
                 System.out.println("Se ha encontrado un usuario-Administrador");
-                Menu_Admin menuAdmi = new Menu_Admin(cedulaUsuario, passwordUsuario, basedatos);
+                Menu_Admin menuAdmi = new Menu_Admin(cedulaUsuario,  basedatos);
                 dispose();
                 
             }else if(usuario.getTipo().equals(tipoVigi)){
                 System.out.println("Se ha encontrado un usuario-Vigialante");
-                Menu_vigilante menuVigilante = new Menu_vigilante(cedulaUsuario, passwordUsuario, basedatos);
+                Menu_vigilante menuVigilante = new Menu_vigilante(cedulaUsuario, basedatos);
                 dispose();
             }
           

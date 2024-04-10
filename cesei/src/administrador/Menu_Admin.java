@@ -15,10 +15,9 @@ public class Menu_Admin extends javax.swing.JFrame {
     int xMouse, yMouse;
     BaseDatos basedatos = new BaseDatos();
     String cedulaAdmin;
-    String passwordAdmin;
-    public Menu_Admin(String cedulaAdmin, String passwordAdmin, BaseDatos basedatos) {
+   
+    public Menu_Admin(String cedulaAdmin, BaseDatos basedatos) {
         this.cedulaAdmin = cedulaAdmin;
-        this.passwordAdmin = passwordAdmin;
         this.basedatos=basedatos;
         initComponents();
         setTitle("Menu");
