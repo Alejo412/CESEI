@@ -5,16 +5,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import utils.BaseDatos;
-import administrador.Panel_RegistrarVigilante; 
 
 public class GuardarImagenBD extends javax.swing.JFrame {
     
     BaseDatos basedatos = new BaseDatos();
     ImageIcon imagenTemporal;
-    String cedula;
     
-     public GuardarImagenBD(String cedula) {
-        this.cedula = cedula; 
+    public GuardarImagenBD() {
         basedatos = new BaseDatos();
         
         initComponents();
@@ -40,6 +37,8 @@ public class GuardarImagenBD extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         imagenLabel = new javax.swing.JLabel();
         btnUploadImage = new javax.swing.JButton();
+        etqCedula = new javax.swing.JLabel();
+        campoCedula = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -102,6 +101,10 @@ public class GuardarImagenBD extends javax.swing.JFrame {
             }
         });
 
+        etqCedula.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        etqCedula.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        etqCedula.setText("CEDULA:");
+
         javax.swing.GroupLayout panelPreviewLayout = new javax.swing.GroupLayout(panelPreview);
         panelPreview.setLayout(panelPreviewLayout);
         panelPreviewLayout.setHorizontalGroup(
@@ -109,12 +112,18 @@ public class GuardarImagenBD extends javax.swing.JFrame {
             .addComponent(etqPreview, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE)
             .addGroup(panelPreviewLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-            .addGroup(panelPreviewLayout.createSequentialGroup()
-                .addGap(143, 143, 143)
-                .addComponent(btnUploadImage, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panelPreviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPreviewLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(etqCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnUploadImage, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelPreviewLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())))
         );
         panelPreviewLayout.setVerticalGroup(
             panelPreviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,7 +132,10 @@ public class GuardarImagenBD extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnUploadImage, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                .addGroup(panelPreviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campoCedula)
+                    .addComponent(etqCedula, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnUploadImage, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
                 .addGap(12, 12, 12))
         );
 
@@ -162,17 +174,20 @@ public class GuardarImagenBD extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoadImageActionPerformed
 
     private void btnUploadImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadImageActionPerformed
-     
+        String cedula = campoCedula.getText();
+        if (!cedula.equalsIgnoreCase("") && imagenTemporal!=null) {
             basedatos.uploadPhoto(cedula, imagenTemporal);
             
             dispose();
-        
+        }
     }//GEN-LAST:event_btnUploadImageActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLoadImage;
     private javax.swing.JButton btnUploadImage;
+    private javax.swing.JTextField campoCedula;
+    private javax.swing.JLabel etqCedula;
     private javax.swing.JLabel etqPreview;
     private javax.swing.JLabel etqTitulo;
     private javax.swing.JLabel imagenLabel;

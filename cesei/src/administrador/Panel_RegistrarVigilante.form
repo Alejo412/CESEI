@@ -101,7 +101,7 @@
                       <Component id="campo_contraseña" alignment="0" max="32767" attributes="0"/>
                       <Component id="jSeparator7" alignment="1" pref="354" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="9" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
@@ -111,18 +111,20 @@
                                   <Component id="campo_telefono" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jSeparator4" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="etq_fechaNacimiento" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="campo_fechaNacimiento" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jSeparator3" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="campo_fechaNacimiento" min="-2" pref="217" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="calender_elegirFecha" min="-2" pref="111" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="jSeparator3" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="etq_correo" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="campo_correo" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jSeparator6" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="etq_fechaNacimiento" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="18" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="btn_registrar" min="-2" pref="108" max="-2" attributes="0"/>
@@ -163,9 +165,14 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="etq_fechaNacimiento" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="campo_fechaNacimiento" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          <Component id="jSeparator3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="campo_fechaNacimiento" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                  <Component id="jSeparator3" min="-2" pref="20" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="calender_elegirFecha" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="etq_nombre" min="-2" max="-2" attributes="0"/>
@@ -183,12 +190,12 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btn_registrar" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="etq_contraseña" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="campo_contraseña" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="btn_registrar" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   <Component id="jSeparator7" min="-2" pref="20" max="-2" attributes="0"/>
@@ -247,7 +254,6 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="aaaa/mm/dd"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -479,6 +485,11 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="calender_elegirFecha">
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="calender_elegirFechaPropertyChange"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -7,6 +7,7 @@
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_RegistrarVigilante.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EditarVigilante.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_ListaSedes.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/alerta/Alerta.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Plantilla.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Entrada.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Persona.java</file>
@@ -21,9 +22,11 @@
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EditarSede.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/SemiNavs.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/utils/Usuario_Sede.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Computador.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EliminarSede.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Menu_Admin.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_ListaVigilantes.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_RegistrarSalida.java</file>
         </group>
     </open-files>
 </project-private>
