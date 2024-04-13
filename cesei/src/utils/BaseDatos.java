@@ -3,6 +3,7 @@ package utils;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -427,4 +428,123 @@ public class BaseDatos {
     }
     
     
+
+
+public Usuario BuscarUsuario(String documento) {
+    Usuario encontrado = null;
+
+    try {
+        String consulta = "SELECT * FROM usuario WHERE usuario.id_usuario = '" + documento + "'";
+        ResultSet registros = manipularDB.executeQuery(consulta);
+
+        if (registros.next()) {
+            String nombres = registros.getString("nombres");
+            String apellidos = registros.getString("apellidos");
+            String telefono = registros.getString("telefono");
+            String correo = registros.getString("correo");
+            String tipo = registros.getString("tipo");
+            String password = registros.getString("password");
+            
+            // Obtener la fecha de nacimiento como un objeto java.sql.Date
+            java.sql.Date fechaNacimientoSql = registros.getDate("f_nacimiento");
+            
+            // Convertir la fecha de nacimiento a una cadena (string)
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            String fechaNacimiento = sdf.format(fechaNacimientoSql);
+            
+            Image foto = null;
+
+            // Cargar la foto BLOB en un objeto Image
+            InputStream inputStream = registros.getBinaryStream("foto");
+            if (inputStream != null) {
+                byte[] bytes = new byte[inputStream.available()];
+                inputStream.read(bytes);
+                foto = new ImageIcon(bytes, documento).getImage();
+            }
+
+            encontrado = new Usuario(documento, nombres, apellidos, telefono, correo, password, tipo, fechaNacimiento, foto);
+        }
+    } catch (IOException ex) {
+        System.out.println("Se presentó un error al extraer la foto: " + ex.getMessage());
+    } catch (SQLException ex) {
+        System.out.println("Error al ejecutar el SELECT: " + ex.getMessage());
+    }
+
+    return encontrado;
 }
+
+
+
+public boolean editarUsuario(String cedula, String nombre, String apellido, String correo, String telefono, String fechaNacimiento, ImageIcon nuevaImagen) {
+    try {
+        // Convertir la imagen a un array de bytes
+        byte[] nuevaImagenBytes = null;
+        if (nuevaImagen != null) {
+            Image img = nuevaImagen.getImage();
+            BufferedImage bImage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+            Graphics2D bImageGraphics = bImage.createGraphics();
+            bImageGraphics.drawImage(img, 0, 0, null);
+            bImageGraphics.dispose();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ImageIO.write(bImage, "png", baos);
+            nuevaImagenBytes = baos.toByteArray();
+        }
+        
+        // Crear la consulta SQL para actualizar los datos del usuario
+        String consulta;
+        if (nuevaImagenBytes != null) {
+            consulta = "UPDATE usuario SET nombres = ?, apellidos = ?, correo = ?, telefono = ?, f_nacimiento = ?, foto = ? WHERE id_usuario = ?";
+        } else {
+            consulta = "UPDATE usuario SET nombres = ?, apellidos = ?, correo = ?, telefono = ?, f_nacimiento = ? WHERE id_usuario = ?";
+        }
+        
+        // Preparar la consulta SQL
+        PreparedStatement statement = conexion.prepareStatement(consulta);
+        
+        // Establecer los valores de los parámetros de la consulta
+        statement.setString(1, nombre);
+        statement.setString(2, apellido);
+        statement.setString(3, correo);
+        statement.setString(4, telefono);
+        
+        // Convertir la fecha de nacimiento a un objeto Date de manera segura
+        java.sql.Date fechaSql = null;
+        if (fechaNacimiento != null && !fechaNacimiento.isEmpty()) {
+            fechaSql = java.sql.Date.valueOf(fechaNacimiento);
+        }
+        statement.setDate(5, fechaSql);
+        
+        // Establecer la nueva imagen como un Blob
+        if (nuevaImagenBytes != null) {
+            ByteArrayInputStream bais = new ByteArrayInputStream(nuevaImagenBytes);
+            statement.setBinaryStream(6, bais, nuevaImagenBytes.length);
+            statement.setString(7, cedula);
+        } else {
+            statement.setString(6, cedula);
+        }
+        
+        // Ejecutar la consulta SQL
+        int filasActualizadas = statement.executeUpdate();
+        
+        // Verificar si se actualizaron correctamente las filas
+        if (filasActualizadas > 0) {
+            return true; // La edición fue exitosa
+        } else {
+            return false; // No se actualizó ninguna fila, puede que el usuario no exista
+        }
+    } catch (SQLException ex) {
+        System.out.println("Error al ejecutar la consulta de actualización: " + ex.getMessage());
+        return false;
+    } catch (IOException ex) {
+        System.out.println("Error al convertir la imagen: " + ex.getMessage());
+        return false;
+    }
+}
+}
+
+
+
+
+
+
+

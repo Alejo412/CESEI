@@ -7,9 +7,11 @@ import utils.BaseDatos;
 public class SemiNavsVigilantes extends javax.swing.JPanel {
 
   BaseDatos basedatos = new BaseDatos();
+  String cedula_vigilante;
    
     public SemiNavsVigilantes(BaseDatos baseDatos) {
         this.basedatos = basedatos;
+        
         initComponents();
     }
 
@@ -147,7 +149,7 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
     }//GEN-LAST:event_btn_eliminarActionPerformed
 
     private void btn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editarActionPerformed
-        Panel_EditarVigilante nuevo = new Panel_EditarVigilante();
+        Panel_EditarVigilante nuevo = new Panel_EditarVigilante(cedula_vigilante, basedatos);
    
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());

@@ -46,7 +46,8 @@ public class Panel_perfilVigilante extends javax.swing.JPanel {
                 foto_perfil = foto_perfil.getScaledInstance(250, 250, Image.SCALE_SMOOTH);
                 ImageIcon icono = new ImageIcon(foto_perfil);
 
-                
+                // Asegúrate de que esta operación de interfaz de usuario se realice en el hilo de despacho de eventos de Swing
+                //SwingUtilities.invokeLater(() -> {
                     etq_fotoVigilante.setIcon(icono);
                 
             } else {
