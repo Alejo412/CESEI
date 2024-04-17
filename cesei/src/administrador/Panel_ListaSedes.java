@@ -13,6 +13,7 @@ public class Panel_ListaSedes extends javax.swing.JPanel {
    DefaultTableModel modelo;
    BaseDatos basedatos;
    Sede listadoDeSedes [];
+   String casa;
     public Panel_ListaSedes(BaseDatos basedatos) {
         this.basedatos = basedatos;
         initComponents();
@@ -141,6 +142,8 @@ public void imprimirListadoDeSedes(){
              
              Object objeto[] = new Object[]{id_sede,direccion, contacto, id_usuario }; 
              modelo.addRow(objeto);
+             
+             
              
              }
              
