@@ -23,8 +23,6 @@ public class Panel_EditarSede extends javax.swing.JPanel {
     private void initComponents() {
 
         contenedor = new javax.swing.JPanel();
-        cont_head = new javax.swing.JPanel();
-        etq_titulo = new javax.swing.JLabel();
         cont_main = new javax.swing.JPanel();
         etq_Nsede = new javax.swing.JLabel();
         campo_direccion = new javax.swing.JTextField();
@@ -38,43 +36,15 @@ public class Panel_EditarSede extends javax.swing.JPanel {
         campo_Nsede = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
 
-        cont_head.setBackground(new java.awt.Color(56, 128, 255));
-
-        etq_titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
-        etq_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        etq_titulo.setText("Editar Sede");
-
-        javax.swing.GroupLayout cont_headLayout = new javax.swing.GroupLayout(cont_head);
-        cont_head.setLayout(cont_headLayout);
-        cont_headLayout.setHorizontalGroup(
-            cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(cont_headLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(etq_titulo)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        cont_headLayout.setVerticalGroup(
-            cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(cont_headLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(etq_titulo)
-                    .addGap(0, 16, Short.MAX_VALUE)))
-        );
-
-        cont_main.setBackground(new java.awt.Color(0, 74, 173));
+        cont_main.setBackground(new java.awt.Color(242, 242, 242));
 
         etq_Nsede.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_Nsede.setForeground(new java.awt.Color(255, 255, 255));
+        etq_Nsede.setForeground(new java.awt.Color(0, 0, 0));
         etq_Nsede.setText("N° Sede");
 
-        campo_direccion.setBackground(new java.awt.Color(0, 74, 173));
+        campo_direccion.setBackground(new java.awt.Color(242, 242, 242));
         campo_direccion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_direccion.setForeground(new java.awt.Color(204, 204, 255));
+        campo_direccion.setForeground(new java.awt.Color(0, 0, 0));
         campo_direccion.setText("Direccion de sede ");
         campo_direccion.setBorder(null);
         campo_direccion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -83,10 +53,11 @@ public class Panel_EditarSede extends javax.swing.JPanel {
             }
         });
 
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_direccion.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_direccion.setForeground(new java.awt.Color(255, 255, 255));
+        etq_direccion.setForeground(new java.awt.Color(0, 0, 0));
         etq_direccion.setText("Direccion");
 
         btn_buscarSede.setBackground(new java.awt.Color(0, 191, 99));
@@ -101,9 +72,9 @@ public class Panel_EditarSede extends javax.swing.JPanel {
             }
         });
 
-        campo_contacto.setBackground(new java.awt.Color(0, 74, 173));
+        campo_contacto.setBackground(new java.awt.Color(242, 242, 242));
         campo_contacto.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_contacto.setForeground(new java.awt.Color(204, 204, 255));
+        campo_contacto.setForeground(new java.awt.Color(0, 0, 0));
         campo_contacto.setText("Número o Email");
         campo_contacto.setBorder(null);
         campo_contacto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -112,7 +83,8 @@ public class Panel_EditarSede extends javax.swing.JPanel {
             }
         });
 
-        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
         btn_editarSede.setBackground(new java.awt.Color(0, 191, 99));
         btn_editarSede.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
@@ -127,12 +99,12 @@ public class Panel_EditarSede extends javax.swing.JPanel {
         });
 
         etq_sede.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_sede.setForeground(new java.awt.Color(255, 255, 255));
+        etq_sede.setForeground(new java.awt.Color(0, 0, 0));
         etq_sede.setText("Contacto");
 
-        campo_Nsede.setBackground(new java.awt.Color(0, 74, 173));
+        campo_Nsede.setBackground(new java.awt.Color(242, 242, 242));
         campo_Nsede.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_Nsede.setForeground(new java.awt.Color(204, 204, 255));
+        campo_Nsede.setForeground(new java.awt.Color(0, 0, 0));
         campo_Nsede.setText("N° de sede");
         campo_Nsede.setBorder(null);
         campo_Nsede.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -141,7 +113,8 @@ public class Panel_EditarSede extends javax.swing.JPanel {
             }
         });
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout cont_mainLayout = new javax.swing.GroupLayout(cont_main);
         cont_main.setLayout(cont_mainLayout);
@@ -218,14 +191,12 @@ public class Panel_EditarSede extends javax.swing.JPanel {
         contenedor.setLayout(contenedorLayout);
         contenedorLayout.setHorizontalGroup(
             contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cont_head, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         contenedorLayout.setVerticalGroup(
             contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contenedorLayout.createSequentialGroup()
-                .addComponent(cont_head, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
                 .addComponent(cont_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -303,13 +274,11 @@ public class Panel_EditarSede extends javax.swing.JPanel {
     private javax.swing.JTextField campo_Nsede;
     private javax.swing.JTextField campo_contacto;
     private javax.swing.JTextField campo_direccion;
-    private javax.swing.JPanel cont_head;
     private javax.swing.JPanel cont_main;
     private javax.swing.JPanel contenedor;
     private javax.swing.JLabel etq_Nsede;
     private javax.swing.JLabel etq_direccion;
     private javax.swing.JLabel etq_sede;
-    private javax.swing.JLabel etq_titulo;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

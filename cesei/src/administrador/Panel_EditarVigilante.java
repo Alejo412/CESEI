@@ -31,8 +31,6 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cont_head = new javax.swing.JPanel();
-        etq_titulo = new javax.swing.JLabel();
         cont_main = new javax.swing.JPanel();
         campo_fechaNacimiento = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
@@ -56,39 +54,11 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
         etq_correo = new javax.swing.JLabel();
         campo_foto = new javax.swing.JLabel();
 
-        cont_head.setBackground(new java.awt.Color(56, 128, 255));
+        cont_main.setBackground(new java.awt.Color(242, 242, 242));
 
-        etq_titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
-        etq_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        etq_titulo.setText("Editar Vigilante");
-
-        javax.swing.GroupLayout cont_headLayout = new javax.swing.GroupLayout(cont_head);
-        cont_head.setLayout(cont_headLayout);
-        cont_headLayout.setHorizontalGroup(
-            cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(cont_headLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(etq_titulo)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        cont_headLayout.setVerticalGroup(
-            cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
-            .addGroup(cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(cont_headLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(etq_titulo)
-                    .addGap(0, 12, Short.MAX_VALUE)))
-        );
-
-        cont_main.setBackground(new java.awt.Color(0, 74, 173));
-
-        campo_fechaNacimiento.setBackground(new java.awt.Color(0, 74, 173));
+        campo_fechaNacimiento.setBackground(new java.awt.Color(242, 242, 242));
         campo_fechaNacimiento.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_fechaNacimiento.setForeground(new java.awt.Color(204, 204, 255));
+        campo_fechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
         campo_fechaNacimiento.setBorder(null);
         campo_fechaNacimiento.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -96,11 +66,11 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
             }
         });
 
-        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
-        campo_apellido.setBackground(new java.awt.Color(0, 74, 173));
+        campo_apellido.setBackground(new java.awt.Color(242, 242, 242));
         campo_apellido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_apellido.setForeground(new java.awt.Color(204, 204, 255));
+        campo_apellido.setForeground(new java.awt.Color(0, 0, 0));
         campo_apellido.setBorder(null);
         campo_apellido.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -108,9 +78,9 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
             }
         });
 
-        campo_correo.setBackground(new java.awt.Color(0, 74, 173));
+        campo_correo.setBackground(new java.awt.Color(242, 242, 242));
         campo_correo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_correo.setForeground(new java.awt.Color(204, 204, 255));
+        campo_correo.setForeground(new java.awt.Color(0, 0, 0));
         campo_correo.setBorder(null);
         campo_correo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -118,9 +88,9 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
             }
         });
 
-        campo_telefono.setBackground(new java.awt.Color(0, 74, 173));
+        campo_telefono.setBackground(new java.awt.Color(242, 242, 242));
         campo_telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_telefono.setForeground(new java.awt.Color(204, 204, 255));
+        campo_telefono.setForeground(new java.awt.Color(0, 0, 0));
         campo_telefono.setBorder(null);
         campo_telefono.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -129,7 +99,7 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
         });
 
         etq_fechaNacimieto.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_fechaNacimieto.setForeground(new java.awt.Color(255, 255, 255));
+        etq_fechaNacimieto.setForeground(new java.awt.Color(0, 0, 0));
         etq_fechaNacimieto.setText("Fecha de nacimiento");
 
         btn_editarVigilante.setBackground(new java.awt.Color(0, 191, 99));
@@ -145,15 +115,15 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
             }
         });
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_cedula.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_cedula.setForeground(new java.awt.Color(255, 255, 255));
+        etq_cedula.setForeground(new java.awt.Color(0, 0, 0));
         etq_cedula.setText("Cédula");
 
-        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
 
         btn_buscarVigilante.setBackground(new java.awt.Color(0, 191, 99));
         btn_buscarVigilante.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
@@ -169,12 +139,12 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
         });
 
         etq_nombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        etq_nombre.setForeground(new java.awt.Color(0, 0, 0));
         etq_nombre.setText("Nombres");
 
-        campo_cedula.setBackground(new java.awt.Color(0, 74, 173));
+        campo_cedula.setBackground(new java.awt.Color(242, 242, 242));
         campo_cedula.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_cedula.setForeground(new java.awt.Color(204, 204, 255));
+        campo_cedula.setForeground(new java.awt.Color(0, 0, 0));
         campo_cedula.setText("Documento del vigilante");
         campo_cedula.setBorder(null);
         campo_cedula.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -183,28 +153,26 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
             }
         });
 
-        campo_nombre.setBackground(new java.awt.Color(0, 74, 173));
+        campo_nombre.setBackground(new java.awt.Color(242, 242, 242));
         campo_nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_nombre.setForeground(new java.awt.Color(204, 204, 255));
+        campo_nombre.setForeground(new java.awt.Color(0, 0, 0));
         campo_nombre.setBorder(null);
 
-        jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_apellido.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_apellido.setForeground(new java.awt.Color(255, 255, 255));
+        etq_apellido.setForeground(new java.awt.Color(0, 0, 0));
         etq_apellido.setText("Apellidos");
 
-        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_telefono.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_telefono.setForeground(new java.awt.Color(255, 255, 255));
+        etq_telefono.setForeground(new java.awt.Color(0, 0, 0));
         etq_telefono.setText("Telefono");
 
         etq_correo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_correo.setForeground(new java.awt.Color(255, 255, 255));
+        etq_correo.setForeground(new java.awt.Color(0, 0, 0));
         etq_correo.setText("Correo");
-
-        campo_foto.setText("campo_foto");
 
         javax.swing.GroupLayout cont_mainLayout = new javax.swing.GroupLayout(cont_main);
         cont_main.setLayout(cont_mainLayout);
@@ -252,7 +220,7 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
         cont_mainLayout.setVerticalGroup(
             cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cont_mainLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
                         .addComponent(etq_cedula)
@@ -307,15 +275,11 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cont_head, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(cont_head, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(cont_main, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -418,7 +382,6 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
     private javax.swing.JLabel campo_foto;
     private javax.swing.JTextField campo_nombre;
     private javax.swing.JTextField campo_telefono;
-    private javax.swing.JPanel cont_head;
     private javax.swing.JPanel cont_main;
     private javax.swing.JLabel etq_apellido;
     private javax.swing.JLabel etq_cedula;
@@ -426,7 +389,6 @@ public class Panel_EditarVigilante extends javax.swing.JPanel {
     private javax.swing.JLabel etq_fechaNacimieto;
     private javax.swing.JLabel etq_nombre;
     private javax.swing.JLabel etq_telefono;
-    private javax.swing.JLabel etq_titulo;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

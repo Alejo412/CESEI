@@ -53,42 +53,13 @@ public class Panel_ListaVigilantes extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        conte_head = new javax.swing.JPanel();
-        etq_titulo = new javax.swing.JLabel();
         conte_main = new javax.swing.JPanel();
         conte_listadoVigilantes = new javax.swing.JScrollPane();
         tabla_listaVigilantes = new javax.swing.JTable();
 
-        conte_head.setBackground(new java.awt.Color(56, 128, 255));
-
-        etq_titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
-        etq_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        etq_titulo.setText("Lista Vigilantes");
-
-        javax.swing.GroupLayout conte_headLayout = new javax.swing.GroupLayout(conte_head);
-        conte_head.setLayout(conte_headLayout);
-        conte_headLayout.setHorizontalGroup(
-            conte_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(conte_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(conte_headLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(etq_titulo)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        conte_headLayout.setVerticalGroup(
-            conte_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(conte_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(conte_headLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(etq_titulo)
-                    .addGap(0, 28, Short.MAX_VALUE)))
-        );
-
         conte_main.setBackground(new java.awt.Color(0, 74, 173));
 
+        tabla_listaVigilantes.setBackground(new java.awt.Color(242, 242, 242));
         tabla_listaVigilantes.setForeground(new java.awt.Color(0, 0, 0));
         tabla_listaVigilantes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -109,7 +80,7 @@ public class Panel_ListaVigilantes extends javax.swing.JPanel {
         conte_main.setLayout(conte_mainLayout);
         conte_mainLayout.setHorizontalGroup(
             conte_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(conte_listadoVigilantes)
+            .addComponent(conte_listadoVigilantes, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
         conte_mainLayout.setVerticalGroup(
             conte_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,16 +91,14 @@ public class Panel_ListaVigilantes extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(conte_head, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(conte_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(conte_head, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
                 .addComponent(conte_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -162,10 +131,8 @@ public class Panel_ListaVigilantes extends javax.swing.JPanel {
      
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel conte_head;
     private javax.swing.JScrollPane conte_listadoVigilantes;
     private javax.swing.JPanel conte_main;
-    private javax.swing.JLabel etq_titulo;
     private javax.swing.JTable tabla_listaVigilantes;
     // End of variables declaration//GEN-END:variables
 }

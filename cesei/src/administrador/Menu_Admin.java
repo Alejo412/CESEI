@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import administrador.SemiNavsSede;
 import administrador.Perfil_admin;
 import administrador.SemiNavsSede;
+import javax.swing.JFrame;
 import utils.BaseDatos;
 
 
@@ -19,19 +20,28 @@ public class Menu_Admin extends javax.swing.JFrame {
     public Menu_Admin(String cedulaAdmin, BaseDatos basedatos) {
         this.cedulaAdmin = cedulaAdmin;
         this.basedatos=basedatos;
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
         setTitle("Menu");
         setLocationRelativeTo(null);
         setVisible(true);
         setResizable(false);
         initAlternComponents();
+        
+        
     }
     
     public void initAlternComponents(){
-        Image icono_registro = getToolkit().createImage(ClassLoader.getSystemResource("imagenes/icono_usuario.png"));
-        icono_registro = icono_registro.getScaledInstance(130, 114, Image.SCALE_SMOOTH);
+        setIconImage( getToolkit().createImage( ClassLoader.getSystemResource("imagenes/logo_blanco.png") ) );
+        
+        Image img_warning = getToolkit().createImage( ClassLoader.getSystemResource("imagenes/logo_blanco.png") );
+        img_warning = img_warning.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+        etq_logo.setIcon(new ImageIcon(img_warning));
+        
+        Image icono_registro = getToolkit().createImage(ClassLoader.getSystemResource("imagenes/icono_perfil_slta.png"));
+        icono_registro = icono_registro.getScaledInstance(150, 120, Image.SCALE_SMOOTH);
         imgUsuario.setIcon(new ImageIcon(icono_registro));
-        setIconImage(getToolkit().createImage(ClassLoader.getSystemResource("imagenes/icono_usuario.png")));
+        
     }
     
     @SuppressWarnings("unchecked")
@@ -41,11 +51,10 @@ public class Menu_Admin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         header = new javax.swing.JPanel();
         nav_Principal = new javax.swing.JPanel();
-        etq_titulo = new javax.swing.JLabel();
         btnSede = new javax.swing.JButton();
         btnVigilante = new javax.swing.JButton();
         imgUsuario = new javax.swing.JLabel();
-        exitTxt = new javax.swing.JLabel();
+        etq_logo = new javax.swing.JLabel();
         ventana_emergente = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -64,7 +73,7 @@ public class Menu_Admin extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        header.setBackground(new java.awt.Color(56, 128, 255));
+        header.setBackground(new java.awt.Color(102, 102, 102));
         header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 headerMouseDragged(evt);
@@ -82,15 +91,10 @@ public class Menu_Admin extends javax.swing.JFrame {
             }
         });
 
-        nav_Principal.setBackground(new java.awt.Color(56, 128, 255));
+        nav_Principal.setBackground(new java.awt.Color(0, 0, 0));
 
-        etq_titulo.setFont(new java.awt.Font("Roboto Black", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
-        etq_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        etq_titulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CESEILOGO.png"))); // NOI18N
-
-        btnSede.setBackground(new java.awt.Color(56, 128, 255));
-        btnSede.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        btnSede.setBackground(new java.awt.Color(0, 0, 0));
+        btnSede.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         btnSede.setForeground(new java.awt.Color(255, 255, 255));
         btnSede.setText("SEDES");
         btnSede.setBorder(null);
@@ -101,8 +105,8 @@ public class Menu_Admin extends javax.swing.JFrame {
             }
         });
 
-        btnVigilante.setBackground(new java.awt.Color(56, 128, 255));
-        btnVigilante.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        btnVigilante.setBackground(new java.awt.Color(0, 0, 0));
+        btnVigilante.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         btnVigilante.setForeground(new java.awt.Color(255, 255, 255));
         btnVigilante.setText("VIGILANTES");
         btnVigilante.setBorder(null);
@@ -125,61 +129,31 @@ public class Menu_Admin extends javax.swing.JFrame {
         nav_PrincipalLayout.setHorizontalGroup(
             nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(nav_PrincipalLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(etq_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(227, 227, 227)
-                .addComponent(btnSede)
-                .addGap(74, 74, 74)
+                .addGap(51, 51, 51)
+                .addComponent(etq_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(195, 195, 195)
+                .addComponent(btnSede, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106)
                 .addComponent(btnVigilante)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
-                .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(81, 81, 81))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(94, 94, 94))
         );
         nav_PrincipalLayout.setVerticalGroup(
             nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(nav_PrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(etq_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(nav_PrincipalLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addGroup(nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(etq_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(nav_PrincipalLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addGroup(nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnSede)
-                            .addComponent(btnVigilante)))
-                    .addGroup(nav_PrincipalLayout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnSede, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        exitTxt.setBackground(new java.awt.Color(56, 128, 255));
-        exitTxt.setFont(new java.awt.Font("Roboto Light", 0, 24)); // NOI18N
-        exitTxt.setForeground(new java.awt.Color(255, 255, 255));
-        exitTxt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        exitTxt.setText("X");
-        exitTxt.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        exitTxt.setOpaque(true);
-        exitTxt.setPreferredSize(new java.awt.Dimension(40, 40));
-        exitTxt.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                exitTxtMouseDragged(evt);
-            }
-        });
-        exitTxt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                exitTxtMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                exitTxtMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                exitTxtMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                exitTxtMousePressed(evt);
-            }
-        });
-
-        ventana_emergente.setBackground(new java.awt.Color(0, 74, 173));
+        ventana_emergente.setBackground(new java.awt.Color(242, 242, 242));
 
         javax.swing.GroupLayout ventana_emergenteLayout = new javax.swing.GroupLayout(ventana_emergente);
         ventana_emergente.setLayout(ventana_emergenteLayout);
@@ -189,27 +163,28 @@ public class Menu_Admin extends javax.swing.JFrame {
         );
         ventana_emergenteLayout.setVerticalGroup(
             ventana_emergenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 602, Short.MAX_VALUE)
+            .addGap(0, 507, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
         header.setLayout(headerLayout);
         headerLayout.setHorizontalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(nav_Principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(headerLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(exitTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(ventana_emergente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ventana_emergente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(nav_Principal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         headerLayout.setVerticalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
-                .addComponent(exitTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(nav_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(ventana_emergente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(nav_Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 98, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ventana_emergente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -226,6 +201,53 @@ public class Menu_Admin extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_headerMousePressed
+
+    private void headerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_headerMouseClicked
+
+    private void headerMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_headerMouseMoved
+
+    private void headerMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_headerMouseDragged
+
+    private void imgUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgUsuarioMouseClicked
+        //crear contenedor nuevo
+        Perfil_admin nuevo = new Perfil_admin(cedulaAdmin, basedatos);
+        //ajustar tamaño
+        nuevo.setPreferredSize(ventana_emergente.getPreferredSize());
+        nuevo.setSize(ventana_emergente.getSize());
+        //eliminar contenido del content principal
+        ventana_emergente.removeAll();
+        //agregar contenido listar
+        ventana_emergente.add(nuevo);
+        repaint();
+        revalidate();
+    }//GEN-LAST:event_imgUsuarioMouseClicked
+
+    private void btnVigilanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVigilanteActionPerformed
+        //crear contenedor nuevo
+        SemiNavsVigilantes nuevo = new SemiNavsVigilantes(basedatos);
+        //ajustar tamaño
+        nuevo.setPreferredSize(ventana_emergente.getPreferredSize());
+        nuevo.setSize(ventana_emergente.getSize());
+        //eliminar contenido del content principal
+        ventana_emergente.removeAll();
+        //agregar contenido listar
+        ventana_emergente.add(nuevo);
+        repaint();
+        revalidate();
+    }//GEN-LAST:event_btnVigilanteActionPerformed
+
     private void btnSedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSedeActionPerformed
         //crear contenedor nuevo
         SemiNavsSede nuevo = new SemiNavsSede(basedatos);
@@ -240,83 +262,13 @@ public class Menu_Admin extends javax.swing.JFrame {
         revalidate();
     }//GEN-LAST:event_btnSedeActionPerformed
 
-    private void exitTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMousePressed
-        
-    }//GEN-LAST:event_exitTxtMousePressed
-
-    private void exitTxtMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseDragged
-        
-    }//GEN-LAST:event_exitTxtMouseDragged
-
-    private void exitTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_exitTxtMouseClicked
-
-    private void exitTxtMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseEntered
-        exitTxt.setBackground(Color.red);
-        exitTxt.setForeground(Color.white);
-    }//GEN-LAST:event_exitTxtMouseEntered
-
-    private void exitTxtMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitTxtMouseExited
-        exitTxt.setBackground(new Color(56,128,255));
-        exitTxt.setForeground(Color.white);
-    }//GEN-LAST:event_exitTxtMouseExited
-
-    private void headerMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseDragged
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_headerMouseDragged
-
-    private void headerMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseMoved
-        // TODO add your handling code here:
-    }//GEN-LAST:event_headerMouseMoved
-
-    private void headerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_headerMouseClicked
-
-    private void headerMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_headerMousePressed
-        xMouse = evt.getX();
-        yMouse = evt.getY();
-    }//GEN-LAST:event_headerMousePressed
-
-    private void btnVigilanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVigilanteActionPerformed
-         //crear contenedor nuevo
-        SemiNavsVigilantes nuevo = new SemiNavsVigilantes(basedatos);
-        //ajustar tamaño
-        nuevo.setPreferredSize(ventana_emergente.getPreferredSize());
-        nuevo.setSize(ventana_emergente.getSize());
-        //eliminar contenido del content principal
-        ventana_emergente.removeAll();
-        //agregar contenido listar
-        ventana_emergente.add(nuevo);
-        repaint();
-        revalidate();
-    }//GEN-LAST:event_btnVigilanteActionPerformed
-
-    private void imgUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgUsuarioMouseClicked
-          //crear contenedor nuevo
-        Perfil_admin nuevo = new Perfil_admin(cedulaAdmin, basedatos);
-        //ajustar tamaño
-        nuevo.setPreferredSize(ventana_emergente.getPreferredSize());
-        nuevo.setSize(ventana_emergente.getSize());
-        //eliminar contenido del content principal
-        ventana_emergente.removeAll();
-        //agregar contenido listar
-        ventana_emergente.add(nuevo);
-        repaint();
-        revalidate();
-    }//GEN-LAST:event_imgUsuarioMouseClicked
-
    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSede;
     private javax.swing.JButton btnVigilante;
-    private javax.swing.JLabel etq_titulo;
-    private javax.swing.JLabel exitTxt;
+    private javax.swing.JLabel etq_logo;
     private javax.swing.JPanel header;
     private javax.swing.JLabel imgUsuario;
     private javax.swing.JPanel jPanel1;

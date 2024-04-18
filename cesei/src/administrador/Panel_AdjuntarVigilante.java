@@ -32,6 +32,20 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
         this.basedatos = basedatos;
         this.fechaFin = null;
         initComponents();
+        initAlternComponents();
+    }
+    
+     public void initAlternComponents(){
+        
+        Image img_warning = getToolkit().createImage( ClassLoader.getSystemResource("imagenes/cesei_logoNuevo.png") );
+        img_warning = img_warning.getScaledInstance(1000, 1000, Image.SCALE_SMOOTH);
+        etq_fotoVigilante.setIcon(new ImageIcon(img_warning));
+        
+         Image icono_registro = getToolkit().createImage(ClassLoader.getSystemResource("imagenes/cesei_logoNuevo.png"));
+        icono_registro = icono_registro.getScaledInstance(80, 84, Image.SCALE_SMOOTH);
+        etq_fotoVigilante.setIcon(new ImageIcon(icono_registro));
+        
+        
     }
 
    
@@ -40,10 +54,7 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
     private void initComponents() {
 
         jButton2 = new javax.swing.JButton();
-        cont_head = new javax.swing.JPanel();
-        etq_titulo = new javax.swing.JLabel();
         cont_main = new javax.swing.JPanel();
-        etq_fotoVigilante = new javax.swing.JLabel();
         etq_fechaNacimiento = new javax.swing.JLabel();
         campo_cedulaVigilante = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -64,6 +75,7 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
         btn_desajuntar = new javax.swing.JButton();
         etq_sedesAcargo = new javax.swing.JLabel();
         campo_sedesAcargo = new javax.swing.JTextField();
+        etq_fotoVigilante = new javax.swing.JLabel();
 
         jButton2.setBackground(new java.awt.Color(0, 74, 173));
         jButton2.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
@@ -72,43 +84,16 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
         jButton2.setBorder(null);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        cont_head.setBackground(new java.awt.Color(56, 128, 255));
-
-        etq_titulo.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
-        etq_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        etq_titulo.setText("Adjuntar Vigilante - Sede");
-
-        javax.swing.GroupLayout cont_headLayout = new javax.swing.GroupLayout(cont_head);
-        cont_head.setLayout(cont_headLayout);
-        cont_headLayout.setHorizontalGroup(
-            cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(etq_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE))
-        );
-        cont_headLayout.setVerticalGroup(
-            cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-            .addGroup(cont_headLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(cont_headLayout.createSequentialGroup()
-                    .addGap(16, 16, 16)
-                    .addComponent(etq_titulo)
-                    .addContainerGap(17, Short.MAX_VALUE)))
-        );
-
-        cont_main.setBackground(new java.awt.Color(0, 74, 173));
-        cont_main.setForeground(new java.awt.Color(255, 255, 255));
-
-        etq_fotoVigilante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LOGOBLANCO.png"))); // NOI18N
+        cont_main.setBackground(new java.awt.Color(242, 242, 242));
+        cont_main.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_fechaNacimiento.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_fechaNacimiento.setForeground(new java.awt.Color(255, 255, 255));
+        etq_fechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
         etq_fechaNacimiento.setText("Fecha de nacimiento: ");
 
-        campo_cedulaVigilante.setBackground(new java.awt.Color(0, 74, 173));
+        campo_cedulaVigilante.setBackground(new java.awt.Color(242, 242, 242));
         campo_cedulaVigilante.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_cedulaVigilante.setForeground(new java.awt.Color(255, 255, 255));
+        campo_cedulaVigilante.setForeground(new java.awt.Color(0, 0, 0));
         campo_cedulaVigilante.setText("Ingrese cédula");
         campo_cedulaVigilante.setBorder(null);
         campo_cedulaVigilante.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,19 +102,19 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
             }
         });
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_vigilante.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
-        etq_vigilante.setForeground(new java.awt.Color(204, 204, 204));
+        etq_vigilante.setForeground(new java.awt.Color(51, 51, 51));
         etq_vigilante.setText("Vigilante");
 
         etq_cedulaVigilante.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_cedulaVigilante.setForeground(new java.awt.Color(255, 255, 255));
+        etq_cedulaVigilante.setForeground(new java.awt.Color(0, 0, 0));
         etq_cedulaVigilante.setText("Cédula del vigilante");
 
-        campo_IdSede.setBackground(new java.awt.Color(0, 74, 173));
+        campo_IdSede.setBackground(new java.awt.Color(242, 242, 242));
         campo_IdSede.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_IdSede.setForeground(new java.awt.Color(255, 255, 255));
+        campo_IdSede.setForeground(new java.awt.Color(0, 0, 0));
         campo_IdSede.setText("Ingrese ID de la sede");
         campo_IdSede.setBorder(null);
         campo_IdSede.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -138,14 +123,14 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
             }
         });
 
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_nombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        etq_nombre.setForeground(new java.awt.Color(0, 0, 0));
         etq_nombre.setText("Nombres:");
 
         etq_Nsede.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_Nsede.setForeground(new java.awt.Color(255, 255, 255));
+        etq_Nsede.setForeground(new java.awt.Color(0, 0, 0));
         etq_Nsede.setText("N° Sede");
 
         btn_adjuntar.setBackground(new java.awt.Color(0, 191, 99));
@@ -161,11 +146,11 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
         });
 
         etq_apellido.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_apellido.setForeground(new java.awt.Color(255, 255, 255));
+        etq_apellido.setForeground(new java.awt.Color(0, 0, 0));
         etq_apellido.setText("Apellidos:");
 
         userLabel3.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        userLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        userLabel3.setForeground(new java.awt.Color(0, 0, 0));
         userLabel3.setText("Correo:");
 
         btn_buscar.setBackground(new java.awt.Color(0, 191, 99));
@@ -209,7 +194,7 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
         });
 
         etq_sedesAcargo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_sedesAcargo.setForeground(new java.awt.Color(255, 255, 255));
+        etq_sedesAcargo.setForeground(new java.awt.Color(0, 0, 0));
         etq_sedesAcargo.setText("Sedes a cargo: ");
 
         campo_sedesAcargo.setBackground(new java.awt.Color(0, 74, 173));
@@ -223,16 +208,26 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
             .addGroup(cont_mainLayout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(etq_Nsede)
+                        .addComponent(campo_IdSede)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cont_mainLayout.createSequentialGroup()
                         .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(etq_cedulaVigilante)
                             .addComponent(campo_cedulaVigilante)
                             .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
-                        .addComponent(etq_fotoVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
+                        .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cont_mainLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(etq_vigilante)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(cont_mainLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                        .addComponent(etq_fotoVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(cont_mainLayout.createSequentialGroup()
                                 .addComponent(etq_fechaNacimiento)
@@ -254,15 +249,7 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
                                 .addComponent(etq_sedesAcargo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(campo_sedesAcargo, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(24, 24, 24))
-                    .addGroup(cont_mainLayout.createSequentialGroup()
-                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(etq_Nsede)
-                            .addComponent(campo_IdSede)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(149, 149, 149)
-                        .addComponent(etq_vigilante)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(23, 23, 23))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btn_adjuntar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -294,32 +281,32 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
                         .addGap(0, 0, 0)
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cont_mainLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(etq_fotoVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(etq_vigilante))
-                    .addGroup(cont_mainLayout.createSequentialGroup()
-                        .addGap(63, 63, 63)
+                        .addGap(38, 38, 38)
                         .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(etq_nombre)
-                            .addComponent(campo_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etq_apellido)
-                            .addComponent(campo_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(userLabel3)
-                            .addComponent(campo_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etq_fechaNacimiento)
-                            .addComponent(campo_Fnacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(etq_sedesAcargo)
-                            .addComponent(campo_sedesAcargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(57, 57, 57)
+                            .addComponent(etq_fotoVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(cont_mainLayout.createSequentialGroup()
+                                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(etq_nombre)
+                                    .addComponent(campo_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(etq_apellido)
+                                    .addComponent(campo_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(userLabel3)
+                                    .addComponent(campo_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(etq_fechaNacimiento)
+                                    .addComponent(campo_Fnacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(etq_sedesAcargo)
+                                    .addComponent(campo_sedesAcargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(etq_vigilante)))
+                .addGap(54, 54, 54)
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_adjuntar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_desajuntar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -330,14 +317,12 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(cont_head, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(cont_head, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
                 .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -459,7 +444,6 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
     private javax.swing.JTextField campo_correo;
     private javax.swing.JTextField campo_nombre;
     private javax.swing.JTextField campo_sedesAcargo;
-    private javax.swing.JPanel cont_head;
     private javax.swing.JPanel cont_main;
     private javax.swing.JLabel etq_Nsede;
     private javax.swing.JLabel etq_apellido;
@@ -468,7 +452,6 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
     private javax.swing.JLabel etq_fotoVigilante;
     private javax.swing.JLabel etq_nombre;
     private javax.swing.JLabel etq_sedesAcargo;
-    private javax.swing.JLabel etq_titulo;
     private javax.swing.JLabel etq_vigilante;
     private javax.swing.JButton jButton2;
     private javax.swing.JSeparator jSeparator1;

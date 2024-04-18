@@ -64,8 +64,6 @@ public class Perfil_admin extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        etq_titulo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         etq_fechaNacimiento = new javax.swing.JLabel();
         etq_fotoAdmin = new javax.swing.JLabel();
@@ -84,66 +82,43 @@ public class Perfil_admin extends javax.swing.JPanel {
         campo_fecha_nacimiento = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
 
-        jPanel1.setBackground(new java.awt.Color(56, 128, 255));
-
-        etq_titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
-        etq_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        etq_titulo.setText("Perfil Administrador");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(etq_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(etq_titulo)
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-
-        jPanel2.setBackground(new java.awt.Color(0, 74, 173));
+        jPanel2.setBackground(new java.awt.Color(242, 242, 242));
 
         etq_fechaNacimiento.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_fechaNacimiento.setForeground(new java.awt.Color(255, 255, 255));
+        etq_fechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
         etq_fechaNacimiento.setText("Fecha de nacimiento");
 
-        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
 
-        campo_correo.setBackground(new java.awt.Color(0, 74, 173));
+        campo_correo.setBackground(new java.awt.Color(242, 242, 242));
         campo_correo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_correo.setForeground(new java.awt.Color(204, 204, 255));
+        campo_correo.setForeground(new java.awt.Color(0, 0, 0));
         campo_correo.setBorder(null);
 
-        campo_nombre.setBackground(new java.awt.Color(0, 74, 173));
+        campo_nombre.setBackground(new java.awt.Color(242, 242, 242));
         campo_nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_nombre.setForeground(new java.awt.Color(204, 204, 255));
+        campo_nombre.setForeground(new java.awt.Color(0, 0, 0));
         campo_nombre.setBorder(null);
 
-        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_telefono.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_telefono.setForeground(new java.awt.Color(255, 255, 255));
+        etq_telefono.setForeground(new java.awt.Color(0, 0, 0));
         etq_telefono.setText("Telefono");
 
         etq_correo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_correo.setForeground(new java.awt.Color(255, 255, 255));
+        etq_correo.setForeground(new java.awt.Color(0, 0, 0));
         etq_correo.setText("Correo");
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_nombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        etq_nombre.setForeground(new java.awt.Color(0, 0, 0));
         etq_nombre.setText("Nombre");
 
-        campo_apellidos.setBackground(new java.awt.Color(0, 74, 173));
+        campo_apellidos.setBackground(new java.awt.Color(242, 242, 242));
         campo_apellidos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_apellidos.setForeground(new java.awt.Color(204, 204, 255));
+        campo_apellidos.setForeground(new java.awt.Color(0, 0, 0));
         campo_apellidos.setBorder(null);
         campo_apellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,29 +126,29 @@ public class Perfil_admin extends javax.swing.JPanel {
             }
         });
 
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_apellido.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_apellido.setForeground(new java.awt.Color(255, 255, 255));
+        etq_apellido.setForeground(new java.awt.Color(0, 0, 0));
         etq_apellido.setText("Apellido");
 
-        campo_telefono.setBackground(new java.awt.Color(0, 74, 173));
+        campo_telefono.setBackground(new java.awt.Color(242, 242, 242));
         campo_telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_telefono.setForeground(new java.awt.Color(204, 204, 255));
+        campo_telefono.setForeground(new java.awt.Color(0, 0, 0));
         campo_telefono.setBorder(null);
 
-        campo_fecha_nacimiento.setBackground(new java.awt.Color(0, 74, 173));
+        campo_fecha_nacimiento.setBackground(new java.awt.Color(242, 242, 242));
         campo_fecha_nacimiento.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_fecha_nacimiento.setForeground(new java.awt.Color(204, 204, 255));
+        campo_fecha_nacimiento.setForeground(new java.awt.Color(0, 0, 0));
         campo_fecha_nacimiento.setBorder(null);
 
-        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 925, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(166, 166, 166)
@@ -204,7 +179,7 @@ public class Perfil_admin extends javax.swing.JPanel {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 367, Short.MAX_VALUE)
+            .addGap(0, 380, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(19, 19, 19)
@@ -249,14 +224,12 @@ public class Perfil_admin extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -278,8 +251,6 @@ public class Perfil_admin extends javax.swing.JPanel {
     private javax.swing.JLabel etq_fotoAdmin;
     private javax.swing.JLabel etq_nombre;
     private javax.swing.JLabel etq_telefono;
-    private javax.swing.JLabel etq_titulo;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
