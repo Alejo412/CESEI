@@ -2,6 +2,7 @@
 package administrador;
 
 import alerta.Alerta;
+import alerta.AlertaEliminar;
 import java.awt.Color;
 import utils.BaseDatos;
 import utils.Sede;
@@ -13,6 +14,7 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
     BaseDatos basedatos;
     String id_sede;
     Sede sede;
+    Boolean click;
     public Panel_EliminarSede(String id_sede, BaseDatos basedatos) {
         this.basedatos = basedatos;
         this.id_sede = id_sede;
@@ -135,12 +137,15 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
         etq_Nsede.setText("N° Sede");
 
         campo_contacto.setBackground(new java.awt.Color(0, 74, 173));
+        campo_contacto.setForeground(new java.awt.Color(255, 255, 255));
         campo_contacto.setBorder(null);
 
         campo_direccion.setBackground(new java.awt.Color(0, 74, 173));
+        campo_direccion.setForeground(new java.awt.Color(255, 255, 255));
         campo_direccion.setBorder(null);
 
         campo_cedulaAdmin.setBackground(new java.awt.Color(0, 74, 173));
+        campo_cedulaAdmin.setForeground(new java.awt.Color(255, 255, 255));
         campo_cedulaAdmin.setBorder(null);
 
         etq_cedulaAdmin.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
@@ -260,7 +265,15 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
         if( id_sede.equals("")){
             Alerta ventana = new Alerta("Debe ingresar N°sede.");
         }else{
-             basedatos.eliminarSede(id_sede);
+           
+            AlertaEliminar alertaEliminar = new AlertaEliminar("¿Esta seguro de eliminar   la sede: "+id_sede+"?",click );
+            if(click = true){
+              basedatos.eliminarSede(id_sede);
+              Panel_ListaSedes nuevo = new Panel_ListaSedes(basedatos);
+            }
+            
+            
+             
          
          }
     }//GEN-LAST:event_btn_eliminiarSedeActionPerformed

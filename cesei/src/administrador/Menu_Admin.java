@@ -4,9 +4,9 @@ package administrador;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
-import administrador.SemiNavs;
+import administrador.SemiNavsSede;
 import administrador.Perfil_admin;
-import administrador.SemiNavs;
+import administrador.SemiNavsSede;
 import utils.BaseDatos;
 
 
@@ -228,7 +228,7 @@ public class Menu_Admin extends javax.swing.JFrame {
 
     private void btnSedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSedeActionPerformed
         //crear contenedor nuevo
-        SemiNavs nuevo = new SemiNavs(basedatos);
+        SemiNavsSede nuevo = new SemiNavsSede(basedatos);
         //ajustar tamaño
         nuevo.setPreferredSize(ventana_emergente.getPreferredSize());
         nuevo.setSize(ventana_emergente.getSize());

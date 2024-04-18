@@ -3,34 +3,35 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Perfil_admin.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/GuardarImagenBD.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Historialingresos.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/utils/BaseDatos.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/utils/Usuario.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EditarVigilante.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_perfilVigilante.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_RegistrarVigilante.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_ListaVigilantes.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Menu_Admin.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/principal/Login.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EditarSede.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/alerta/Alerta.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_RegistrarSalida.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/SemiNavsVigilantes.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_ListaSedes.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_RegistroSede.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/principal/Principal.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Computador.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/alerta/Alerta.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_AdjuntarVigilante.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EditarSede.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_RegistroSede.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/utils/Usuario.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Computador.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EliminarSede.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/SemiNavsVigilantes.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Menu_Admin.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Historialingresos.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_RegistrarVigilante.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EditarVigilante.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Entrada.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Persona.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/utils/BaseDatos.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Perfil_admin.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/principal/Principal.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/alerta/AlertaEliminar.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_perfilVigilante.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/GuardarImagenBD.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/SemiNavsSede.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/principal/Login.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Menu_vigilante.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/utils/Usuario_Sede.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/utils/Sede.java</file>
             <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EliminarVigilante.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Persona.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Menu_vigilante.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_Registrar_Entrada.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_EliminarSede.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/utils/Usuario_Sede.java</file>
-            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/SemiNavs.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/administrador/Panel_ListaVigilantes.java</file>
+            <file>file:/C:/Users/alejo/OneDrive/Escritorio/cesei_borrador/cesei/src/vigilante/Panel_RegistrarSalida.java</file>
         </group>
     </open-files>
 </project-private>

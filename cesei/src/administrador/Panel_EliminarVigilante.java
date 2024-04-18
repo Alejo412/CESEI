@@ -2,6 +2,7 @@
 package administrador;
 
 import alerta.Alerta;
+import alerta.AlertaEliminar;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -14,6 +15,7 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
     Usuario usuarioValidado;
     BaseDatos basedatos;
     String cedula_vigilante; 
+    Boolean click;
     public Panel_EliminarVigilante(String cedula_vigilante, BaseDatos basedatos) {
          initComponents();
         this.cedula_vigilante = cedula_vigilante; 
@@ -346,9 +348,13 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
     private void btn_eliminarVigilanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarVigilanteActionPerformed
         String cedulaVigilante = campo_cedula.getText();
         if( cedulaVigilante.equals("")){
-            Alerta ventana = new Alerta("Debe ingresar N°sede.");
+            Alerta ventana = new Alerta("Debe ingresar documento.");
         }else{
-             basedatos.eliminarVigilante(cedulaVigilante);
+            AlertaEliminar alertaEliminar = new AlertaEliminar("¿Esta seguro de eliminar el vigilante: "+cedula_vigilante+"?",click );
+            if(click = true){
+              basedatos.eliminarVigilante(cedulaVigilante);
+            }
+             
          
          }
     }//GEN-LAST:event_btn_eliminarVigilanteActionPerformed
