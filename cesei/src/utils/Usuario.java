@@ -11,20 +11,21 @@ public class Usuario {
     String apellidos;
     String telefono;
     String email;
-    String password;
     String tipo;
     String fecha_nacimiento;
+    String password;
     Image foto;
 
-    public Usuario(String cedula, String nombres, String apellidos, String telefono, String email, String password, String tipo, String fecha_nacimiento, Image foto) {
+   
+    public Usuario(String cedula, String tipo, String nombres, String apellidos, String email, String telefono, String fecha_nacimiento, String password, Image foto) {
         this.cedula = cedula;
+        this.tipo = tipo;
         this.nombres = nombres;
         this.apellidos = apellidos;
-        this.telefono = telefono;
         this.email = email;
+        this.telefono = telefono;
+        this.fecha_nacimiento = fecha_nacimiento;
         this.password = password;
-        this.tipo = tipo;
-        this.fecha_nacimiento=fecha_nacimiento;
         this.foto = foto;
     }
 

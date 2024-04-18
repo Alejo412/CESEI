@@ -7,6 +7,7 @@ import utils.BaseDatos;
 public class SemiNavsVigilantes extends javax.swing.JPanel {
 
   BaseDatos basedatos = new BaseDatos();
+  String cedula_vigilante;
    
     public SemiNavsVigilantes(BaseDatos baseDatos) {
         this.basedatos = basedatos;
@@ -134,7 +135,7 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
 
     private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
       
-        Panel_EliminarVigilante nuevo = new Panel_EliminarVigilante();
+        Panel_EliminarVigilante nuevo = new Panel_EliminarVigilante(cedula_vigilante, basedatos);
    
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());
@@ -147,7 +148,7 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
     }//GEN-LAST:event_btn_eliminarActionPerformed
 
     private void btn_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_editarActionPerformed
-        Panel_EditarVigilante nuevo = new Panel_EditarVigilante();
+        Panel_EditarVigilante nuevo = new Panel_EditarVigilante(cedula_vigilante, basedatos);
    
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());
@@ -160,7 +161,7 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
     }//GEN-LAST:event_btn_editarActionPerformed
 
     private void btn_verListaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_verListaActionPerformed
-        Panel_ListaVigilantes nuevo = new Panel_ListaVigilantes();
+        Panel_ListaVigilantes nuevo = new Panel_ListaVigilantes(basedatos);
    
         nuevo.setPreferredSize(panel_opciones.getPreferredSize());
         nuevo.setSize(panel_opciones.getSize());

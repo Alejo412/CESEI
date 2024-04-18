@@ -3,6 +3,7 @@ package utils;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -78,7 +79,7 @@ public class BaseDatos {
                         foto = new ImageIcon(bytes, cedula).getImage();
                     }
                     
-                    encontrado = new Usuario(cedula, nombres, apellidos, telefono, correo, getMD5(password), tipo, fecha_nacimiento, foto);
+                    encontrado = new Usuario(cedula, tipo, nombres, apellidos, telefono, correo, fecha_nacimiento, getMD5(password), foto);
                 return encontrado;
            
             }
@@ -127,7 +128,7 @@ public class BaseDatos {
                         foto = new ImageIcon(bytes, cedula).getImage();
                     }
                     
-                    encontrado = new Usuario(cedula, nombres, apellidos, telefono, correo, password, tipo, fecha_nacimiento, foto);
+                    encontrado = new Usuario(cedula, nombres, apellidos, telefono, correo, tipo, fecha_nacimiento, password, foto);
                 return encontrado;
            
             }
@@ -142,6 +143,93 @@ public class BaseDatos {
         }
          return encontrado;
     }
+     
+     
+public boolean editarUsuario(String cedula, String nombre, String apellido, String correo, String telefono, String fechaNacimiento, ImageIcon nuevaImagen) {
+    try {
+        // Convertir la imagen a un array de bytes
+        byte[] nuevaImagenBytes = null;
+        if (nuevaImagen != null) {
+            Image img = nuevaImagen.getImage();
+            BufferedImage bImage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
+            Graphics2D bImageGraphics = bImage.createGraphics();
+            bImageGraphics.drawImage(img, 0, 0, null);
+            bImageGraphics.dispose();
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            ImageIO.write(bImage, "png", baos);
+            nuevaImagenBytes = baos.toByteArray();
+        }
+        
+        // Crear la consulta SQL para actualizar los datos del usuario
+        String consulta;
+        if (nuevaImagenBytes != null) {
+            consulta = "UPDATE usuario SET nombres = ?, apellidos = ?, correo = ?, telefono = ?, f_nacimiento = ?, foto = ? WHERE id_usuario = ?";
+        } else {
+            consulta = "UPDATE usuario SET nombres = ?, apellidos = ?, correo = ?, telefono = ?, f_nacimiento = ? WHERE id_usuario = ?";
+        }
+        
+        // Preparar la consulta SQL
+        PreparedStatement statement = conexion.prepareStatement(consulta);
+        
+        // Establecer los valores de los parámetros de la consulta
+        statement.setString(1, nombre);
+        statement.setString(2, apellido);
+        statement.setString(3, correo);
+        statement.setString(4, telefono);
+        
+        // Convertir la fecha de nacimiento a un objeto Date de manera segura
+        java.sql.Date fechaSql = null;
+        if (fechaNacimiento != null && !fechaNacimiento.isEmpty()) {
+            fechaSql = java.sql.Date.valueOf(fechaNacimiento);
+        }
+        statement.setDate(5, fechaSql);
+        
+        // Establecer la nueva imagen como un Blob
+        if (nuevaImagenBytes != null) {
+            ByteArrayInputStream bais = new ByteArrayInputStream(nuevaImagenBytes);
+            statement.setBinaryStream(6, bais, nuevaImagenBytes.length);
+            statement.setString(7, cedula);
+        } else {
+            statement.setString(6, cedula);
+        }
+        
+        // Ejecutar la consulta SQL
+        int filasActualizadas = statement.executeUpdate();
+        
+        // Verificar si se actualizaron correctamente las filas
+        if (filasActualizadas > 0) {
+            return true; // La edición fue exitosa
+        } else {
+            return false; // No se actualizó ninguna fila, puede que el usuario no exista
+        }
+    } catch (SQLException ex) {
+        System.out.println("Error al ejecutar la consulta de actualización: " + ex.getMessage());
+        return false;
+    } catch (IOException ex) {
+        System.out.println("Error al convertir la imagen: " + ex.getMessage());
+        return false;
+    }
+}
+
+public boolean eliminarVigilante(String id_usuario){
+        boolean respuesta = false;
+        try {
+            String consulta = "DELETE FROM usuario WHERE id_usuario='"+id_usuario+"' ";
+            int resp_consulta = manipularDB.executeUpdate(consulta);
+            if (resp_consulta==1) {
+                respuesta = true;
+            }
+        } catch (SQLException ex) {
+            System.out.println("--> Error Delete: " + ex.getMessage());
+        }
+        if (respuesta){
+            System.out.println("Eliminado con exito");
+        }else{
+            System.out.println("No se pudo Eliminar");
+        }
+        return respuesta;
+    }
+
      
     public Sede buscarSede(String id_sede){
           Sede sedeEncontrada = null;
@@ -199,6 +287,42 @@ public class BaseDatos {
             return null;
         }
     }
+     public Usuario [] extraerVigilantes() {
+        try {
+            Usuario arreglo [] = new Usuario[100];
+            String consulta = "SELECT * FROM usuario";
+            ResultSet registros = manipularDB.executeQuery(consulta);
+            registros.next();
+            if (registros.getRow()==1) {
+                int i = 0;
+                do{
+                    String id_usuario = registros.getString("id_usuario");
+                    String tipo = registros.getString("tipo");
+                    String nombres = registros.getString("nombres");
+                    String apellidos = registros.getString("apellidos");
+                    String correo = registros.getString("correo");
+                    String telefono = registros.getString("telefono");
+                    String f_nacimiento = registros.getString("f_nacimiento");
+                    String password = registros.getString("password");
+                    Image foto = null;
+                   
+                
+                    
+                    arreglo[i] = new Usuario(id_usuario, tipo, nombres, apellidos, correo, telefono, f_nacimiento, password, foto);
+                    i++;
+                }while(registros.next());
+                 
+                System.out.println("SELECT exitoso ");
+                return arreglo;
+            }else{
+                return arreglo;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error al ejecutar el SELECT: ");
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
     
     
      
@@ -228,7 +352,7 @@ public class BaseDatos {
         }
     }
     
-    public void insertarUsuario(String idUsuario, String nombres, String apellidos, String correo, String password, String telefono, String fechaNacimiento) {
+    public void insertarUsuario(String idUsuario, String nombres, String apellidos, String correo, String telefono, String fechaNacimiento, String password ) {
     try {
         String consulta = "INSERT INTO usuario (id_usuario, nombres, apellidos, correo, password, telefono, f_nacimiento) VALUES ('" + idUsuario + "', '" + nombres + "', '" + apellidos + "', '" + correo + "', '" + password + "', '" + telefono + "', '" + fechaNacimiento + "')";
         manipularDB.executeUpdate(consulta);

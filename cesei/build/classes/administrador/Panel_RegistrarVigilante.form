@@ -98,7 +98,7 @@
                       <Component id="campo_cedula" alignment="0" max="32767" attributes="0"/>
                       <Component id="jSeparator5" alignment="0" pref="354" max="32767" attributes="0"/>
                       <Component id="etq_contraseña" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_contraseña" alignment="0" max="32767" attributes="0"/>
+                      <Component id="campo_contrasena" alignment="0" max="32767" attributes="0"/>
                       <Component id="jSeparator7" alignment="1" pref="354" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="9" max="32767" attributes="0"/>
@@ -111,11 +111,6 @@
                                   <Component id="campo_telefono" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jSeparator4" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="campo_fechaNacimiento" min="-2" pref="217" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="calender_elegirFecha" min="-2" pref="111" max="-2" attributes="0"/>
-                              </Group>
                               <Component id="jSeparator3" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="etq_correo" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -123,8 +118,9 @@
                                   <Component id="jSeparator6" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
                               </Group>
                               <Component id="etq_fechaNacimiento" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="calender_elegirFecha" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="btn_registrar" min="-2" pref="108" max="-2" attributes="0"/>
@@ -164,15 +160,10 @@
                           <Component id="jSeparator4" min="-2" pref="20" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="etq_fechaNacimiento" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Component id="calender_elegirFecha" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="campo_fechaNacimiento" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                                  <Component id="jSeparator3" min="-2" pref="20" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="calender_elegirFecha" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jSeparator3" min="-2" pref="20" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="etq_nombre" min="-2" max="-2" attributes="0"/>
@@ -193,7 +184,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="etq_contraseña" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="campo_contraseña" min="-2" max="-2" attributes="0"/>
+                          <Component id="campo_contrasena" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="btn_registrar" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
@@ -242,25 +233,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Apellidos"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="campo_fechaNacimiento">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ad" green="4a" red="0" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Roboto" size="12" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="cc" red="cc" type="rgb"/>
-            </Property>
-            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="campo_fechaNacimientoMousePressed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="campo_telefono">
           <Properties>
@@ -466,7 +438,7 @@
             <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="campo_contrase&#xf1;a">
+        <Component class="javax.swing.JPasswordField" name="campo_contrasena">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ad" green="4a" red="0" type="rgb"/>

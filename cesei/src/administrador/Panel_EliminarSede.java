@@ -257,6 +257,16 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
 
     private void btn_eliminiarSedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminiarSedeActionPerformed
         String id_sede = campo_Nsede.getText();
+        if( id_sede.equals("")){
+            Alerta ventana = new Alerta("Debe ingresar N°sede.");
+        }else{
+             basedatos.eliminarSede(id_sede);
+         
+         }
+    }//GEN-LAST:event_btn_eliminiarSedeActionPerformed
+
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
+        String id_sede = campo_Nsede.getText();
          if( id_sede.equals("")){
             Alerta ventana = new Alerta("Debe ingresar N°sede.");
         }else{
@@ -271,15 +281,8 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
              campo_cedulaAdmin.setText(cedulaAdmin);
            
          }
-    }//GEN-LAST:event_btn_eliminiarSedeActionPerformed
-
-    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
-        String id_sede = campo_Nsede.getText();
-        if( id_sede.equals("")){
-            Alerta ventana = new Alerta("Debe ingresar N°sede.");
-        }else{
-             basedatos.eliminarSede(id_sede);
-         }
+        
+       
     }//GEN-LAST:event_btn_buscarActionPerformed
 
 
