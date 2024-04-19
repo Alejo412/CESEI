@@ -81,40 +81,40 @@ public class Panel_perfilVigilante extends javax.swing.JPanel {
         jSeparator5 = new javax.swing.JSeparator();
         etq_correo = new javax.swing.JLabel();
 
-        contenedor.setBackground(new java.awt.Color(0, 74, 173));
+        contenedor.setBackground(new java.awt.Color(242, 242, 242));
         contenedor.setForeground(new java.awt.Color(255, 255, 255));
 
-        campo_telefono.setBackground(new java.awt.Color(0, 74, 173));
+        campo_telefono.setBackground(new java.awt.Color(242, 242, 242));
         campo_telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_telefono.setForeground(new java.awt.Color(204, 204, 255));
+        campo_telefono.setForeground(new java.awt.Color(0, 0, 0));
         campo_telefono.setBorder(null);
 
-        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_fechaNacimiento.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_fechaNacimiento.setForeground(new java.awt.Color(255, 255, 255));
+        etq_fechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
         etq_fechaNacimiento.setText("Fecha de nacimiento");
 
-        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
 
-        campo_nombre.setBackground(new java.awt.Color(0, 74, 173));
+        campo_nombre.setBackground(new java.awt.Color(242, 242, 242));
         campo_nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_nombre.setForeground(new java.awt.Color(204, 204, 255));
+        campo_nombre.setForeground(new java.awt.Color(0, 0, 0));
         campo_nombre.setBorder(null);
 
         etq_telefono.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_telefono.setForeground(new java.awt.Color(255, 255, 255));
+        etq_telefono.setForeground(new java.awt.Color(0, 0, 0));
         etq_telefono.setText("Telefono");
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_nombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        etq_nombre.setForeground(new java.awt.Color(0, 0, 0));
         etq_nombre.setText("Nombre");
 
-        campo_apellidos.setBackground(new java.awt.Color(0, 74, 173));
+        campo_apellidos.setBackground(new java.awt.Color(242, 242, 242));
         campo_apellidos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_apellidos.setForeground(new java.awt.Color(204, 204, 255));
+        campo_apellidos.setForeground(new java.awt.Color(0, 0, 0));
         campo_apellidos.setBorder(null);
         campo_apellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,30 +122,30 @@ public class Panel_perfilVigilante extends javax.swing.JPanel {
             }
         });
 
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_apellido.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_apellido.setForeground(new java.awt.Color(255, 255, 255));
+        etq_apellido.setForeground(new java.awt.Color(0, 0, 0));
         etq_apellido.setText("Apellido");
 
-        campo_fecha_nacimiento.setBackground(new java.awt.Color(0, 74, 173));
+        campo_fecha_nacimiento.setBackground(new java.awt.Color(242, 242, 242));
         campo_fecha_nacimiento.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_fecha_nacimiento.setForeground(new java.awt.Color(204, 204, 255));
+        campo_fecha_nacimiento.setForeground(new java.awt.Color(0, 0, 0));
         campo_fecha_nacimiento.setBorder(null);
 
         etq_titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
+        etq_titulo.setForeground(new java.awt.Color(0, 0, 0));
         etq_titulo.setText("Vigilante");
 
-        campo_correo.setBackground(new java.awt.Color(0, 74, 173));
+        campo_correo.setBackground(new java.awt.Color(242, 242, 242));
         campo_correo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_correo.setForeground(new java.awt.Color(204, 204, 255));
+        campo_correo.setForeground(new java.awt.Color(0, 0, 0));
         campo_correo.setBorder(null);
 
-        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_correo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_correo.setForeground(new java.awt.Color(255, 255, 255));
+        etq_correo.setForeground(new java.awt.Color(0, 0, 0));
         etq_correo.setText("Correo");
 
         javax.swing.GroupLayout contenedorLayout = new javax.swing.GroupLayout(contenedor);
@@ -167,9 +167,8 @@ public class Panel_perfilVigilante extends javax.swing.JPanel {
                 .addGroup(contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(etq_nombre)
                     .addComponent(etq_apellido)
-                    .addGroup(contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(campo_nombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator1)
+                    .addComponent(campo_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(etq_fechaNacimiento)
                     .addComponent(jSeparator2)
                     .addComponent(campo_fecha_nacimiento)
