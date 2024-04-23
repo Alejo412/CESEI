@@ -9,10 +9,12 @@ import administrador.Perfil_admin;
 import administrador.SemiNavsSede;
 import javax.swing.JFrame;
 import utils.BaseDatos;
+import administrador.Panel_RegistrarVigilante;
 
 
 public class Menu_Admin extends javax.swing.JFrame {
 
+    
     int xMouse, yMouse;
     BaseDatos basedatos = new BaseDatos();
     String cedulaAdmin;
@@ -29,12 +31,16 @@ public class Menu_Admin extends javax.swing.JFrame {
         initAlternComponents();
         
         
+
+        
+        
     }
     
     public void initAlternComponents(){
-        setIconImage( getToolkit().createImage( ClassLoader.getSystemResource("imagenes/logo_blanco.png") ) );
+        setIconImage( getToolkit().createImage( ClassLoader.getSystemResource("imagenes/logofinal.png") ) );
         
-        Image img_warning = getToolkit().createImage( ClassLoader.getSystemResource("imagenes/logo_blanco.png") );
+        Image img_warning = getToolkit().createImage( ClassLoader.getSystemResource("imagenes/logofinal.png") );
+
         img_warning = img_warning.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
         etq_logo.setIcon(new ImageIcon(img_warning));
         
@@ -73,7 +79,8 @@ public class Menu_Admin extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        header.setBackground(new java.awt.Color(102, 102, 102));
+
+        header.setBackground(new java.awt.Color(255, 255, 255));
         header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 headerMouseDragged(evt);
@@ -94,7 +101,9 @@ public class Menu_Admin extends javax.swing.JFrame {
         nav_Principal.setBackground(new java.awt.Color(0, 0, 0));
 
         btnSede.setBackground(new java.awt.Color(0, 0, 0));
-        btnSede.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+
+        btnSede.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+
         btnSede.setForeground(new java.awt.Color(255, 255, 255));
         btnSede.setText("SEDES");
         btnSede.setBorder(null);
@@ -106,7 +115,9 @@ public class Menu_Admin extends javax.swing.JFrame {
         });
 
         btnVigilante.setBackground(new java.awt.Color(0, 0, 0));
-        btnVigilante.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+
+        btnVigilante.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+
         btnVigilante.setForeground(new java.awt.Color(255, 255, 255));
         btnVigilante.setText("VIGILANTES");
         btnVigilante.setBorder(null);
@@ -129,15 +140,17 @@ public class Menu_Admin extends javax.swing.JFrame {
         nav_PrincipalLayout.setHorizontalGroup(
             nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(nav_PrincipalLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(etq_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(195, 195, 195)
+
+                .addGap(80, 80, 80)
+                .addComponent(etq_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(142, 142, 142)
                 .addComponent(btnSede, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 140, Short.MAX_VALUE)
                 .addComponent(btnVigilante)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addGap(127, 127, 127)
                 .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(94, 94, 94))
+                .addGap(85, 85, 85))
+
         );
         nav_PrincipalLayout.setVerticalGroup(
             nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,13 +160,17 @@ public class Menu_Admin extends javax.swing.JFrame {
             .addGroup(nav_PrincipalLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addGroup(nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnSede, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
 
-        ventana_emergente.setBackground(new java.awt.Color(242, 242, 242));
+                    .addComponent(etq_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(nav_PrincipalLayout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addGroup(nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(btnSede, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(19, 19, 19))
+        );
 
         javax.swing.GroupLayout ventana_emergenteLayout = new javax.swing.GroupLayout(ventana_emergente);
         ventana_emergente.setLayout(ventana_emergenteLayout);

@@ -50,32 +50,41 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         etq_correo = new javax.swing.JLabel();
         campo_foto = new javax.swing.JLabel();
 
+    
         cont_main.setBackground(new java.awt.Color(242, 242, 242));
 
         campo_fechaNacimiento.setBackground(new java.awt.Color(242, 242, 242));
         campo_fechaNacimiento.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         campo_fechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
+
         campo_fechaNacimiento.setBorder(null);
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
         campo_apellido.setBackground(new java.awt.Color(242, 242, 242));
         campo_apellido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
         campo_apellido.setForeground(new java.awt.Color(0, 0, 0));
+
+
         campo_apellido.setBorder(null);
 
         campo_correo.setBackground(new java.awt.Color(242, 242, 242));
         campo_correo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
         campo_correo.setForeground(new java.awt.Color(0, 0, 0));
+        
         campo_correo.setBorder(null);
 
         campo_telefono.setBackground(new java.awt.Color(242, 242, 242));
         campo_telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
         campo_telefono.setForeground(new java.awt.Color(0, 0, 0));
         campo_telefono.setBorder(null);
 
         etq_fechaNacimieto.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         etq_fechaNacimieto.setForeground(new java.awt.Color(0, 0, 0));
+
         etq_fechaNacimieto.setText("Fecha de nacimiento");
 
         btn_eliminarVigilante.setBackground(new java.awt.Color(255, 0, 0));
@@ -96,7 +105,9 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_cedula.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+
         etq_cedula.setForeground(new java.awt.Color(0, 0, 0));
+
         etq_cedula.setText("Cédula");
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
@@ -115,12 +126,16 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         });
 
         etq_nombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+
         etq_nombre.setForeground(new java.awt.Color(0, 0, 0));
+
         etq_nombre.setText("Nombres");
 
         campo_cedula.setBackground(new java.awt.Color(242, 242, 242));
         campo_cedula.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
         campo_cedula.setForeground(new java.awt.Color(0, 0, 0));
+
         campo_cedula.setText("Documento del vigilante");
         campo_cedula.setBorder(null);
         campo_cedula.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -131,7 +146,9 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
 
         campo_nombre.setBackground(new java.awt.Color(242, 242, 242));
         campo_nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
         campo_nombre.setForeground(new java.awt.Color(0, 0, 0));
+
         campo_nombre.setBorder(null);
 
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
@@ -143,60 +160,66 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_telefono.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+
         etq_telefono.setForeground(new java.awt.Color(0, 0, 0));
         etq_telefono.setText("Telefono");
 
         etq_correo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         etq_correo.setForeground(new java.awt.Color(0, 0, 0));
+
         etq_correo.setText("Correo");
 
         javax.swing.GroupLayout cont_mainLayout = new javax.swing.GroupLayout(cont_main);
         cont_main.setLayout(cont_mainLayout);
         cont_mainLayout.setHorizontalGroup(
             cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_eliminarVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(433, 433, 433))
             .addGroup(cont_mainLayout.createSequentialGroup()
-                .addGap(116, 116, 116)
+                .addGap(129, 129, 129)
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(etq_correo)
-                        .addComponent(campo_correo)
-                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cont_mainLayout.createSequentialGroup()
-                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campo_cedula, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_buscarVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(etq_cedula)
-                    .addComponent(campo_foto, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(81, 81, 81)
-                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(etq_apellido)
-                        .addComponent(campo_apellido)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(etq_nombre)
-                        .addComponent(campo_nombre)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(etq_telefono)
-                        .addComponent(campo_telefono)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(etq_fechaNacimieto)
-                        .addComponent(campo_fechaNacimiento)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(82, Short.MAX_VALUE))
+                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(etq_correo)
+                                .addComponent(campo_correo)
+                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(cont_mainLayout.createSequentialGroup()
+                                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campo_cedula, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(btn_buscarVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(etq_cedula)
+                            .addComponent(campo_foto, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(81, 81, 81)
+                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(etq_apellido)
+                                .addComponent(campo_apellido)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(etq_nombre)
+                                .addComponent(campo_nombre)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(etq_telefono)
+                                .addComponent(campo_telefono)
+                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(etq_fechaNacimieto)
+                                .addComponent(campo_fechaNacimiento)
+                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_eliminarVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(281, 281, 281)))
+                .addContainerGap(183, Short.MAX_VALUE))
         );
         cont_mainLayout.setVerticalGroup(
             cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cont_mainLayout.createSequentialGroup()
+
                 .addContainerGap(9, Short.MAX_VALUE)
+
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
                         .addComponent(etq_cedula)
@@ -234,22 +257,23 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cont_mainLayout.createSequentialGroup()
                         .addGap(4, 4, 4)
-                        .addComponent(campo_foto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(campo_foto, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(etq_correo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(campo_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_eliminarVigilante, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
             .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -257,6 +281,17 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(cont_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cont_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 

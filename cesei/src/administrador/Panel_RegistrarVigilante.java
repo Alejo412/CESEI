@@ -53,11 +53,13 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         jSeparator7 = new javax.swing.JSeparator();
         calender_elegirFecha = new com.toedter.calendar.JDateChooser();
 
+
         cont_main.setBackground(new java.awt.Color(242, 242, 242));
 
         campo_apellido.setBackground(new java.awt.Color(242, 242, 242));
         campo_apellido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         campo_apellido.setForeground(new java.awt.Color(0, 0, 0));
+
         campo_apellido.setText("Apellido del vigilante");
         campo_apellido.setBorder(null);
         campo_apellido.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -70,12 +72,15 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
 
         etq_apellido.setBackground(new java.awt.Color(0, 0, 0));
         etq_apellido.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+
         etq_apellido.setForeground(new java.awt.Color(0, 0, 0));
+
         etq_apellido.setText("Apellidos");
 
         campo_telefono.setBackground(new java.awt.Color(242, 242, 242));
         campo_telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         campo_telefono.setForeground(new java.awt.Color(0, 0, 0));
+
         campo_telefono.setText("Ingrese el teléfono");
         campo_telefono.setBorder(null);
         campo_telefono.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -87,6 +92,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         etq_fechaNacimiento.setBackground(new java.awt.Color(0, 0, 0));
         etq_fechaNacimiento.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         etq_fechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
+
         etq_fechaNacimiento.setText("Fecha de nacimiento");
 
         btn_registrar.setBackground(new java.awt.Color(0, 191, 99));
@@ -105,7 +111,9 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
 
         campo_nombre.setBackground(new java.awt.Color(242, 242, 242));
         campo_nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+
         campo_nombre.setForeground(new java.awt.Color(0, 0, 0));
+
         campo_nombre.setText("Nombre del vigilante");
         campo_nombre.setBorder(null);
         campo_nombre.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,16 +125,19 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         etq_telefono.setBackground(new java.awt.Color(0, 0, 0));
         etq_telefono.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         etq_telefono.setForeground(new java.awt.Color(0, 0, 0));
+
         etq_telefono.setText("Telefono");
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_nombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+
         etq_nombre.setForeground(new java.awt.Color(0, 0, 0));
         etq_nombre.setText("Nombres");
 
         etq_cedula.setBackground(new java.awt.Color(0, 0, 0));
         etq_cedula.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+
         etq_cedula.setForeground(new java.awt.Color(0, 0, 0));
         etq_cedula.setText("Cédula");
 
@@ -135,6 +146,8 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         campo_cedula.setForeground(new java.awt.Color(0, 0, 0));
         campo_cedula.setText("Documento del vigilante");
         campo_cedula.setBorder(null);
+        campo_cedula.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        campo_cedula.setSelectedTextColor(new java.awt.Color(0, 0, 0));
         campo_cedula.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 campo_cedulaMousePressed(evt);
@@ -145,12 +158,14 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
 
         etq_correo.setBackground(new java.awt.Color(0, 0, 0));
         etq_correo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
+
         etq_correo.setForeground(new java.awt.Color(0, 0, 0));
         etq_correo.setText("Correo");
 
         campo_correo.setBackground(new java.awt.Color(242, 242, 242));
         campo_correo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         campo_correo.setForeground(new java.awt.Color(0, 0, 0));
+
         campo_correo.setText("Correo del vigilante");
         campo_correo.setBorder(null);
         campo_correo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -168,6 +183,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
 
         campo_contrasena.setBackground(new java.awt.Color(242, 242, 242));
         campo_contrasena.setForeground(new java.awt.Color(0, 0, 0));
+
         campo_contrasena.setBorder(null);
 
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
@@ -183,44 +199,54 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         cont_mainLayout.setHorizontalGroup(
             cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cont_mainLayout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(etq_nombre)
-                    .addComponent(campo_nombre)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                    .addComponent(etq_apellido)
-                    .addComponent(campo_apellido)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                    .addComponent(etq_cedula)
-                    .addComponent(campo_cedula)
-                    .addComponent(jSeparator5, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
-                    .addComponent(etq_contraseña)
-                    .addComponent(campo_contrasena)
-                    .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(cont_mainLayout.createSequentialGroup()
-                        .addGap(94, 94, 94)
+                        .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(cont_mainLayout.createSequentialGroup()
+                        .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(etq_nombre)
+                            .addComponent(campo_nombre)
+                            .addComponent(jSeparator1)
+                            .addComponent(etq_apellido)
+                            .addComponent(campo_apellido)
+                            .addComponent(jSeparator2)
+                            .addComponent(etq_cedula)
+                            .addComponent(campo_cedula)
+                            .addComponent(jSeparator5)
+                            .addComponent(etq_contraseña)
+                            .addComponent(campo_contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, Short.MAX_VALUE)
                         .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(etq_telefono)
-                                .addComponent(campo_telefono)
-                                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(etq_correo)
-                                .addComponent(campo_correo)
-                                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(etq_fechaNacimiento)
-                            .addComponent(calender_elegirFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
-                        .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(228, 228, 228))))
+
+                            .addGroup(cont_mainLayout.createSequentialGroup()
+                                .addGap(94, 94, 94)
+                                .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(etq_telefono)
+                                        .addComponent(campo_telefono)
+                                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(etq_correo)
+                                        .addComponent(campo_correo)
+                                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(etq_fechaNacimiento)
+                                    .addComponent(calender_elegirFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
+                                .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(119, 119, 119)))))
+                .addContainerGap())
+
         );
         cont_mainLayout.setVerticalGroup(
             cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
+
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+
+                .addGap(15, 15, 15)
+
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
                         .addComponent(etq_cedula)
@@ -266,15 +292,16 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(campo_contrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(1, 1, 1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(202, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
             .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -282,6 +309,17 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(cont_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cont_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -328,7 +366,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
             campo_contrasena.setText("");
             calender_elegirFecha.setDate(null);
             
-             GuardarImagenBD guardarImagenBD = new GuardarImagenBD();
+             GuardarImagenBD guardarImagenBD = new GuardarImagenBD(cedula, basedatos);
              guardarImagenBD.setVisible(true);
              
          

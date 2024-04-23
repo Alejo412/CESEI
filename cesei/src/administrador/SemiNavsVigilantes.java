@@ -26,11 +26,13 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
         btn_verLista = new javax.swing.JButton();
         panel_opciones = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(204, 204, 204));
 
-        btn_registrar.setBackground(new java.awt.Color(204, 204, 204));
-        btn_registrar.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+        setBackground(new java.awt.Color(204, 204, 204));
         btn_registrar.setForeground(new java.awt.Color(0, 0, 0));
+
+        btn_registrar.setBackground(new java.awt.Color(242, 242, 242));
+        btn_registrar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+
         btn_registrar.setText("Registrar");
         btn_registrar.setBorder(null);
         btn_registrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -40,9 +42,11 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
             }
         });
 
-        btn_editar.setBackground(new java.awt.Color(204, 204, 204));
-        btn_editar.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+
         btn_editar.setForeground(new java.awt.Color(0, 0, 0));
+        btn_editar.setBackground(new java.awt.Color(242, 242, 242));
+        btn_editar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+
         btn_editar.setText("Editar");
         btn_editar.setBorder(null);
         btn_editar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -52,9 +56,11 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
             }
         });
 
-        btn_eliminar.setBackground(new java.awt.Color(204, 204, 204));
-        btn_eliminar.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+
         btn_eliminar.setForeground(new java.awt.Color(0, 0, 0));
+
+        btn_eliminar.setBackground(new java.awt.Color(242, 242, 242));
+        btn_eliminar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_eliminar.setText("Eliminar");
         btn_eliminar.setBorder(null);
         btn_eliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -64,9 +70,10 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
             }
         });
 
-        btn_verLista.setBackground(new java.awt.Color(204, 204, 204));
-        btn_verLista.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+
         btn_verLista.setForeground(new java.awt.Color(0, 0, 0));
+        btn_verLista.setBackground(new java.awt.Color(242, 242, 242));
+        btn_verLista.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_verLista.setText("Ver lista");
         btn_verLista.setBorder(null);
         btn_verLista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -76,7 +83,9 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
             }
         });
 
+
         panel_opciones.setBackground(new java.awt.Color(242, 242, 242));
+
         panel_opciones.setForeground(new java.awt.Color(242, 242, 242));
 
         javax.swing.GroupLayout panel_opcionesLayout = new javax.swing.GroupLayout(panel_opciones);
@@ -96,7 +105,7 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel_opciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(285, 285, 285)
+                .addGap(296, 296, 296)
                 .addComponent(btn_registrar)
                 .addGap(60, 60, 60)
                 .addComponent(btn_editar)
@@ -109,13 +118,13 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_eliminar)
                     .addComponent(btn_editar)
                     .addComponent(btn_registrar)
                     .addComponent(btn_verLista))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(panel_opciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );

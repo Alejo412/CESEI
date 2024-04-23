@@ -16,48 +16,50 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Component id="cont_main" alignment="0" max="32767" attributes="0"/>
+=======
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="cont_main" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+>>>>>>> miguel
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="cont_main" max="32767" attributes="0"/>
+=======
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="cont_main" min="-2" max="-2" attributes="0"/>
+>>>>>>> miguel
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="cont_main">
+<<<<<<< HEAD
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="f2" green="f2" red="f2" type="rgb"/>
         </Property>
       </Properties>
+=======
+>>>>>>> miguel
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="etq_nombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_nombre" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jSeparator1" alignment="0" pref="354" max="32767" attributes="0"/>
-                      <Component id="etq_apellido" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_apellido" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jSeparator2" alignment="0" pref="354" max="32767" attributes="0"/>
-                      <Component id="etq_cedula" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_cedula" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jSeparator5" alignment="0" pref="354" max="32767" attributes="0"/>
-                      <Component id="etq_contraseña" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="campo_contrasena" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jSeparator7" alignment="1" pref="354" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="9" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
+<<<<<<< HEAD
                           <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
@@ -74,19 +76,63 @@
                               <Component id="calender_elegirFecha" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="12" max="32767" attributes="0"/>
+=======
+                          <Component id="jSeparator7" min="-2" pref="354" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+>>>>>>> miguel
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="btn_registrar" min="-2" pref="108" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="228" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="etq_nombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="campo_nombre" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="etq_apellido" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="campo_apellido" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jSeparator2" alignment="0" max="32767" attributes="0"/>
+                              <Component id="etq_cedula" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="campo_cedula" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jSeparator5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="etq_contraseña" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="campo_contrasena" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="276" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="etq_telefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="campo_telefono" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jSeparator4" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="etq_correo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="campo_correo" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jSeparator6" alignment="0" min="-2" pref="354" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="etq_fechaNacimiento" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="calender_elegirFecha" alignment="0" min="-2" pref="131" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="btn_registrar" min="-2" pref="108" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
                   <EmptySpace max="32767" attributes="0"/>
+=======
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+>>>>>>> miguel
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="etq_cedula" min="-2" max="-2" attributes="0"/>
@@ -140,9 +186,9 @@
                       </Group>
                       <Component id="btn_registrar" alignment="0" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                  <Component id="jSeparator7" min="-2" pref="20" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jSeparator7" min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace pref="202" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -156,9 +202,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="12" style="0"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Apellido del vigilante"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -183,9 +232,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto Light" size="14" style="1"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Apellidos"/>
           </Properties>
         </Component>
@@ -197,9 +249,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="12" style="0"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Ingrese el tel&#xe9;fono"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -217,9 +272,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto Light" size="14" style="1"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Fecha de nacimiento"/>
           </Properties>
         </Component>
@@ -261,9 +319,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="12" style="0"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Nombre del vigilante"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -281,9 +342,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto Light" size="14" style="1"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Telefono"/>
           </Properties>
         </Component>
@@ -299,9 +363,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto Light" size="14" style="1"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Nombres"/>
           </Properties>
         </Component>
@@ -313,14 +380,18 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto Light" size="14" style="1"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="C&#xe9;dula"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="campo_cedula">
           <Properties>
+<<<<<<< HEAD
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f2" green="f2" red="f2" type="rgb"/>
             </Property>
@@ -330,9 +401,20 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Roboto" size="12" style="0"/>
+            </Property>
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Documento del vigilante"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
+            </Property>
+            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="selectedTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
           <Events>
@@ -354,9 +436,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto Light" size="14" style="1"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Correo"/>
           </Properties>
         </Component>
@@ -368,9 +453,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="12" style="0"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Correo del vigilante"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -395,9 +483,12 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto Light" size="14" style="1"/>
             </Property>
+<<<<<<< HEAD
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
+=======
+>>>>>>> miguel
             <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
           </Properties>
         </Component>
@@ -405,9 +496,12 @@
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f2" green="f2" red="f2" type="rgb"/>
+<<<<<<< HEAD
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
+=======
+>>>>>>> miguel
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
