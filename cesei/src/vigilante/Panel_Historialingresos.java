@@ -38,10 +38,10 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
         campo_id1 = new javax.swing.JTextField();
         userLabel8 = new javax.swing.JLabel();
 
-        contenedor_Historialingresos.setBackground(new java.awt.Color(0, 74, 173));
+        contenedor_Historialingresos.setBackground(new java.awt.Color(242, 242, 242));
 
         etq_titulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
+        etq_titulo.setForeground(new java.awt.Color(0, 0, 0));
         etq_titulo.setText("Historial Ingresos");
 
         btn_buscar.setBackground(new java.awt.Color(0, 191, 99));
@@ -52,7 +52,7 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
         btn_buscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         tabla_historialingresos.setAutoCreateRowSorter(true);
-        tabla_historialingresos.setBackground(new java.awt.Color(56, 128, 255));
+        tabla_historialingresos.setBackground(new java.awt.Color(204, 204, 204));
         tabla_historialingresos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         tabla_historialingresos.setForeground(new java.awt.Color(255, 255, 255));
         tabla_historialingresos.setModel(new javax.swing.table.DefaultTableModel(
@@ -76,11 +76,11 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tabla_historialingresos);
 
-        jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
 
-        campo_id.setBackground(new java.awt.Color(0, 74, 173));
+        campo_id.setBackground(new java.awt.Color(242, 242, 242));
         campo_id.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_id.setForeground(new java.awt.Color(204, 204, 255));
+        campo_id.setForeground(new java.awt.Color(0, 0, 0));
         campo_id.setText("Buscar por Cédula");
         campo_id.setBorder(null);
         campo_id.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -90,14 +90,14 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
         });
 
         userLabel7.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        userLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        userLabel7.setForeground(new java.awt.Color(0, 0, 0));
         userLabel7.setText("Cédula de usuario");
 
-        jSeparator9.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator9.setForeground(new java.awt.Color(0, 0, 0));
 
-        campo_id1.setBackground(new java.awt.Color(0, 74, 173));
+        campo_id1.setBackground(new java.awt.Color(242, 242, 242));
         campo_id1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_id1.setForeground(new java.awt.Color(204, 204, 255));
+        campo_id1.setForeground(new java.awt.Color(0, 0, 0));
         campo_id1.setText("Buscar por fecha");
         campo_id1.setBorder(null);
         campo_id1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -107,7 +107,7 @@ public class Panel_Historialingresos extends javax.swing.JPanel {
         });
 
         userLabel8.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        userLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        userLabel8.setForeground(new java.awt.Color(0, 0, 0));
         userLabel8.setText("Fecha");
 
         javax.swing.GroupLayout contenedor_HistorialingresosLayout = new javax.swing.GroupLayout(contenedor_Historialingresos);

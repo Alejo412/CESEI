@@ -550,5 +550,140 @@ public boolean eliminarVigilante(String id_usuario){
         return respuesta;
     }
     
+    public void insertarComputador(String codigo,String marca, String id_persona){
+        try {
+        String consulta = "INSERT INTO computador( codigo,  marca,  id_persona) VALUES ('" + codigo + "', '" + marca + "', '" + id_persona + "')";
+        manipularDB.executeUpdate(consulta);
+        System.out.println("computador insertado correctamente.");
+    } catch (SQLException ex) {
+        System.out.println("Error al insertar computador:");
+        System.out.println(ex.getMessage());
+    }
+    }
+    
+    public void insertarPersona(String cedula, String nombres, String apellidos, String telefono){
+        try {
+        String consulta = "INSERT INTO persona( id_persona,  nombres,  apellidos, telefono) VALUES ('" + cedula + "', '" + nombres + "', '" + apellidos + "', '" + telefono + "')";
+        manipularDB.executeUpdate(consulta);
+        System.out.println("Persona insertado correctamente.");
+        } catch (SQLException ex) {
+        System.out.println("Error al insertar persona:");
+        System.out.println(ex.getMessage());
+        }
+    }
+    
+    
+    
+    public Computador [] extraerComputadores(String id_persona){
+        try {
+            Computador arreglo [] = new Computador[100];
+            String consulta = "SELECT * FROM computador WHERE id_persona = '" + id_persona + "'";
+            ResultSet registros = manipularDB.executeQuery(consulta);
+            registros.next();
+            if (registros.getRow()==1) {
+                int i = 0;
+                do{
+                    String codigo = registros.getString("codigo");
+                    String marca = registros.getString("marca");
+                   
+                    
+                    arreglo[i] = new Computador(codigo, marca, id_persona);
+                    i++;
+                }while(registros.next());
+                 
+                System.out.println("SELECT exitoso ");
+                return arreglo;
+            }else{
+                return arreglo;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error al ejecutar el SELECT: ");
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
+
+    public Computador [] extraerPcQueHanEntrado(String id_persona){
+        try {
+            Computador arreglo [] = new Computador[100];
+            String consulta = "SELECT * FROM computador WHERE fecha_salida = '" + null + "'";
+            ResultSet registros = manipularDB.executeQuery(consulta);
+            registros.next();
+            if (registros.getRow()==1) {
+                int i = 0;
+                do{
+                    String codigo = registros.getString("codigo");
+                    String marca = registros.getString("marca");
+                   
+                    
+                    arreglo[i] = new Computador(codigo, marca, id_persona);
+                    i++;
+                }while(registros.next());
+                 
+                System.out.println("SELECT exitoso ");
+                return arreglo;
+            }else{
+                return arreglo;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error al ejecutar el SELECT: ");
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
+
+    
+     public void insertarPersona_computador(String id_persona ,String codigo_equipo, String fecha_ingreso, String fecha_salida, String id_usuario){
+            String consulta = "INSERT INTO persona_computador ( id_persona,  codigo_equipo,  fecha_ingreso,  fecha_salida, id_usuario) VALUES (?, ?, ?, ?, ?)";
+            
+
+        try( PreparedStatement statement = conexion.prepareStatement(consulta)) {
+       
+        statement.setString(1, id_persona);
+        statement.setString(2, codigo_equipo);
+        statement.setString(3, fecha_ingreso);
+        statement.setString(4, fecha_salida);
+        statement.setString(5, fecha_salida);
+ 
+        // Si fecha_fin es null, establecerlo como null en la consulta
+            if (fecha_salida == null) {
+               statement.setNull(4, Types.TIMESTAMP);
+            } else {
+                statement.setString(4, fecha_salida);
+            }
+
+        //  Ejecutar la consulta
+            int filasAfectadas = statement.executeUpdate();
+            System.out.println("persona_computador insertado correctamente.");
+        } catch (SQLException ex) {
+            System.out.println("Error al insertar persona_computador:");
+            System.out.println(ex.getMessage());
+        }
+    }
+     
+     
+      public boolean editarFechaFinPersona_Computador(String id_usuario, String fecha_salida){
+          boolean respuesta = false;
+        try {
+            String consulta = "UPDATE persona_computador SET fecha_salida='"+fecha_salida+"' WHERE id_usuario='"+id_usuario+"'";
+            int resp_consulta = manipularDB.executeUpdate(consulta);
+            if (resp_consulta==1) {
+                respuesta = true;
+            }
+        } catch (SQLException ex) {
+            System.out.println("--> Error Update: " + ex.getMessage());
+        }
+        if (respuesta){
+            System.out.println("Editado con exito");
+        }else{
+            System.out.println("No se pudo Editar");
+        }
+        return respuesta;
+      }
+    
+    
     
 }
+
+ 
+

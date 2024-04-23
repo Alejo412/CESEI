@@ -22,8 +22,6 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         etq_Nsede = new javax.swing.JLabel();
         campo_direccion = new javax.swing.JTextField();
@@ -39,38 +37,15 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
         etq_cedulaAdmin = new javax.swing.JLabel();
         campo_cedulaAdmin = new javax.swing.JTextField();
 
-        jPanel2.setBackground(new java.awt.Color(56, 128, 255));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Registrar Sede");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1140, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-
-        jPanel3.setBackground(new java.awt.Color(0, 74, 173));
+        jPanel3.setBackground(new java.awt.Color(242, 242, 242));
 
         etq_Nsede.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_Nsede.setForeground(new java.awt.Color(255, 255, 255));
+        etq_Nsede.setForeground(new java.awt.Color(0, 0, 0));
         etq_Nsede.setText("N° Sede");
 
-        campo_direccion.setBackground(new java.awt.Color(0, 74, 173));
+        campo_direccion.setBackground(new java.awt.Color(242, 242, 242));
         campo_direccion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_direccion.setForeground(new java.awt.Color(204, 204, 255));
+        campo_direccion.setForeground(new java.awt.Color(0, 0, 0));
         campo_direccion.setText("Direccion de sede ");
         campo_direccion.setBorder(null);
         campo_direccion.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -79,15 +54,15 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
             }
         });
 
-        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_direccion.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_direccion.setForeground(new java.awt.Color(255, 255, 255));
+        etq_direccion.setForeground(new java.awt.Color(0, 0, 0));
         etq_direccion.setText("Direccion");
 
-        campo_contacto.setBackground(new java.awt.Color(0, 74, 173));
+        campo_contacto.setBackground(new java.awt.Color(242, 242, 242));
         campo_contacto.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_contacto.setForeground(new java.awt.Color(204, 204, 255));
+        campo_contacto.setForeground(new java.awt.Color(0, 0, 0));
         campo_contacto.setText("Número o Email");
         campo_contacto.setBorder(null);
         campo_contacto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -96,10 +71,10 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
             }
         });
 
-        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_sede.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_sede.setForeground(new java.awt.Color(255, 255, 255));
+        etq_sede.setForeground(new java.awt.Color(0, 0, 0));
         etq_sede.setText("Contacto");
 
         btn_registrar.setBackground(new java.awt.Color(0, 191, 99));
@@ -114,9 +89,9 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
             }
         });
 
-        campo_Nsede.setBackground(new java.awt.Color(0, 74, 173));
+        campo_Nsede.setBackground(new java.awt.Color(242, 242, 242));
         campo_Nsede.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_Nsede.setForeground(new java.awt.Color(204, 204, 255));
+        campo_Nsede.setForeground(new java.awt.Color(0, 0, 0));
         campo_Nsede.setText("N° de sede");
         campo_Nsede.setBorder(null);
         campo_Nsede.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -125,17 +100,17 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
             }
         });
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
-        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_cedulaAdmin.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_cedulaAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        etq_cedulaAdmin.setForeground(new java.awt.Color(0, 0, 0));
         etq_cedulaAdmin.setText("Cédula Admin");
 
-        campo_cedulaAdmin.setBackground(new java.awt.Color(0, 74, 173));
+        campo_cedulaAdmin.setBackground(new java.awt.Color(242, 242, 242));
         campo_cedulaAdmin.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_cedulaAdmin.setForeground(new java.awt.Color(204, 204, 255));
+        campo_cedulaAdmin.setForeground(new java.awt.Color(0, 0, 0));
         campo_cedulaAdmin.setText("Documento del Admin");
         campo_cedulaAdmin.setBorder(null);
         campo_cedulaAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -149,7 +124,7 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(753, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(etq_cedulaAdmin)
                     .addComponent(campo_cedulaAdmin)
@@ -224,15 +199,11 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -315,9 +286,7 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
     private javax.swing.JLabel etq_cedulaAdmin;
     private javax.swing.JLabel etq_direccion;
     private javax.swing.JLabel etq_sede;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;

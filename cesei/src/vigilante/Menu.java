@@ -6,13 +6,19 @@ import vigilante.Panel_RegistrarSalida;
 import vigilante.Panel_Historialingresos;
 import vigilante.Panel_Registrar_Persona;
 import java.awt.Color;
+import utils.BaseDatos;
+
 
 
 
 public class Menu extends javax.swing.JFrame {
 
+    BaseDatos basedatos; 
+    String id_usuario;
    
     public Menu() {
+        this.basedatos = basedatos; 
+        this.id_usuario = id_usuario;
         initComponents();
         initAlternComponents();
         etq_registrarEquipoMouseClicked(null);
@@ -226,8 +232,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void etq_registrarEquipoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEquipoMouseClicked
         //Crear el contenedor nuevo
-        Panel_Registrar_Computador nuevo = new Panel_Registrar_Computador();
-        
+        Panel_Registrar_Computador nuevo = new Panel_Registrar_Computador(basedatos);
         //Ajustar el tamaño del contenedor nuevo
         nuevo.setPreferredSize(contenedor_principal.getPreferredSize());
         nuevo.setSize(contenedor_principal.getSize());
@@ -245,7 +250,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void etq_registrarPersonaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarPersonaMouseClicked
         //Crear el contenedor nuevo
-        Panel_Registrar_Persona nuevo = new Panel_Registrar_Persona();
+        Panel_Registrar_Persona nuevo = new Panel_Registrar_Persona(basedatos);
         
         //Ajustar el tamaño del contenedor nuevo
         nuevo.setPreferredSize(contenedor_principal.getPreferredSize());
@@ -264,8 +269,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void etq_registrarEntradaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEntradaMouseClicked
         //Crear el contenedor nuevo
-        Panel_Registrar_Entrada nuevo = new Panel_Registrar_Entrada();
-        
+        Panel_Registrar_Entrada nuevo = new Panel_Registrar_Entrada(id_usuario, basedatos);
         //Ajustar el tamaño del contenedor nuevo
         nuevo.setPreferredSize(contenedor_principal.getPreferredSize());
         nuevo.setSize(contenedor_principal.getSize());
@@ -283,8 +287,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void etq_registrarSalidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarSalidaMouseClicked
         //Crear el contenedor nuevo
-        Panel_RegistrarSalida nuevo = new Panel_RegistrarSalida();
-        
+        Panel_Registrar_Entrada nuevo = new Panel_Registrar_Entrada(id_usuario, basedatos);
         //Ajustar el tamaño del contenedor nuevo
         nuevo.setPreferredSize(contenedor_principal.getPreferredSize());
         nuevo.setSize(contenedor_principal.getSize());

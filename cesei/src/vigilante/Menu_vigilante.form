@@ -44,7 +44,7 @@
     <Container class="javax.swing.JPanel" name="contenedor_menu_vigilante">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="80" red="38" type="rgb"/>
+          <Color blue="0" green="0" red="0" type="rgb"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -215,7 +215,7 @@
     <Container class="javax.swing.JPanel" name="contenedor_principal">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ad" green="4a" red="0" type="rgb"/>
+          <Color blue="f2" green="f2" red="f2" type="rgb"/>
         </Property>
       </Properties>
 
@@ -223,7 +223,7 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="259" max="32767" attributes="0"/>
+                  <EmptySpace pref="335" max="32767" attributes="0"/>
                   <Component id="etq_temporal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="285" max="-2" attributes="0"/>
               </Group>
@@ -241,9 +241,6 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JLabel" name="etq_temporal">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Panel principal"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

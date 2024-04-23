@@ -29,8 +29,6 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
         campo_contacto1 = new javax.swing.JTextField();
         etq_contacto1 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
-        jPanel1 = new javax.swing.JPanel();
-        etq_titulo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btn_eliminiarSede = new javax.swing.JButton();
         btn_buscar = new javax.swing.JButton();
@@ -56,32 +54,7 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
 
         jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
 
-        jPanel1.setBackground(new java.awt.Color(56, 128, 255));
-
-        etq_titulo.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        etq_titulo.setForeground(new java.awt.Color(255, 255, 255));
-        etq_titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        etq_titulo.setText("Eliminar Sede");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(etq_titulo, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 75, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(14, 14, 14)
-                    .addComponent(etq_titulo)
-                    .addContainerGap(14, Short.MAX_VALUE)))
-        );
-
-        jPanel2.setBackground(new java.awt.Color(0, 74, 173));
+        jPanel2.setBackground(new java.awt.Color(242, 242, 242));
 
         btn_eliminiarSede.setBackground(new java.awt.Color(255, 0, 0));
         btn_eliminiarSede.setFont(new java.awt.Font("Roboto Black", 1, 14)); // NOI18N
@@ -108,16 +81,16 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
         });
 
         etq_contacto.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_contacto.setForeground(new java.awt.Color(255, 255, 255));
+        etq_contacto.setForeground(new java.awt.Color(0, 0, 0));
         etq_contacto.setText("Contacto:");
 
-        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
 
-        jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
 
-        campo_Nsede.setBackground(new java.awt.Color(0, 74, 173));
+        campo_Nsede.setBackground(new java.awt.Color(242, 242, 242));
         campo_Nsede.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_Nsede.setForeground(new java.awt.Color(204, 204, 255));
+        campo_Nsede.setForeground(new java.awt.Color(0, 0, 0));
         campo_Nsede.setText("Ingrese el ID de la sede");
         campo_Nsede.setBorder(null);
         campo_Nsede.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -126,33 +99,33 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
             }
         });
 
-        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_direccion.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_direccion.setForeground(new java.awt.Color(255, 255, 255));
+        etq_direccion.setForeground(new java.awt.Color(0, 0, 0));
         etq_direccion.setText("Dirección:");
 
         etq_Nsede.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_Nsede.setForeground(new java.awt.Color(255, 255, 255));
+        etq_Nsede.setForeground(new java.awt.Color(0, 0, 0));
         etq_Nsede.setText("N° Sede");
 
-        campo_contacto.setBackground(new java.awt.Color(0, 74, 173));
-        campo_contacto.setForeground(new java.awt.Color(255, 255, 255));
+        campo_contacto.setBackground(new java.awt.Color(242, 242, 242));
+        campo_contacto.setForeground(new java.awt.Color(0, 0, 0));
         campo_contacto.setBorder(null);
 
-        campo_direccion.setBackground(new java.awt.Color(0, 74, 173));
-        campo_direccion.setForeground(new java.awt.Color(255, 255, 255));
+        campo_direccion.setBackground(new java.awt.Color(242, 242, 242));
+        campo_direccion.setForeground(new java.awt.Color(0, 0, 0));
         campo_direccion.setBorder(null);
 
-        campo_cedulaAdmin.setBackground(new java.awt.Color(0, 74, 173));
-        campo_cedulaAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        campo_cedulaAdmin.setBackground(new java.awt.Color(242, 242, 242));
+        campo_cedulaAdmin.setForeground(new java.awt.Color(0, 0, 0));
         campo_cedulaAdmin.setBorder(null);
 
         etq_cedulaAdmin.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_cedulaAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        etq_cedulaAdmin.setForeground(new java.awt.Color(0, 0, 0));
         etq_cedulaAdmin.setText("Administrador:");
 
-        jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
+        jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -233,21 +206,18 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
                         .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(34, 34, 34)
                 .addComponent(btn_eliminiarSede, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -312,8 +282,6 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
     private javax.swing.JLabel etq_contacto;
     private javax.swing.JLabel etq_contacto1;
     private javax.swing.JLabel etq_direccion;
-    private javax.swing.JLabel etq_titulo;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator5;
