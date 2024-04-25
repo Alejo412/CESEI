@@ -2,6 +2,8 @@
 package administrador;
 
 import alerta.Alerta;
+import alerta.AlertaAccion;
+import alerta.AlertaSiNo;
 import java.awt.Color;
 import utils.BaseDatos;
 import utils.Usuario;
@@ -10,6 +12,7 @@ import utils.Usuario;
 public class Panel_RegistroSede extends javax.swing.JPanel {
 
     BaseDatos basedatos;
+    Boolean click;
     
     public Panel_RegistroSede(BaseDatos basedatos) {
       this.basedatos = basedatos;
@@ -227,7 +230,7 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
     private void campo_direccionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_direccionMousePressed
          if (campo_direccion.getText().equals("Direccion de sede ")) {
             campo_direccion.setText("");
-            campo_direccion.setForeground(Color.white);
+            campo_direccion.setForeground(Color.black);
         }
         
          
@@ -236,7 +239,7 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
     private void campo_contactoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_contactoMousePressed
          if (campo_contacto.getText().equals("Número o Email")) {
             campo_contacto.setText("");
-            campo_contacto.setForeground(Color.white);
+            campo_contacto.setForeground(Color.black);
         }
         
     }//GEN-LAST:event_campo_contactoMousePressed
@@ -250,7 +253,11 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
          if( Nsede.equals("") || contacto.equals("") || direccion.equals("") || cedulaAdmin.equals("")){
             Alerta ventana = new Alerta("Todos los campos son Obligatorios.");
         }else{
-             basedatos.insertarSede(Nsede, direccion, contacto, cedulaAdmin);
+             AlertaAccion alertaRegistrar = new AlertaAccion("Sede registrada correctamente");
+            if(click = true){
+              basedatos.insertarSede(Nsede, direccion, contacto, cedulaAdmin);
+            }
+             
              campo_Nsede.setText(" ");
              campo_contacto.setText(" ");
              campo_direccion.setText(" ");
@@ -264,14 +271,14 @@ public class Panel_RegistroSede extends javax.swing.JPanel {
     private void campo_NsedeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_NsedeMousePressed
         if (campo_Nsede.getText().equals("N° de sede")) {
             campo_Nsede.setText("");
-            campo_Nsede.setForeground(Color.white);
+            campo_Nsede.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_NsedeMousePressed
 
     private void campo_cedulaAdminMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_cedulaAdminMousePressed
         if (campo_cedulaAdmin.getText().equals("Documento del Admin")) {
             campo_cedulaAdmin.setText("");
-            campo_cedulaAdmin.setForeground(Color.white);
+            campo_cedulaAdmin.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_cedulaAdminMousePressed
 

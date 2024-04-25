@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS cesei;
 CREATE DATABASE cesei;
 USE cesei;
 
@@ -28,8 +27,8 @@ CREATE TABLE usuario_sede(
     numero_adjuntar INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario VARCHAR(30),
     id_sede VARCHAR(30),
-    fecha_inicio DATE,
-    fecha_fin DATE,
+    fecha_inicio DATETIME DEFAULT NULL,
+    fecha_fin DATETIME DEFAULT NULL,
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
     FOREIGN KEY (id_sede) REFERENCES sede(id_sede)
 );
@@ -55,8 +54,8 @@ CREATE TABLE persona_computador(
     id_ingreso INT AUTO_INCREMENT PRIMARY KEY,
     id_persona VARCHAR(30),
     codigo_equipo VARCHAR(30),
-    fecha_ingreso DATE DEFAULT NULL,
-    fecha_salida DATE DEFAULT NULL,
+    fecha_ingreso DATETIME DEFAULT NULL,
+    fecha_salida DATETIME DEFAULT NULL,
     id_usuario VARCHAR(30),
     FOREIGN KEY (id_persona) REFERENCES persona(id_persona),
     FOREIGN KEY (codigo_equipo) REFERENCES computador(codigo),
@@ -94,6 +93,3 @@ VALUES
 ('2373', 'Asus', '102836'),
 ('1528', 'Hp', '102836');
 
-INSERT INTO persona_computador (id_persona,codigo_equipo, fecha_ingreso, fecha_salida, id_usuario) 
-VALUES
-('102836','2373', CURRENT_DATE, CURRENT_DATE, '837192');

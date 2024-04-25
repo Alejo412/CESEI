@@ -2,6 +2,8 @@
 package vigilante;
 
 import alerta.Alerta;
+import alerta.AlertaAccion;
+import alerta.AlertaSiNo;
 import java.awt.Color;
 import utils.BaseDatos;
 
@@ -9,6 +11,7 @@ import utils.BaseDatos;
 public class Panel_Registrar_Persona extends javax.swing.JPanel {
 
     BaseDatos basedatos;
+    Boolean click;
     public Panel_Registrar_Persona(BaseDatos basedatos) {
         this.basedatos = basedatos;
         initComponents();
@@ -224,7 +227,11 @@ public class Panel_Registrar_Persona extends javax.swing.JPanel {
         if( cedula.equals("") || nombres.equals("") || apellidos.equals("") || telefono.equals("")){
             Alerta ventana = new Alerta("Todos los campos son Obligatorios.");
         }else{
-             basedatos.insertarPersona(cedula, nombres, apellidos, telefono);
+            
+              basedatos.insertarPersona(cedula, nombres, apellidos, telefono);
+              AlertaAccion alertaEditar = new AlertaAccion("Persona registrada correctamente");
+             
+             
              campo_cedula.setText(" ");
              campo_nombres.setText(" ");
              campo_apellidos.setText(" ");

@@ -2,6 +2,8 @@
 package vigilante;
 
 import alerta.Alerta;
+import alerta.AlertaAccion;
+import alerta.AlertaSiNo;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -27,6 +29,7 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
    Computador listadoDeComputadores [];
    String id_persona;
    String id_usuario;
+   Boolean click;
    
     public Panel_RegistrarSalida(String id_usuario, BaseDatos basedatos) {
         this.basedatos = basedatos;
@@ -105,7 +108,7 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         });
 
         tabla_computador.setBackground(new java.awt.Color(204, 204, 204));
-        tabla_computador.setForeground(new java.awt.Color(255, 255, 255));
+        tabla_computador.setForeground(new java.awt.Color(0, 0, 0));
         tabla_computador.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -144,7 +147,7 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         campo_cedulaPersona.setBackground(new java.awt.Color(242, 242, 242));
         campo_cedulaPersona.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         campo_cedulaPersona.setForeground(new java.awt.Color(0, 0, 0));
-        campo_cedulaPersona.setText("Ingrese Cédula");
+        campo_cedulaPersona.setText("Ingrese cedula");
         campo_cedulaPersona.setBorder(null);
         campo_cedulaPersona.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -157,15 +160,15 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         etq_cedulaPersona.setText("Cédula de persona");
 
         campo_codigoSeleccionado.setBackground(new java.awt.Color(204, 204, 204));
-        campo_codigoSeleccionado.setForeground(new java.awt.Color(0, 204, 51));
+        campo_codigoSeleccionado.setForeground(new java.awt.Color(255, 0, 0));
         campo_codigoSeleccionado.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         campo_marcaSeleccionado.setBackground(new java.awt.Color(204, 204, 204));
-        campo_marcaSeleccionado.setForeground(new java.awt.Color(0, 204, 51));
+        campo_marcaSeleccionado.setForeground(new java.awt.Color(255, 0, 0));
         campo_marcaSeleccionado.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         campo_id_personaSeleccionado.setBackground(new java.awt.Color(204, 204, 204));
-        campo_id_personaSeleccionado.setForeground(new java.awt.Color(0, 204, 51));
+        campo_id_personaSeleccionado.setForeground(new java.awt.Color(255, 0, 0));
         campo_id_personaSeleccionado.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout contenedor_registrarSalidaLayout = new javax.swing.GroupLayout(contenedor_registrarSalida);
@@ -302,7 +305,11 @@ public class Panel_RegistrarSalida extends javax.swing.JPanel {
         if( codigo.equals("") || marca.equals("") || id_persona.equals("")){
             Alerta ventana = new Alerta("Todos los campos son Obligatorios.");
         }else{
-             basedatos.editarFechaFinPersona_Computador(id_usuario, fechaSalida);
+          
+               basedatos.editarFechaFinPersona_Computador(id_persona, fechaSalida, id_usuario);
+               AlertaAccion alertaEditar = new AlertaAccion("Salida registrada correctamente");
+            
+            
              campo_codigoSeleccionado.setText(" ");
              campo_marcaSeleccionado.setText(" ");
              campo_id_personaSeleccionado.setText(" ");

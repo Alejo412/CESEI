@@ -2,6 +2,8 @@
 package vigilante;
 
 import alerta.Alerta;
+import alerta.AlertaAccion;
+import alerta.AlertaSiNo;
 import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
@@ -30,6 +32,7 @@ public class Panel_Registrar_Entrada extends javax.swing.JPanel {
    Computador listadoDeComputadores [];
    String id_persona;
    String id_usuario;
+   Boolean click;
    
     public Panel_Registrar_Entrada(String id_usuario, BaseDatos basedatos) {
         this.basedatos = basedatos;
@@ -43,8 +46,9 @@ public class Panel_Registrar_Entrada extends javax.swing.JPanel {
         setVisible(true);
         modelo = (DefaultTableModel) tabla_computador.getModel();
         
-        tabla_computador.getColumnModel().getColumn(3).setCellEditor(new ButtonEditor(new JCheckBox()));
+        
         tabla_computador.getColumnModel().getColumn(3).setCellRenderer(new ButtonRenderer());
+        tabla_computador.getColumnModel().getColumn(3).setCellEditor(new ButtonEditor(new JCheckBox()));
         
         
         tabla_computador.getColumnModel().getColumn(0).setPreferredWidth(100);
@@ -161,15 +165,15 @@ public class Panel_Registrar_Entrada extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tabla_computador);
 
         campo_codigoSeleccionado.setBackground(new java.awt.Color(204, 204, 204));
-        campo_codigoSeleccionado.setForeground(new java.awt.Color(0, 204, 51));
+        campo_codigoSeleccionado.setForeground(new java.awt.Color(255, 0, 0));
         campo_codigoSeleccionado.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         campo_marcaSeleccionada.setBackground(new java.awt.Color(204, 204, 204));
-        campo_marcaSeleccionada.setForeground(new java.awt.Color(0, 204, 51));
+        campo_marcaSeleccionada.setForeground(new java.awt.Color(255, 0, 0));
         campo_marcaSeleccionada.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         campo_idPersonaSeleccionado.setBackground(new java.awt.Color(204, 204, 204));
-        campo_idPersonaSeleccionado.setForeground(new java.awt.Color(0, 204, 51));
+        campo_idPersonaSeleccionado.setForeground(new java.awt.Color(255, 0, 0));
         campo_idPersonaSeleccionado.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -314,7 +318,10 @@ public class Panel_Registrar_Entrada extends javax.swing.JPanel {
         if( codigo.equals("") || marca.equals("") || id_persona.equals("")){
             Alerta ventana = new Alerta("Todos los campos son Obligatorios.");
         }else{
-             basedatos.insertarPersona_computador(id_persona, codigo, fechaIngreso, fechaSalida, id_usuario);
+            
+                basedatos.insertarPersona_computador(id_persona, codigo, fechaIngreso, fechaSalida, id_usuario);
+              AlertaAccion alertaEditar = new AlertaAccion("Entrada registrada correctamente");
+            
              campo_codigoSeleccionado.setText(" ");
              campo_marcaSeleccionada.setText(" ");
              campo_idPersonaSeleccionado.setText(" ");

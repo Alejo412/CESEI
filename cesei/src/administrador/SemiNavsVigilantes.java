@@ -26,13 +26,8 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
         btn_verLista = new javax.swing.JButton();
         panel_opciones = new javax.swing.JPanel();
 
-
-        setBackground(new java.awt.Color(204, 204, 204));
-        btn_registrar.setForeground(new java.awt.Color(0, 0, 0));
-
         btn_registrar.setBackground(new java.awt.Color(242, 242, 242));
         btn_registrar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-
         btn_registrar.setText("Registrar");
         btn_registrar.setBorder(null);
         btn_registrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -42,11 +37,8 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
             }
         });
 
-
-        btn_editar.setForeground(new java.awt.Color(0, 0, 0));
         btn_editar.setBackground(new java.awt.Color(242, 242, 242));
         btn_editar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-
         btn_editar.setText("Editar");
         btn_editar.setBorder(null);
         btn_editar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -55,9 +47,6 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
                 btn_editarActionPerformed(evt);
             }
         });
-
-
-        btn_eliminar.setForeground(new java.awt.Color(0, 0, 0));
 
         btn_eliminar.setBackground(new java.awt.Color(242, 242, 242));
         btn_eliminar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -70,8 +59,6 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
             }
         });
 
-
-        btn_verLista.setForeground(new java.awt.Color(0, 0, 0));
         btn_verLista.setBackground(new java.awt.Color(242, 242, 242));
         btn_verLista.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         btn_verLista.setText("Ver lista");
@@ -82,9 +69,6 @@ public class SemiNavsVigilantes extends javax.swing.JPanel {
                 btn_verListaActionPerformed(evt);
             }
         });
-
-
-        panel_opciones.setBackground(new java.awt.Color(242, 242, 242));
 
         panel_opciones.setForeground(new java.awt.Color(242, 242, 242));
 

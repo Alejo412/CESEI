@@ -2,6 +2,8 @@
 package administrador;
 
 import alerta.Alerta;
+import alerta.AlertaAccion;
+import alerta.AlertaSiNo;
 import java.awt.Color;
 import utils.BaseDatos;
 import utils.Sede;
@@ -12,8 +14,10 @@ public class Panel_EditarSede extends javax.swing.JPanel {
    BaseDatos basedatos;
    Sede sede;
    String id_sede;
+   Boolean click;
     public Panel_EditarSede(String id_sede, BaseDatos basedatos) {
         this.basedatos  =  basedatos;
+        this.id_sede = id_sede;
         initComponents();
     }
 
@@ -45,7 +49,6 @@ public class Panel_EditarSede extends javax.swing.JPanel {
         campo_direccion.setBackground(new java.awt.Color(242, 242, 242));
         campo_direccion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         campo_direccion.setForeground(new java.awt.Color(0, 0, 0));
-        campo_direccion.setText("Direccion de sede ");
         campo_direccion.setBorder(null);
         campo_direccion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -75,7 +78,6 @@ public class Panel_EditarSede extends javax.swing.JPanel {
         campo_contacto.setBackground(new java.awt.Color(242, 242, 242));
         campo_contacto.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         campo_contacto.setForeground(new java.awt.Color(0, 0, 0));
-        campo_contacto.setText("Número o Email");
         campo_contacto.setBorder(null);
         campo_contacto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -110,6 +112,11 @@ public class Panel_EditarSede extends javax.swing.JPanel {
         campo_Nsede.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 campo_NsedeMousePressed(evt);
+            }
+        });
+        campo_Nsede.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campo_NsedeActionPerformed(evt);
             }
         });
 
@@ -216,7 +223,7 @@ public class Panel_EditarSede extends javax.swing.JPanel {
     private void campo_direccionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_direccionMousePressed
         if (campo_Nsede.getText().equals("Direccion de sede ")) {
             campo_Nsede.setText("");
-            campo_Nsede.setForeground(Color.white);
+            campo_Nsede.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_direccionMousePressed
 
@@ -239,7 +246,7 @@ public class Panel_EditarSede extends javax.swing.JPanel {
     private void campo_contactoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_contactoMousePressed
         if (campo_Nsede.getText().equals("Número o Email")) {
             campo_Nsede.setText("");
-            campo_Nsede.setForeground(Color.white);
+            campo_Nsede.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_contactoMousePressed
 
@@ -253,9 +260,14 @@ public class Panel_EditarSede extends javax.swing.JPanel {
             Alerta ventana = new Alerta("Todos los campos son obligatorios.");
             verificacion = false;
         }else{
+   
+              Boolean editarSede = basedatos.editarSede(id_sede, direccion, contacto);
+               AlertaAccion alertaEditar = new AlertaAccion("Sede editada correctamente");
+              verificacion = true;
+              
+            
              
-             Boolean editarSede = basedatos.editarSede(id_sede, direccion, contacto);
-             verificacion = true;
+             
              
          }
     }//GEN-LAST:event_btn_editarSedeActionPerformed
@@ -263,9 +275,13 @@ public class Panel_EditarSede extends javax.swing.JPanel {
     private void campo_NsedeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_NsedeMousePressed
         if (campo_Nsede.getText().equals("N° de sede")) {
             campo_Nsede.setText("");
-            campo_Nsede.setForeground(Color.white);
+            campo_Nsede.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_NsedeMousePressed
+
+    private void campo_NsedeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campo_NsedeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campo_NsedeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

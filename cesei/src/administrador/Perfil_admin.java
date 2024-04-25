@@ -1,10 +1,14 @@
 
 package administrador;
 
+import alerta.AlertaSiNo;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 import utils.BaseDatos;
 import utils.Usuario;
+import principal.Login;
 
 public class Perfil_admin extends javax.swing.JPanel {
 
@@ -12,11 +16,12 @@ public class Perfil_admin extends javax.swing.JPanel {
     Usuario usuarioValidado;
     BaseDatos basedatos;
     String cedula;
-    
-   
-    public Perfil_admin(String cedula, BaseDatos basedatos) {
-         this.basedatos=basedatos;
-        this.cedula=cedula;
+    JFrame frame; // Referencia al JFrame que contiene este panel
+    Boolean click;
+    public Perfil_admin(String cedula, BaseDatos basedatos, JFrame frame) {
+        this.basedatos = basedatos;
+        this.cedula = cedula;
+        this.frame = frame; // Guardar la referencia al JFrame
         initComponents();
         initAlternComponents();
     }
@@ -81,52 +86,36 @@ public class Perfil_admin extends javax.swing.JPanel {
         campo_telefono = new javax.swing.JTextField();
         campo_fecha_nacimiento = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
-
-
-        jPanel2.setBackground(new java.awt.Color(242, 242, 242));
+        jButton1 = new javax.swing.JButton();
 
         etq_fechaNacimiento.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_fechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
-
         etq_fechaNacimiento.setText("Fecha de nacimiento");
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
 
         campo_correo.setBackground(new java.awt.Color(242, 242, 242));
         campo_correo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_correo.setForeground(new java.awt.Color(0, 0, 0));
         campo_correo.setBorder(null);
 
         campo_nombre.setBackground(new java.awt.Color(242, 242, 242));
         campo_nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        campo_nombre.setForeground(new java.awt.Color(0, 0, 0));
-
-
         campo_nombre.setBorder(null);
 
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_telefono.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_telefono.setForeground(new java.awt.Color(0, 0, 0));
         etq_telefono.setText("Telefono");
 
         etq_correo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_correo.setForeground(new java.awt.Color(0, 0, 0));
-
         etq_correo.setText("Correo");
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_nombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-
-        etq_nombre.setForeground(new java.awt.Color(0, 0, 0));
         etq_nombre.setText("Nombre");
 
         campo_apellidos.setBackground(new java.awt.Color(242, 242, 242));
         campo_apellidos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_apellidos.setForeground(new java.awt.Color(0, 0, 0));
-
         campo_apellidos.setBorder(null);
         campo_apellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,61 +126,67 @@ public class Perfil_admin extends javax.swing.JPanel {
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_apellido.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-
-        etq_apellido.setForeground(new java.awt.Color(0, 0, 0));
-
         etq_apellido.setText("Apellido");
 
         campo_telefono.setBackground(new java.awt.Color(242, 242, 242));
         campo_telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_telefono.setForeground(new java.awt.Color(0, 0, 0));
         campo_telefono.setBorder(null);
 
         campo_fecha_nacimiento.setBackground(new java.awt.Color(242, 242, 242));
         campo_fecha_nacimiento.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        campo_fecha_nacimiento.setForeground(new java.awt.Color(0, 0, 0));
         campo_fecha_nacimiento.setBorder(null);
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setText("Cerrar Sesion");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(244, Short.MAX_VALUE)
-                .addComponent(etq_fotoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(etq_fechaNacimiento)
-                            .addComponent(campo_fecha_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etq_nombre)
-                            .addComponent(jSeparator1)
-                            .addComponent(campo_nombre)
-                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(etq_apellido)
-                            .addComponent(jSeparator2)
-                            .addComponent(campo_apellidos)
-                            .addComponent(etq_correo)
-                            .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campo_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(etq_fotoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(103, 103, 103)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campo_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etq_telefono))
-                        .addGap(182, 182, 182)))
-                .addGap(58, 58, 58))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(etq_fechaNacimiento)
+                                    .addComponent(campo_fecha_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(etq_nombre)
+                                    .addComponent(jSeparator1)
+                                    .addComponent(campo_nombre)
+                                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(etq_apellido)
+                                    .addComponent(jSeparator2)
+                                    .addComponent(campo_apellidos)
+                                    .addComponent(etq_correo)
+                                    .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campo_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campo_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(etq_telefono))
+                                .addGap(182, 182, 182)))
+                        .addGap(58, 58, 58))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(106, 106, 106))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,7 +211,6 @@ public class Perfil_admin extends javax.swing.JPanel {
                             .addComponent(etq_correo, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
                             .addComponent(campo_fecha_nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(campo_telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, 0)
@@ -230,7 +224,9 @@ public class Perfil_admin extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(etq_fotoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -251,7 +247,18 @@ public class Perfil_admin extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_campo_apellidosActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        AlertaSiNo alertaRegistrar = new AlertaSiNo("¿Esta seguro de cerrar sesión?",click );
+            if(click = true){
+              // Cerrar sesión y cerrar la ventana
+             
+             frame.dispose(); // Cerrar la ventana
+             Login cerrar = new Login(basedatos);
 
+            }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField campo_apellidos;
     private javax.swing.JTextField campo_correo;
@@ -264,6 +271,7 @@ public class Perfil_admin extends javax.swing.JPanel {
     private javax.swing.JLabel etq_fotoAdmin;
     private javax.swing.JLabel etq_nombre;
     private javax.swing.JLabel etq_telefono;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;

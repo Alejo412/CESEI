@@ -3,6 +3,7 @@ package administrador;
 
 import alerta.Alerta;
 import alerta.AlertaEliminar;
+import alerta.AlertaSiNo;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -50,41 +51,25 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         etq_correo = new javax.swing.JLabel();
         campo_foto = new javax.swing.JLabel();
 
-    
-        cont_main.setBackground(new java.awt.Color(242, 242, 242));
-
         campo_fechaNacimiento.setBackground(new java.awt.Color(242, 242, 242));
         campo_fechaNacimiento.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        campo_fechaNacimiento.setForeground(new java.awt.Color(0, 0, 0));
-
         campo_fechaNacimiento.setBorder(null);
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
 
         campo_apellido.setBackground(new java.awt.Color(242, 242, 242));
         campo_apellido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        campo_apellido.setForeground(new java.awt.Color(0, 0, 0));
-
-
         campo_apellido.setBorder(null);
 
         campo_correo.setBackground(new java.awt.Color(242, 242, 242));
         campo_correo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        campo_correo.setForeground(new java.awt.Color(0, 0, 0));
-        
         campo_correo.setBorder(null);
 
         campo_telefono.setBackground(new java.awt.Color(242, 242, 242));
         campo_telefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        campo_telefono.setForeground(new java.awt.Color(0, 0, 0));
         campo_telefono.setBorder(null);
 
         etq_fechaNacimieto.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_fechaNacimieto.setForeground(new java.awt.Color(0, 0, 0));
-
         etq_fechaNacimieto.setText("Fecha de nacimiento");
 
         btn_eliminarVigilante.setBackground(new java.awt.Color(255, 0, 0));
@@ -105,9 +90,6 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_cedula.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-
-        etq_cedula.setForeground(new java.awt.Color(0, 0, 0));
-
         etq_cedula.setText("Cédula");
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
@@ -126,16 +108,10 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         });
 
         etq_nombre.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-
-        etq_nombre.setForeground(new java.awt.Color(0, 0, 0));
-
         etq_nombre.setText("Nombres");
 
         campo_cedula.setBackground(new java.awt.Color(242, 242, 242));
         campo_cedula.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        campo_cedula.setForeground(new java.awt.Color(0, 0, 0));
-
         campo_cedula.setText("Documento del vigilante");
         campo_cedula.setBorder(null);
         campo_cedula.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -146,27 +122,19 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
 
         campo_nombre.setBackground(new java.awt.Color(242, 242, 242));
         campo_nombre.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-
-        campo_nombre.setForeground(new java.awt.Color(0, 0, 0));
-
         campo_nombre.setBorder(null);
 
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_apellido.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_apellido.setForeground(new java.awt.Color(0, 0, 0));
         etq_apellido.setText("Apellidos");
 
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
 
         etq_telefono.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-
-        etq_telefono.setForeground(new java.awt.Color(0, 0, 0));
         etq_telefono.setText("Telefono");
 
         etq_correo.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
-        etq_correo.setForeground(new java.awt.Color(0, 0, 0));
-
         etq_correo.setText("Correo");
 
         javax.swing.GroupLayout cont_mainLayout = new javax.swing.GroupLayout(cont_main);
@@ -217,9 +185,7 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         cont_mainLayout.setVerticalGroup(
             cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cont_mainLayout.createSequentialGroup()
-
-                .addContainerGap(9, Short.MAX_VALUE)
-
+                .addContainerGap()
                 .addGroup(cont_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
                         .addComponent(etq_cedula)
@@ -273,15 +239,6 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
-            .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cont_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-
             .addGroup(layout.createSequentialGroup()
                 .addComponent(cont_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -291,7 +248,6 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(cont_main, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -342,7 +298,7 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
     private void campo_cedulaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_cedulaMousePressed
          if (campo_cedula.getText().equals("Documento del vigilante")) {
             campo_cedula.setText("");
-            campo_cedula.setForeground(Color.white);
+            campo_cedula.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_cedulaMousePressed
 

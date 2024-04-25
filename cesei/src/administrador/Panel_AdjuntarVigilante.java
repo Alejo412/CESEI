@@ -165,20 +165,20 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
             }
         });
 
-        campo_nombre.setBackground(new java.awt.Color(0, 74, 173));
-        campo_nombre.setForeground(new java.awt.Color(255, 255, 255));
+        campo_nombre.setBackground(new java.awt.Color(242, 242, 242));
+        campo_nombre.setForeground(new java.awt.Color(0, 0, 0));
         campo_nombre.setBorder(null);
 
-        campo_apellido.setBackground(new java.awt.Color(0, 74, 173));
-        campo_apellido.setForeground(new java.awt.Color(255, 255, 255));
+        campo_apellido.setBackground(new java.awt.Color(242, 242, 242));
+        campo_apellido.setForeground(new java.awt.Color(0, 0, 0));
         campo_apellido.setBorder(null);
 
-        campo_Fnacimiento.setBackground(new java.awt.Color(0, 74, 173));
-        campo_Fnacimiento.setForeground(new java.awt.Color(255, 255, 255));
+        campo_Fnacimiento.setBackground(new java.awt.Color(242, 242, 242));
+        campo_Fnacimiento.setForeground(new java.awt.Color(0, 0, 0));
         campo_Fnacimiento.setBorder(null);
 
-        campo_correo.setBackground(new java.awt.Color(0, 74, 173));
-        campo_correo.setForeground(new java.awt.Color(255, 255, 255));
+        campo_correo.setBackground(new java.awt.Color(242, 242, 242));
+        campo_correo.setForeground(new java.awt.Color(0, 0, 0));
         campo_correo.setBorder(null);
 
         btn_desajuntar.setBackground(new java.awt.Color(255, 0, 0));
@@ -197,8 +197,8 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
         etq_sedesAcargo.setForeground(new java.awt.Color(0, 0, 0));
         etq_sedesAcargo.setText("Sedes a cargo: ");
 
-        campo_sedesAcargo.setBackground(new java.awt.Color(0, 74, 173));
-        campo_sedesAcargo.setForeground(new java.awt.Color(255, 255, 255));
+        campo_sedesAcargo.setBackground(new java.awt.Color(242, 242, 242));
+        campo_sedesAcargo.setForeground(new java.awt.Color(0, 0, 0));
         campo_sedesAcargo.setBorder(null);
 
         javax.swing.GroupLayout cont_mainLayout = new javax.swing.GroupLayout(cont_main);
@@ -330,14 +330,14 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
     private void campo_cedulaVigilanteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_cedulaVigilanteMousePressed
          if (campo_cedulaVigilante.getText().equals("Ingrese cédula")) {
             campo_cedulaVigilante.setText("");
-            campo_cedulaVigilante.setForeground(Color.white);
+            campo_cedulaVigilante.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_cedulaVigilanteMousePressed
 
     private void campo_IdSedeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_IdSedeMousePressed
          if (campo_IdSede.getText().equals("Ingrese ID de la sede")) {
             campo_IdSede.setText("");
-            campo_IdSede.setForeground(Color.white);
+            campo_IdSede.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_IdSedeMousePressed
 

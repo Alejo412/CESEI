@@ -3,6 +3,7 @@ package administrador;
 
 import alerta.Alerta;
 import alerta.AlertaEliminar;
+import alerta.AlertaSiNo;
 import java.awt.Color;
 import utils.BaseDatos;
 import utils.Sede;
@@ -226,7 +227,7 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
     private void campo_NsedeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campo_NsedeMousePressed
         if (campo_Nsede.getText().equals("Ingrese el ID de la sede")) {
             campo_Nsede.setText("");
-            campo_Nsede.setForeground(Color.white);
+            campo_Nsede.setForeground(Color.black);
         }
     }//GEN-LAST:event_campo_NsedeMousePressed
 

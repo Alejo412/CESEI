@@ -128,7 +128,7 @@ public class BaseDatos {
                         foto = new ImageIcon(bytes, cedula).getImage();
                     }
                     
-                    encontrado = new Usuario(cedula, nombres, apellidos, telefono, correo, tipo, fecha_nacimiento, password, foto);
+                    encontrado = new Usuario(cedula, tipo, nombres, apellidos, correo, telefono,  fecha_nacimiento, password, foto);
                 return encontrado;
            
             }
@@ -643,7 +643,7 @@ public boolean eliminarVigilante(String id_usuario){
         statement.setString(2, codigo_equipo);
         statement.setString(3, fecha_ingreso);
         statement.setString(4, fecha_salida);
-        statement.setString(5, fecha_salida);
+        statement.setString(5, id_usuario);
  
         // Si fecha_fin es null, establecerlo como null en la consulta
             if (fecha_salida == null) {
@@ -662,10 +662,10 @@ public boolean eliminarVigilante(String id_usuario){
     }
      
      
-      public boolean editarFechaFinPersona_Computador(String id_usuario, String fecha_salida){
+      public boolean editarFechaFinPersona_Computador(String id_persona, String fecha_salida, String id_usuario){
           boolean respuesta = false;
         try {
-            String consulta = "UPDATE persona_computador SET fecha_salida='"+fecha_salida+"' WHERE id_usuario='"+id_usuario+"'";
+            String consulta = "UPDATE persona_computador SET fecha_salida='"+fecha_salida+"' WHERE id_persona='"+id_persona+"'";
             int resp_consulta = manipularDB.executeUpdate(consulta);
             if (resp_consulta==1) {
                 respuesta = true;
@@ -681,6 +681,73 @@ public boolean eliminarVigilante(String id_usuario){
         return respuesta;
       }
     
+      
+      
+    public Persona_computador [] extraerIngresosXcedula(String cedula){
+        try {
+            Persona_computador arreglo [] = new Persona_computador[100];
+            String consulta = "SELECT * FROM persona_computador WHERE id_persona = '"+cedula+"'";
+            ResultSet registros = manipularDB.executeQuery(consulta);
+            registros.next();
+            if (registros.getRow()==1) {
+                int i = 0;
+                do{
+                    String id_ingreso = registros.getString("id_ingreso");
+                    String id_persona = registros.getString("id_persona");
+                    String codigo_eqipo = registros.getString("codigo_equipo");
+                    String fecha_ingreso = registros.getString("fecha_ingreso");
+                    String fecha_salida = registros.getString("fecha_salida");
+                    
+                
+                    
+                    arreglo[i] = new Persona_computador(id_ingreso, id_persona, codigo_eqipo, fecha_ingreso, fecha_salida);
+                    i++;
+                }while(registros.next());
+                 
+                System.out.println("SELECT exitoso ");
+                return arreglo;
+            }else{
+                return arreglo;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error al ejecutar el SELECT: ");
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
+      
+    public Persona_computador [] extraerIngresosXfecha(String fecha){
+        try {
+            Persona_computador arreglo [] = new Persona_computador[100];
+            String consulta = "SELECT * FROM persona_computador WHERE fecha_ingreso LIKE  '"+fecha+"%'";
+            ResultSet registros = manipularDB.executeQuery(consulta);
+            registros.next();
+            if (registros.getRow()==1) {
+                int i = 0;
+                do{
+                    String id_ingreso = registros.getString("id_ingreso");
+                    String id_persona = registros.getString("id_persona");
+                    String codigo_eqipo = registros.getString("codigo_equipo");
+                    String fecha_ingreso = registros.getString("fecha_ingreso");
+                    String fecha_salida = registros.getString("fecha_salida");
+                    
+                
+                    
+                    arreglo[i] = new Persona_computador(id_ingreso, id_persona, codigo_eqipo, fecha_ingreso, fecha_salida);
+                    i++;
+                }while(registros.next());
+                 
+                System.out.println("SELECT exitoso ");
+                return arreglo;
+            }else{
+                return arreglo;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error al ejecutar el SELECT: ");
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
     
     
 }

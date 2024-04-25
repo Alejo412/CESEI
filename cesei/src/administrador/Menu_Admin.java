@@ -31,7 +31,6 @@ public class Menu_Admin extends javax.swing.JFrame {
         initAlternComponents();
         
         
-
         
         
     }
@@ -40,7 +39,6 @@ public class Menu_Admin extends javax.swing.JFrame {
         setIconImage( getToolkit().createImage( ClassLoader.getSystemResource("imagenes/logofinal.png") ) );
         
         Image img_warning = getToolkit().createImage( ClassLoader.getSystemResource("imagenes/logofinal.png") );
-
         img_warning = img_warning.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
         etq_logo.setIcon(new ImageIcon(img_warning));
         
@@ -76,9 +74,7 @@ public class Menu_Admin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setUndecorated(true);
         setResizable(false);
-
 
         header.setBackground(new java.awt.Color(255, 255, 255));
         header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -101,9 +97,7 @@ public class Menu_Admin extends javax.swing.JFrame {
         nav_Principal.setBackground(new java.awt.Color(0, 0, 0));
 
         btnSede.setBackground(new java.awt.Color(0, 0, 0));
-
         btnSede.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
-
         btnSede.setForeground(new java.awt.Color(255, 255, 255));
         btnSede.setText("SEDES");
         btnSede.setBorder(null);
@@ -115,9 +109,7 @@ public class Menu_Admin extends javax.swing.JFrame {
         });
 
         btnVigilante.setBackground(new java.awt.Color(0, 0, 0));
-
         btnVigilante.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
-
         btnVigilante.setForeground(new java.awt.Color(255, 255, 255));
         btnVigilante.setText("VIGILANTES");
         btnVigilante.setBorder(null);
@@ -140,7 +132,6 @@ public class Menu_Admin extends javax.swing.JFrame {
         nav_PrincipalLayout.setHorizontalGroup(
             nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(nav_PrincipalLayout.createSequentialGroup()
-
                 .addGap(80, 80, 80)
                 .addComponent(etq_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(142, 142, 142)
@@ -150,17 +141,11 @@ public class Menu_Admin extends javax.swing.JFrame {
                 .addGap(127, 127, 127)
                 .addComponent(imgUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85))
-
         );
         nav_PrincipalLayout.setVerticalGroup(
             nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(nav_PrincipalLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(etq_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(nav_PrincipalLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
                 .addGroup(nav_PrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-
                     .addComponent(etq_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(nav_PrincipalLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
@@ -180,7 +165,7 @@ public class Menu_Admin extends javax.swing.JFrame {
         );
         ventana_emergenteLayout.setVerticalGroup(
             ventana_emergenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 507, Short.MAX_VALUE)
+            .addGap(0, 513, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout headerLayout = new javax.swing.GroupLayout(header);
@@ -239,7 +224,7 @@ public class Menu_Admin extends javax.swing.JFrame {
 
     private void imgUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgUsuarioMouseClicked
         //crear contenedor nuevo
-        Perfil_admin nuevo = new Perfil_admin(cedulaAdmin, basedatos);
+        Perfil_admin nuevo = new Perfil_admin(cedulaAdmin, basedatos, this);
         //ajustar tamaño
         nuevo.setPreferredSize(ventana_emergente.getPreferredSize());
         nuevo.setSize(ventana_emergente.getSize());

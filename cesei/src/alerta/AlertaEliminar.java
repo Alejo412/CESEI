@@ -6,13 +6,13 @@ import javax.swing.ImageIcon;
 
 
 public class AlertaEliminar extends javax.swing.JFrame {
-
+    
     String texto;
     Boolean click;
     public AlertaEliminar(String texto, Boolean click) {
+        initComponents();
         this.texto = texto;
         this.click = click;
-        initComponents();
         initAlternComponents();
     }
     
@@ -28,14 +28,13 @@ public class AlertaEliminar extends javax.swing.JFrame {
             
         etqtexto.setText(texto);
     }
-    
 
-    
+   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        conte_alertaEliminar = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         etqImagen = new javax.swing.JLabel();
         etqtexto = new javax.swing.JLabel();
         btn_si = new javax.swing.JButton();
@@ -43,9 +42,9 @@ public class AlertaEliminar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        conte_alertaEliminar.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        etqtexto.setForeground(new java.awt.Color(255, 255, 255));
+        etqtexto.setForeground(new java.awt.Color(0, 0, 0));
 
         btn_si.setBackground(new java.awt.Color(102, 102, 255));
         btn_si.setForeground(new java.awt.Color(255, 255, 255));
@@ -65,37 +64,37 @@ public class AlertaEliminar extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout conte_alertaEliminarLayout = new javax.swing.GroupLayout(conte_alertaEliminar);
-        conte_alertaEliminar.setLayout(conte_alertaEliminarLayout);
-        conte_alertaEliminarLayout.setHorizontalGroup(
-            conte_alertaEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(conte_alertaEliminarLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(8, Short.MAX_VALUE)
                 .addComponent(etqImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(conte_alertaEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(conte_alertaEliminarLayout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(etqtexto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, conte_alertaEliminarLayout.createSequentialGroup()
-                        .addGap(185, 185, 185)
-                        .addComponent(btn_si, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_no, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                        .addComponent(btn_si, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_no, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(15, 15, 15))))
         );
-        conte_alertaEliminarLayout.setVerticalGroup(
-            conte_alertaEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(conte_alertaEliminarLayout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(conte_alertaEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(conte_alertaEliminarLayout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(etqImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 12, Short.MAX_VALUE))
-                    .addGroup(conte_alertaEliminarLayout.createSequentialGroup()
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(etqtexto, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(conte_alertaEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btn_si)
                             .addComponent(btn_no))))
                 .addContainerGap())
@@ -105,13 +104,11 @@ public class AlertaEliminar extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(conte_alertaEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(conte_alertaEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -119,6 +116,7 @@ public class AlertaEliminar extends javax.swing.JFrame {
 
     private void btn_siActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_siActionPerformed
         click = true;
+        
         dispose();
     }//GEN-LAST:event_btn_siActionPerformed
 
@@ -127,13 +125,13 @@ public class AlertaEliminar extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btn_noActionPerformed
 
-   
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_no;
     private javax.swing.JButton btn_si;
-    private javax.swing.JPanel conte_alertaEliminar;
     private javax.swing.JLabel etqImagen;
     private javax.swing.JLabel etqtexto;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

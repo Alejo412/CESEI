@@ -3,7 +3,7 @@ package vigilante;
 import vigilante.Panel_Registrar_Computador;
 import vigilante.Panel_Registrar_Entrada;
 import vigilante.Panel_RegistrarSalida;
-import vigilante.Panel_Historialingresos;
+import vigilante.Panel_HistorialXcedula;
 import vigilante.Panel_Registrar_Persona;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -43,13 +43,15 @@ public class Menu_vigilante extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
         setResizable(false);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         
         
         Image icono_crear = getToolkit().createImage(ClassLoader.getSystemResource("imagenes/icono_perfilM.png"));
         icono_crear = icono_crear.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
         etq_perfil_Igm.setIcon(new ImageIcon(icono_crear));
         etq_perfil_Igm.setForeground(new Color(0, 200, 0));
+        
+        setIconImage(getToolkit().createImage(ClassLoader.getSystemResource("imagenes/logofinal.png")));
         
         
         //Image icono_registro = getToolkit().createImage(ClassLoader.getSystemResource("imagenes/CESEILOGO.png"));
@@ -77,7 +79,6 @@ public class Menu_vigilante extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
-        setUndecorated(true);
         setResizable(false);
 
         contenedor_menu_vigilante.setBackground(new java.awt.Color(0, 0, 0));
@@ -333,7 +334,7 @@ public class Menu_vigilante extends javax.swing.JFrame {
 
     private void etq_verHistorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_verHistorialMouseClicked
         
-        Panel_Historialingresos nuevo = new Panel_Historialingresos();
+        NavsHistorialEntradas nuevo = new NavsHistorialEntradas(cedula, basedatos);
         
         nuevo.setPreferredSize(contenedor_principal.getPreferredSize());
         nuevo.setSize(contenedor_principal.getSize());
@@ -355,7 +356,7 @@ public class Menu_vigilante extends javax.swing.JFrame {
     
     private void etq_registrarSalidaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarSalidaMouseEntered
         // Cambia el color de fondo del JLabel cuando el mouse entra en él
-        etq_registrarSalida.setForeground(Color.BLUE);
+        etq_registrarSalida.setForeground(Color.RED);
     }//GEN-LAST:event_etq_registrarSalidaMouseEntered
 
     private void etq_registrarSalidaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarSalidaMouseExited
@@ -364,7 +365,7 @@ public class Menu_vigilante extends javax.swing.JFrame {
     }//GEN-LAST:event_etq_registrarSalidaMouseExited
 
     private void etq_verHistorialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_verHistorialMouseEntered
-        etq_verHistorial.setForeground(Color.BLUE);
+        etq_verHistorial.setForeground(Color.RED);
     }//GEN-LAST:event_etq_verHistorialMouseEntered
 
     private void etq_verHistorialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_verHistorialMouseExited
@@ -372,7 +373,7 @@ public class Menu_vigilante extends javax.swing.JFrame {
     }//GEN-LAST:event_etq_verHistorialMouseExited
 
     private void etq_registrarEquipoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEquipoMouseEntered
-        etq_registrarEquipo.setForeground(Color.BLUE);
+        etq_registrarEquipo.setForeground(Color.RED);
     }//GEN-LAST:event_etq_registrarEquipoMouseEntered
 
     private void etq_registrarEquipoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEquipoMouseExited
@@ -380,7 +381,7 @@ public class Menu_vigilante extends javax.swing.JFrame {
     }//GEN-LAST:event_etq_registrarEquipoMouseExited
 
     private void etq_registrarPersonaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarPersonaMouseEntered
-        etq_registrarPersona.setForeground(Color.BLUE);
+        etq_registrarPersona.setForeground(Color.RED);
     }//GEN-LAST:event_etq_registrarPersonaMouseEntered
 
     private void etq_registrarPersonaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarPersonaMouseExited
@@ -388,7 +389,7 @@ public class Menu_vigilante extends javax.swing.JFrame {
     }//GEN-LAST:event_etq_registrarPersonaMouseExited
 
     private void etq_registrarEntradaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEntradaMouseEntered
-        etq_registrarEntrada.setForeground(Color.BLUE);
+        etq_registrarEntrada.setForeground(Color.RED);
     }//GEN-LAST:event_etq_registrarEntradaMouseEntered
 
     private void etq_registrarEntradaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_registrarEntradaMouseExited

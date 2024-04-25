@@ -2,6 +2,8 @@
 package vigilante;
 
 import alerta.Alerta;
+import alerta.AlertaAccion;
+import alerta.AlertaSiNo;
 import java.awt.Color;
 import utils.BaseDatos;
 
@@ -9,6 +11,7 @@ import utils.BaseDatos;
 public class Panel_Registrar_Computador extends javax.swing.JPanel {
 
    BaseDatos basedatos;
+   Boolean click;
     public Panel_Registrar_Computador(BaseDatos basedatos) {
         this.basedatos = basedatos;
         initComponents();
@@ -180,10 +183,14 @@ public class Panel_Registrar_Computador extends javax.swing.JPanel {
         String marca = campo_marca.getText();
         String cedula_persona = campo_cedulaPersona.getText();
         
-        if( codigo.equals("") || marca.equals("") || cedula_persona.equals("")){
+        if( codigo.equals(" ") || marca.equals(" ") || cedula_persona.equals(" ")){
             Alerta ventana = new Alerta("Todos los campos son Obligatorios.");
         }else{
-             basedatos.insertarComputador(codigo, marca, cedula_persona);
+           
+              basedatos.insertarComputador(codigo, marca, cedula_persona);
+              AlertaAccion alertaEditar = new AlertaAccion("Computador registrada correctamente");
+            
+             
              campo_codigo.setText(" ");
              campo_marca.setText(" ");
              campo_cedulaPersona.setText(" ");
