@@ -248,14 +248,11 @@ public class Perfil_admin extends javax.swing.JPanel {
     }//GEN-LAST:event_campo_apellidosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        AlertaSiNo alertaRegistrar = new AlertaSiNo("¿Esta seguro de cerrar sesión?",click );
-            if(click = true){
-              // Cerrar sesión y cerrar la ventana
-             
+       
              frame.dispose(); // Cerrar la ventana
              Login cerrar = new Login(basedatos);
 
-            }
+            
     }//GEN-LAST:event_jButton1ActionPerformed
 
     

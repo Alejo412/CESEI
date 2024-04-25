@@ -237,7 +237,7 @@ public class Panel_EliminarSede extends javax.swing.JPanel {
             Alerta ventana = new Alerta("Debe ingresar N°sede.");
         }else{
            
-            AlertaEliminar alertaEliminar = new AlertaEliminar("¿Esta seguro de eliminar   la sede: "+id_sede+"?",click );
+            AlertaEliminar alertaEliminar = new AlertaEliminar("¿Esta seguro de eliminar   la sede: "+campo_Nsede.getText()+"?",click );
             if(click = true){
               basedatos.eliminarSede(id_sede);
               Panel_ListaSedes nuevo = new Panel_ListaSedes(basedatos);

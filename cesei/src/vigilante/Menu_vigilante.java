@@ -397,7 +397,7 @@ public class Menu_vigilante extends javax.swing.JFrame {
     }//GEN-LAST:event_etq_registrarEntradaMouseExited
 
     private void etq_perfil_IgmMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_etq_perfil_IgmMouseClicked
-        Panel_perfilVigilante nuevo = new Panel_perfilVigilante(cedula, basedatos);
+        Panel_perfilVigilante nuevo = new Panel_perfilVigilante(cedula, basedatos, this);
         
        
         nuevo.setPreferredSize(contenedor_principal.getPreferredSize());

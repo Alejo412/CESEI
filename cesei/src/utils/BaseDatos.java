@@ -290,7 +290,7 @@ public boolean eliminarVigilante(String id_usuario){
      public Usuario [] extraerVigilantes() {
         try {
             Usuario arreglo [] = new Usuario[100];
-            String consulta = "SELECT * FROM usuario";
+            String consulta = "SELECT * FROM usuario WHERE tipo LIKE 'Vigilante%'";
             ResultSet registros = manipularDB.executeQuery(consulta);
             registros.next();
             if (registros.getRow()==1) {

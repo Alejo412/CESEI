@@ -307,7 +307,7 @@ public class Panel_EliminarVigilante extends javax.swing.JPanel {
         if( cedulaVigilante.equals("")){
             Alerta ventana = new Alerta("Debe ingresar documento.");
         }else{
-            AlertaEliminar alertaEliminar = new AlertaEliminar("¿Esta seguro de eliminar el vigilante: "+cedula_vigilante+"?",click );
+            AlertaEliminar alertaEliminar = new AlertaEliminar("¿Esta seguro de eliminar el vigilante: "+campo_cedula.getText()+"?",click );
             if(click = true){
               basedatos.eliminarVigilante(cedulaVigilante);
             }

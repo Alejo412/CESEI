@@ -4,6 +4,7 @@ package vigilante;
 import alerta.AlertaSiNo;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Frame;
 import java.awt.Image;
 import java.awt.Window;
 import javax.swing.ImageIcon;
@@ -19,15 +20,13 @@ public class Panel_perfilVigilante extends javax.swing.JPanel {
     BaseDatos basedatos;
     Usuario usuarioValidado;
     String cedula;
-     Boolean click = false;
+    Boolean click = false;
+    JFrame frame;
     
-   
-  
-
-   
-    public Panel_perfilVigilante(String cedula, BaseDatos basedatos ) {
+    public Panel_perfilVigilante(String cedula, BaseDatos basedatos, JFrame frame ) {
         this.basedatos=basedatos;
         this.cedula=cedula;
+        this.frame = frame;
       
         initComponents();
         initAlternComponents();
@@ -273,17 +272,11 @@ public class Panel_perfilVigilante extends javax.swing.JPanel {
     }//GEN-LAST:event_campo_apellidosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       AlertaSiNo alertaRegistrar = new AlertaSiNo("¿Esta seguro de cerrar sesión?",click );
-       
-    if (click == true) {
+      
+       frame.dispose(); // Cerrar la ventana
         Login cerrar = new Login(basedatos);
-        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
 
-        // Cerrar el JFrame padre
-        if (frame != null) {
-            frame.dispose();
-        }
-    }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     
