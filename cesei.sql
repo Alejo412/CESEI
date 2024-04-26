@@ -76,20 +76,3 @@ CREATE TRIGGER actualizar_tipo BEFORE INSERT ON usuario
 DELIMITER ;
 
 
-INSERT INTO usuario (id_usuario, nombres, apellidos, correo, password, telefono, f_nacimiento, tipo) VALUES
-('192834', 'Carlos', 'Perez', 'carlos@gmail.com', '1234', '322062524', '1987-04-23', 'Administrador');
-('836292', 'Hernan', 'Ramirez', 'ernc@hotmail.com','1122','312062536', '1988-06-12', 'Vigilante'),
-('028371', 'Andres', 'Rios', 'andres@hotmail.com','2233','322022536', '1988-06-12', 'Vigilante');
-
-INSERT INTO usuario (id_usuario, nombres, apellidos, correo, password, telefono, f_nacimiento, tipo) VALUES
-('028371', 'Andres', 'Rios', 'andres@hotmail.com','2233','322022536', '1988-06-12', 'Vigilante');
-INSERT INTO persona (id_persona, nombres, apellidos, telefono)
-VALUES
-('102836','Pepe', 'Rios', '328673524'),
-('830264', 'karla', 'Vasquez', '319273659');
-
-INSERT INTO computador (codigo, marca, id_persona)
-VALUES
-('2373', 'Asus', '102836'),
-('1528', 'Hp', '102836');
-
