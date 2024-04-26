@@ -53,7 +53,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         etq_contraseña = new javax.swing.JLabel();
         campo_contrasena = new javax.swing.JPasswordField();
         jSeparator7 = new javax.swing.JSeparator();
-        calender_elegirFecha = new com.toedter.calendar.JDateChooser();
+        calender_elegir_Fecha = new com.toedter.calendar.JDateChooser();
 
         campo_apellido.setBackground(new java.awt.Color(242, 242, 242));
         campo_apellido.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -122,6 +122,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
         etq_cedula.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         etq_cedula.setText("Cédula");
 
+        campo_cedula.setBackground(new java.awt.Color(242, 242, 242));
         campo_cedula.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         campo_cedula.setText("Documento del vigilante");
         campo_cedula.setBorder(null);
@@ -160,9 +161,9 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
 
         jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
 
-        calender_elegirFecha.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        calender_elegir_Fecha.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                calender_elegirFechaPropertyChange(evt);
+                calender_elegir_FechaPropertyChange(evt);
             }
         });
 
@@ -203,7 +204,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
                                         .addComponent(campo_correo)
                                         .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(etq_fechaNacimiento)
-                                    .addComponent(calender_elegirFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(calender_elegir_Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cont_mainLayout.createSequentialGroup()
                                 .addComponent(btn_registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(119, 119, 119)))))
@@ -237,7 +238,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(etq_fechaNacimiento)
                         .addGap(8, 8, 8)
-                        .addComponent(calender_elegirFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(calender_elegir_Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(44, 44, 44))
                     .addGroup(cont_mainLayout.createSequentialGroup()
                         .addComponent(etq_nombre)
@@ -302,7 +303,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
     String correo = campo_correo.getText();
     String telefono = campo_telefono.getText();
     SimpleDateFormat fecha_formateada = new SimpleDateFormat("yyyy-MM-dd");
-    String fecha_nacimiento = (fecha_formateada.format(calender_elegirFecha.getCalendar().getTime()));
+    String fecha_nacimiento = (fecha_formateada.format(calender_elegir_Fecha.getCalendar().getTime()));
     String contrasena = campo_contrasena.getText();
     
          if( cedula.equals("") || nombre.equals("") || apellido.equals("") || telefono.equals("") || correo.equals("") || fecha_nacimiento.equals("") || contrasena.equals("")  ){
@@ -329,7 +330,7 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
             campo_correo.setText("");
             campo_telefono.setText("");
             campo_contrasena.setText("");
-            calender_elegirFecha.setDate(null);
+            calender_elegir_Fecha.setDate(null);
             
             
          
@@ -387,19 +388,19 @@ public class Panel_RegistrarVigilante extends javax.swing.JPanel {
        
     }//GEN-LAST:event_campo_fechaNacimiento1MousePressed
 
-    private void calender_elegirFechaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_calender_elegirFechaPropertyChange
+    private void calender_elegir_FechaPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_calender_elegir_FechaPropertyChange
        
         //if(evt.getOldValue() != null){
         //    SimpleDateFormat fecha_formateada = new SimpleDateFormat("yyyy/mm/dd");
         //    campo_fechaNacimiento.setText(fecha_formateada.format(calender_elegirFecha.getCalendar().getTime()));    
         
         //}
-    }//GEN-LAST:event_calender_elegirFechaPropertyChange
+    }//GEN-LAST:event_calender_elegir_FechaPropertyChange
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_registrar;
-    private com.toedter.calendar.JDateChooser calender_elegirFecha;
+    private com.toedter.calendar.JDateChooser calender_elegir_Fecha;
     private javax.swing.JTextField campo_apellido;
     private javax.swing.JTextField campo_cedula;
     private javax.swing.JPasswordField campo_contrasena;
