@@ -2,6 +2,7 @@
 package administrador;
 
 import alerta.Alerta;
+import alerta.AlertaAccion;
 import java.awt.Color;
 import java.awt.Image;
 import java.text.SimpleDateFormat;
@@ -354,6 +355,8 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
             Alerta ventana = new Alerta("Todos los campos son Obligatorios.");
         }else{
              basedatos.insertarUsuario_Sede(cedulaVigilante, IdSede, fechaInicio, fechaFin );
+             AlertaAccion alertaEditar = new AlertaAccion("Vigilante Adjuntado correctamente");
+           
          }
         
     }//GEN-LAST:event_btn_adjuntarActionPerformed
@@ -417,8 +420,11 @@ public class Panel_AdjuntarVigilante extends javax.swing.JPanel {
                 String fechaFin = sdf.format(fechaHora);
                 
                 Boolean editarFechaFin = basedatos.editarFechaFinUsuario_Sede(cedulaVigilante, IdSede, fechaFin);
+                
                  if(editarFechaFin == true){
                     System.out.println("Se edito fechafin exitosasmente");
+                    AlertaAccion alertaEditar = new AlertaAccion("Vigilante ha terminado turno");
+           
                 }else{
                     System.out.println("No se edito fechafin");
            }
